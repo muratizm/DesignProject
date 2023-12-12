@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class LevelGenerator : MonoBehaviour {
+
+	public Tilemap tilemap;
+	public bool[,] tileArray;
 	public static int Level = 0;
 	public GameObject floorPrefab;
 	public GameObject wallPrefab;
@@ -37,7 +41,8 @@ public class LevelGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		ConvertTilemapToArray();
+		
 		// initialize map 2D array
 		mapData = GenerateMazeData();
 		// create actual maze blocks from maze boolean data
@@ -68,9 +73,11 @@ public class LevelGenerator : MonoBehaviour {
 					CreateChildPrefab(floorPrefab, floorParent, x, 0, z);
 				}
 
+				/*
 				if (generateRoof) { // create ceiling
 					CreateChildPrefab(ceilingPrefab, wallsParent, x, 4, z);
 				}
+				*/
 			}
 		}
 
@@ -81,6 +88,44 @@ public class LevelGenerator : MonoBehaviour {
 		var myPickup = Instantiate(pickup, new Vector3(mazeX, 1, mazeY), Quaternion.identity);
 		myPickup.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
 	}
+
+	    void ConvertTilemapToArray()
+    {
+        BoundsInt bounds = tilemap.cellBounds;
+        tileArray = new bool[bounds.size.x, bounds.size.y];
+
+        for (int x = 0; x < bounds.size.x; x++)
+        {
+            for (int y = 0; y < bounds.size.y; y++)
+            {
+                Vector3Int cellPosition = new Vector3Int(bounds.x + x, bounds.y + y, 0);
+                TileBase tile = tilemap.GetTile(cellPosition);
+
+                // If a tile is present, set the corresponding array element to true, otherwise false.
+                tileArray[x, y] = (tile != null);
+            }
+        }
+
+        // Output the 2D array (for testing purposes)
+        PrintArray(tileArray);
+    }
+
+    void PrintArray(bool[,] array)
+    {
+        string output = "";
+
+        for (int y = 0; y < array.GetLength(1); y++)
+        {
+            for (int x = 0; x < array.GetLength(0); x++)
+            {
+                output += array[x, y] + " ";
+            }
+
+            output += "\n";
+        }
+
+        Debug.Log(output);
+    }
 
 	// generates the booleans determining the maze, which will be used to construct the cubes
 	// actually making up the maze

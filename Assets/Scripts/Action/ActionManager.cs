@@ -21,9 +21,6 @@ public class ActionManager : MonoBehaviour
 
     public BaseAction action;
 
-    [Header("Globals Ink File")]
-    [SerializeField] private TextAsset globalsTextFile;
-
 
     [Header("Action UI")]
     [SerializeField] private GameObject actionPanel;
@@ -49,7 +46,6 @@ public class ActionManager : MonoBehaviour
         }
         instance = this;
 
-        storyVariables = new StoryVariables(globalsTextFile);
     }
 
 
@@ -57,6 +53,8 @@ public class ActionManager : MonoBehaviour
     {
         actionIsPlaying = false;
         actionPanel.SetActive(false);
+
+        storyVariables = StoryStateManager.Instance.GetStoryVariables();
         
         actionChoicesText = new TextMeshProUGUI[actionChoices.Length];
         int index = 0;
@@ -180,5 +178,14 @@ public class ActionManager : MonoBehaviour
 
     public Story GetCurrentStory(){
         return currentStory;
+    }
+
+    public Ink.Runtime.Object GetStoryState(string variableName){
+        Ink.Runtime.Object variableValue = null;
+        storyVariables.variables.TryGetValue(variableName, out variableValue);
+        if(variableValue == null){
+            Debug.LogWarning("ink variable was found to be null: " + variableName );
+        }
+        return variableValue;
     }
 }

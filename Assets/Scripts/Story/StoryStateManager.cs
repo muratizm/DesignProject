@@ -5,10 +5,19 @@ using UnityEngine;
 public class StoryStateManager : MonoBehaviour
 {
     public static StoryStateManager Instance { get; private set; }
-
+    private StoryVariables storyVariables;
     private StoryBaseState currentState;
-    private StoryBaseState startState;
     private Dictionary<string, StoryBaseState> states;
+
+
+    //bu burda olmayacak dediğim gibi daha güzel biryer bi sistem bulcaz bu işlere
+    public GameObject obstacle;
+
+
+
+    [Header("Globals Ink File")]
+    [SerializeField] private TextAsset globalsTextFile;
+
 
     void Awake()
     {
@@ -21,20 +30,22 @@ public class StoryStateManager : MonoBehaviour
                 { "StoryState2", new StoryState2() },
                 // Add all your states here
             };
-            startState = states["StoryState1"];
+
+            currentState = states["StoryState1"];
+            storyVariables = new StoryVariables(globalsTextFile);
+
         }
         else
         {
             Destroy(gameObject);
+
         }
     }
 
     void Start()
     {
         
-        currentState = startState;
         currentState.EnterState(this);
-
 
     }
 
@@ -61,5 +72,29 @@ public class StoryStateManager : MonoBehaviour
     }
 
 
+    public Ink.Runtime.Object GetStoryState(string variableName){
+        Ink.Runtime.Object variableValue = null;
+        storyVariables.variables.TryGetValue(variableName, out variableValue);
+        if(variableValue == null){
+            Debug.LogWarning("ink variable was found to be null: " + variableName );
+        }
+        return variableValue;
+    }
+
+    public StoryVariables GetStoryVariables(){
+        return storyVariables;
+    }
+
+
+
+
+    // bunu şimdilik buraya yazıyorum bunun daha güzel biryerde olması lazım bana kalırsa
+    public void Getridoftheobstacle(){
+        if(obstacle != null){
+             Debug.Log("Obstacle is gone");
+
+            obstacle.GetComponent<Animation>().Play("delete");
+        }
+    }
 
 }

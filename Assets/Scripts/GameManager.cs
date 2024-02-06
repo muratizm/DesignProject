@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     {
         // bunu update'ten çıkarıp atıyorum poke_name' değiştirildiği zaman güncelle dersen ne olur:
         // oyunu kapatıp açtığımızda bütün story global variable'ları playerprefsten geri yüklüyor. 
+        /*
         string str = ((Ink.Runtime.StringValue) DialogueManager.GetInstance().GetStoryState("poke_name")).value;
         switch (str)
         {
@@ -37,5 +38,6 @@ public class GameManager : MonoBehaviour
                 Debug.LogWarning("zort");
                 break;
         }
+        */
     }
 }

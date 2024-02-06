@@ -40,19 +40,23 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager GetInstance(){
         return instance;
     }
-    void Awake()
+        void Awake()
     {
         if(instance != null){
-            Debug.LogError("found more than one DialogueManager.");
+            Debug.LogError("found more than one StoryStateManager.");
         }
         instance = this;
 
-        storyVariables = new StoryVariables(globalsTextFile);
+        
     }
+
 
     private void Start() {
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
+
+        storyVariables = ActionManager.GetInstance().GetStoryVariables();
+
 
         layoutAnimator = dialoguePanel.GetComponent<Animator>();
 
@@ -251,9 +255,5 @@ public class DialogueManager : MonoBehaviour
         return variableValue;
     }
 
-    private void OnApplicationQuit() {
-        if(storyVariables != null){
-            storyVariables.SaveVariables();
-        }
-    }
+
 }

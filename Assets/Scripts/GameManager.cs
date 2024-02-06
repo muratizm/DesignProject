@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         playerCamera = FindObjectOfType<Camera>();
-        Debug.Log("aa" +  playerCamera);
     }
 
     // Update is called once per frame

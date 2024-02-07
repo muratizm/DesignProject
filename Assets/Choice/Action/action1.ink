@@ -7,14 +7,11 @@ gizemli bir mavi nesne ile karşılaştın, seçimini yap!
 -> choices
 
 === choices ===
-* [Yok ET ! (x)]  
-  ~ curstate = "yokettik"
-  -> END 
+* [Yok ET ! (x) ]  -> chosen ("yokettik")
+* [Yavasca acmayi dene (c)] -> chosen("actik")
+* [Osur! (v)] -> chosen("osurduk")
 
-* [Yavasca acmayi dene (c)] 
-  ~ curstate = "actik"
-  -> END
-
-* [Osur! (v)] 
-  ~ curstate = "osurduk"
-  -> END
+=== chosen(option) ===
+ ~ curstate = option
+You choosed "{option}"!  #end3
+-> END

@@ -18,7 +18,7 @@ public class StoryState1 : StoryBaseState
 
     public override void UpdateState(StoryStateManager storyStateManager)
     {
-        Debug.Log("Updating StoryState1");
+        
         if( ((Ink.Runtime.StringValue) StoryStateManager.Instance.GetStoryState("curstate")).value == "osurduk"){
             Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaa");
             storyStateManager.Getridoftheobstacle();

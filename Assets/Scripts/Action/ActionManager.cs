@@ -6,19 +6,22 @@ using Ink.Runtime;
 using UnityEngine.UI;
 using System.Linq;
 using Ink.UnityIntegration;
+using System.IO;
 
 public class ActionManager : MonoBehaviour
 {
     private static ActionManager instance;
     private StoryVariables storyVariables; 
+    private string path = "Assets/Choice/debug.txt";
+
     private Story currentStory;
     private BaseAction currentAction;
 
     public bool actionIsPlaying {get; private set;}
-        private bool lineEnded = false;
     
-    [Header("ActionScript")]
 
+
+    [Header("ActionScript")]
     public BaseAction action;
 
 
@@ -48,7 +51,6 @@ public class ActionManager : MonoBehaviour
 
     }
 
-
     void Start()
     {
         actionIsPlaying = false;
@@ -62,16 +64,12 @@ public class ActionManager : MonoBehaviour
             actionChoicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++; 
         }
-
-
     }
 
     void Update()
     {
         currentAction?.UpdateAction(this);
     }
-
-
     
     public void EnterActionMode(TextAsset inkJSON, BaseAction actionScript){
         currentStory = new Story(inkJSON.text);
@@ -91,47 +89,29 @@ public class ActionManager : MonoBehaviour
 
 
     
+
     public void ContinueStory(){
-        if(currentStory.canContinue){
-            StartCoroutine(DisplayTextInSeconds(actionText, currentStory.Continue()));
+        if(currentStory.canContinue)
+        {   
+            Display(actionText, currentStory.Continue());
         }
         else{
             ExitDialogueMode();
         }
     }
 
-
     
-    private IEnumerator DisplayTextInSeconds(TMP_Text tmp_text, string content){
-        tmp_text.text = "";
+    private void Display(TMP_Text tmp_text, string content){
+        tmp_text.text = content;
         
-        //HandleTags(currentStory.currentTags);
-        // action için uyarlama yapılacak   
+        File.AppendAllText(path, "========= situation : " + content + "\n");
 
-        lineEnded = false;
-         
-        foreach(char letter in content){
-            tmp_text.text += letter;
-            yield return new WaitForSeconds(Constants.WAIT_BETWEEN_LETTERS);
+        
+
+        if(currentStory.currentTags.Contains("end3"))
+        {
+            Invoke("ExitDialogueMode", 3);
         }
-
-        lineEnded = true;
-
-        if(actionText.text == ""){
-            ContinueStory();
-            
-            // bu if ne işe yarıyor:
-            /*
-            .ink kodu: 
-            === choices ===
-            +[good ty] -> END           
-            böyle bir seçenek olduğunda (goodty seçeneği seçilirse direkt kapat demek oluyor)
-            direkt kapatmak yerine boş konuşma paneli açıyordu sonra kapatıyordu
-            boş konuşma panelini geçsin diye bunu koydum.
-            */
-        }
-            
-        yield return new WaitForEndOfFrame();
         DisplayChoices();
     }
 
@@ -150,6 +130,7 @@ public class ActionManager : MonoBehaviour
         foreach (Choice choice in currentActionChoices){
             actionChoicesText[index].text = choice.text;
             actionChoices[index].gameObject.SetActive(true);
+            File.AppendAllText(path, "========= given choice" + index + " : " + actionChoicesText[index].text + "\n");
             index++;
         }
 
@@ -163,6 +144,8 @@ public class ActionManager : MonoBehaviour
     public void MakeChoice(int index){
 
         currentStory.ChooseChoiceIndex(index);
+        File.AppendAllText(path, "=========choice made: " + actionChoicesText[index].text + "\n");
+
         ContinueStory();
 
     }
@@ -170,7 +153,6 @@ public class ActionManager : MonoBehaviour
     private void ExitDialogueMode()
     {
         storyVariables.StartListening(currentStory);
-
         actionIsPlaying = false;
         actionPanel.SetActive(false);
         actionText.text  = "";

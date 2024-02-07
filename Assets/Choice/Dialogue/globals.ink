@@ -1,1 +1,0 @@
-VAR poke_name = ""

@@ -16,6 +16,5 @@ public class StoryState2 : StoryBaseState
 
     public override void UpdateState(StoryStateManager storyStateManager)
     {
-        Debug.Log("Updating StoryState2");
     }
 }

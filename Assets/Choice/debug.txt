@@ -1,0 +1,30 @@
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : ...
+
+========= situation : Which poke do you choose?
+
+========= given choice0 : ahar
+========= given choice1 : bhar
+========= given choice2 : char
+=========choice made: char
+========= situation : You choosed char!
+
+========= situation : hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: bad
+========= situation : not good.
+
+========= situation : and. dont ask me why!
+
+========= situation : if you dare. i will kill you
+

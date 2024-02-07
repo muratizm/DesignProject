@@ -6,14 +6,13 @@ using Ink.Runtime;
 using UnityEngine.UI;
 using System.Linq;
 using Ink.UnityIntegration;
+using System.IO;
 
 public class DialogueManager : MonoBehaviour
 {
     private static DialogueManager instance;
     private StoryVariables storyVariables; 
-
-    [Header("Globals Ink File")]
-    [SerializeField] private TextAsset globalsTextFile;
+    private string path = "Assets/Choice/debug.txt";
 
 
     [Header("Dialogue UI")]
@@ -55,7 +54,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
 
-        storyVariables = ActionManager.GetInstance().GetStoryVariables();
+        storyVariables = StoryStateManager.Instance.GetStoryVariables();
 
 
         layoutAnimator = dialoguePanel.GetComponent<Animator>();
@@ -130,35 +129,14 @@ public class DialogueManager : MonoBehaviour
 
         lineEnded = true;
 
-        if(dialogueText.text == ""){
-            ContinueStory();
-            
-            // bu if ne işe yarıyor:
-            /*
-            .ink kodu: 
-            === choices ===
-            +[good ty] -> END           
-            böyle bir seçenek olduğunda (goodty seçeneği seçilirse direkt kapat demek oluyor)
-            direkt kapatmak yerine boş konuşma paneli açıyordu sonra kapatıyordu
-            boş konuşma panelini geçsin diye bunu koydum.
-            */
-        }
-            
+        File.AppendAllText(path, "========= situation : " + content + "\n");
+        
         yield return new WaitForEndOfFrame();
         DisplayChoices();
     }
 
 
-    public void MakeChoice(){
-        if(selectedChoiceIndex != -1){
-            UnhighlightChoice();
-            for(int i = 0; i < choices.Length; i++){ //hide all choices
-                choices[i].gameObject.SetActive(false);
-            }
-            currentStory.ChooseChoiceIndex(selectedChoiceIndex);
-        }
-        ContinueStory();
-    }
+
 
     private void DisplayChoices(){
         currentChoices = currentStory.currentChoices;
@@ -172,6 +150,7 @@ public class DialogueManager : MonoBehaviour
         foreach (Choice choice in currentChoices){
             choicesText[index].text = choice.text;
             choices[index].gameObject.SetActive(true);
+            File.AppendAllText(path, "========= given choice" + index + " : " + choicesText[index].text + "\n");
             index++;
         }
 
@@ -188,6 +167,19 @@ public class DialogueManager : MonoBehaviour
             selectedChoiceIndex = -1;
         }
 
+    }
+
+    public void MakeChoice(){
+        if(selectedChoiceIndex != -1){
+            UnhighlightChoice();
+            for(int i = 0; i < choices.Length; i++){ //hide all choices
+                choices[i].gameObject.SetActive(false);
+            }
+            currentStory.ChooseChoiceIndex(selectedChoiceIndex);
+            File.AppendAllText(path, "=========choice made: " + choicesText[selectedChoiceIndex].text + "\n");
+            
+        }
+        ContinueStory();
     }
     private void HandleTags(List<string> currentTags)
     {

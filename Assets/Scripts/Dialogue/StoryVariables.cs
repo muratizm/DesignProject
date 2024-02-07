@@ -55,7 +55,6 @@ public class StoryVariables
             variables.Remove(name);
             variables.Add(name,value);
         }
-        Debug.Log("variable changed: " + name +  " = " + value);
     }
 
     private void VariableToStory(Story story){

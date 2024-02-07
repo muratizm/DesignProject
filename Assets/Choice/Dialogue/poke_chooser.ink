@@ -1,4 +1,4 @@
-INCLUDE globals.ink
+INCLUDE ../globals.ink
 
 {poke_name == "" : -> main | -> already_chosen}
 

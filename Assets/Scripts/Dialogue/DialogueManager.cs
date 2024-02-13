@@ -29,6 +29,8 @@ public class DialogueManager : MonoBehaviour
     List<Choice> currentChoices;
     private TextMeshProUGUI[] choicesText;
     private int selectedChoiceIndex = -1;
+    [SerializeField] private Slider timerSlider;
+    private bool choiceMade = false;
     
 
     private Story currentStory;
@@ -72,7 +74,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         if(Input.GetKeyDown(KeyCode.Return) && lineEnded){
-            MakeChoice();
+            MakeChoice(selectedChoiceIndex);
         }
         else if(Input.GetKeyDown(KeyCode.UpArrow) && selectedChoiceIndex != -1){
             GoPastChoice();
@@ -130,6 +132,8 @@ public class DialogueManager : MonoBehaviour
         lineEnded = true;
 
         File.AppendAllText(path, "========= situation : " + content + "\n");
+        choiceMade = false;
+
         
         yield return new WaitForEndOfFrame();
         DisplayChoices();
@@ -140,6 +144,10 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplayChoices(){
         currentChoices = currentStory.currentChoices;
+        if(currentChoices.Count != 0){
+            StartCoroutine(StartCountdown(3f));
+
+        }
 
         if(currentChoices.Count > choices.Length){
             Debug.LogError("more choices were given than the ui can support. there is not enough space for this choices. number of choices given: " + currentChoices);
@@ -169,14 +177,43 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    public void MakeChoice(){
-        if(selectedChoiceIndex != -1){
+    
+    IEnumerator StartCountdown(float duration)
+    {
+        float timePassed = 0;
+
+        while (timePassed < duration)
+        {
+            // If a choice has been made, stop the countdown
+            if (choiceMade)
+            {
+                timerSlider.value = 0; // Reset the slider
+                yield break;
+            }
+
+            timePassed += Time.deltaTime;
+            timerSlider.value = 1 - (timePassed / duration); // Update the slider
+
+            yield return null;
+        }
+
+        if (!choiceMade)
+        {
+            MakeChoice(UnityEngine.Random.Range(0, currentChoices.Count));
+        }
+
+        timerSlider.value = 0; // Reset the slider
+    }
+
+    public void MakeChoice(int index){
+        if(index != -1){
             UnhighlightChoice();
             for(int i = 0; i < choices.Length; i++){ //hide all choices
                 choices[i].gameObject.SetActive(false);
             }
-            currentStory.ChooseChoiceIndex(selectedChoiceIndex);
-            File.AppendAllText(path, "=========choice made: " + choicesText[selectedChoiceIndex].text + "\n");
+            currentStory.ChooseChoiceIndex(index);
+            choiceMade = true;
+            File.AppendAllText(path, "=========choice made: " + choicesText[index].text + "\n");
             
         }
         ContinueStory();

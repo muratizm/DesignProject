@@ -28,3 +28,391 @@
 
 ========= situation : if you dare. i will kill you
 
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yavasca acmayi dene (c)
+========= situation : You choosed "actik"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yavasca acmayi dene (c)
+========= situation : You choosed "actik"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : ...
+
+========= situation : Which poke do you choose?
+
+========= given choice0 : ahar
+========= given choice1 : bhar
+========= given choice2 : char
+=========choice made: bhar
+========= situation : You choosed bhar!
+
+========= situation : hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: bad
+========= situation : not good.
+
+========= situation : and. dont ask me why!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : Which poke do you choose?
+
+========= given choice0 : ahar
+========= given choice1 : bhar
+========= given choice2 : char
+=========choice made: char
+========= situation : You choosed char!
+
+========= situation : hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: bad
+========= situation : not good.
+
+========= situation : and. dont ask me why!
+
+========= situation : if you dare. i will kill you
+
+========= situation : hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: bad
+========= situation : not good.
+
+========= situation : hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: good ty
+========= situation : oh, i am great. Thanks for asking!
+
+========= situation : Which poke do you choose?
+
+========= given choice0 : ahar
+========= given choice1 : bhar
+========= given choice2 : char
+=========choice made: char
+========= situation : You choosed char!
+
+========= situation : You already chose char
+
+========= situation : char
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yavasca acmayi dene (c)
+========= situation : You choosed "actik"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: sorry. i couldn't hear you.
+========= situation : oh. you didnt hear me? i said: hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: sorry. i couldn't hear you.
+========= situation : oh. you didnt hear me? i said: hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: sorry. i couldn't hear you.
+========= situation : oh. you didnt hear me? i said: hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: good ty
+========= situation : oh, i am great. Thanks for asking!
+
+========= situation : Which poke do you choose?
+
+========= given choice0 : ahar
+========= given choice1 : bhar
+========= given choice2 : char
+=========choice made: bhar
+========= situation : You choosed bhar!
+
+========= situation : bhar
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: sorry. i couldn't hear you.
+========= situation : oh. you didnt hear me? i said: hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: sorry. i couldn't hear you.
+========= situation : oh. you didnt hear me? i said: hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: sorry. i couldn't hear you.
+========= situation : oh. you didnt hear me? i said: hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: good ty
+========= situation : oh, i am great. Thanks for asking!
+
+========= situation : Which poke do you choose?
+
+========= given choice0 : ahar
+========= given choice1 : bhar
+========= given choice2 : char
+=========choice made: ahar
+========= situation : You choosed ahar!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yavasca acmayi dene (c)
+========= situation : You choosed "actik"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : Which poke do you choose?
+
+========= given choice0 : ahar
+========= given choice1 : bhar
+========= given choice2 : char
+=========choice made: bhar
+========= situation : You choosed bhar!
+
+========= situation : bhar
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : ...
+
+========= situation : Which poke do you choose?
+
+========= given choice0 : ahar
+========= given choice1 : bhar
+========= given choice2 : char

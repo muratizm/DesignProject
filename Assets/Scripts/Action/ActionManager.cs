@@ -35,6 +35,8 @@ public class ActionManager : MonoBehaviour
     [SerializeField] private GameObject[] actionChoices;
     List<Choice> currentActionChoices;
     private TextMeshProUGUI[] actionChoicesText;
+    private bool choiceMade = false;
+    [SerializeField] private Slider timerSlider;
     
     
     public static ActionManager GetInstance(){
@@ -105,13 +107,14 @@ public class ActionManager : MonoBehaviour
         tmp_text.text = content;
         
         File.AppendAllText(path, "========= situation : " + content + "\n");
-
+        choiceMade = false;
         
 
         if(currentStory.currentTags.Contains("end3"))
         {
             Invoke("ExitDialogueMode", 3);
         }
+
         DisplayChoices();
     }
 
@@ -119,6 +122,9 @@ public class ActionManager : MonoBehaviour
 
     
     private void DisplayChoices(){
+        Debug.Log("displaying choices");
+        StartCoroutine(StartCountdown(3f));
+
         currentActionChoices = currentStory.currentChoices;
 
         if(currentActionChoices.Count > actionChoices.Length){
@@ -140,11 +146,40 @@ public class ActionManager : MonoBehaviour
         }
 
     }
+    
+
+    IEnumerator StartCountdown(float duration)
+    {
+        float timePassed = 0;
+
+        while (timePassed < duration)
+        {
+            // If a choice has been made, stop the countdown
+            if (choiceMade)
+            {
+                timerSlider.value = 0; // Reset the slider
+                yield break;
+            }
+
+            timePassed += Time.deltaTime;
+            timerSlider.value = 1 - (timePassed / duration); // Update the slider
+
+            yield return null;
+        }
+
+        if (!choiceMade)
+        {
+            MakeChoice(UnityEngine.Random.Range(0, currentActionChoices.Count));
+        }
+
+        timerSlider.value = 0; // Reset the slider
+    }
 
     public void MakeChoice(int index){
 
         currentStory.ChooseChoiceIndex(index);
         File.AppendAllText(path, "=========choice made: " + actionChoicesText[index].text + "\n");
+        choiceMade = true;
 
         ContinueStory();
 

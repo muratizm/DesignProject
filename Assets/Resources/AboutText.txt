@@ -1,0 +1,5 @@
+The line StartCoroutine(LoadAndDisplayCredits()); itself is unlikely to return null. The potential for a NullReferenceException lies within the LoadAndDisplayCredits() coroutine, specifically these conditions:
+
+1. creditsTextAsset is null
+
+Resource Location: Is the creditsTextAsset (likely a TextAsset) actually in a "Resources" folder in your project? Unity requires specific folder naming for this functionality.

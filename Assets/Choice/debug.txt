@@ -416,3 +416,125 @@
 ========= given choice0 : ahar
 ========= given choice1 : bhar
 ========= given choice2 : char
+========= situation : ...
+
+========= situation : ...
+
+========= situation : ...
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : Which poke do you choose?
+
+========= given choice0 : ahar
+========= given choice1 : bhar
+========= given choice2 : char
+=========choice made: ahar
+========= situation : You choosed ahar!
+
+========= situation : ...
+
+========= situation : hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: sorry. i couldn't hear you.
+========= situation : oh. you didnt hear me? i said: hi how are you?
+
+========= given choice0 : good ty
+========= given choice1 : bad
+========= given choice2 : sorry. i couldn't hear you.
+=========choice made: good ty
+========= situation : oh, i am great. Thanks for asking!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yavasca acmayi dene (c)
+========= situation : You choosed "actik"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : ...
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : gizemli bir mavi nesne ile karşılaştın, seçimini yap!
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : ...
+

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 26a72068ca58618458c6418e396d5628
+  m_SerializeEntries:
+  - m_GUID: 8802544ed0324a14095edc70ab3bbab1
+    m_Address: Assets/AddressableResources/Sounds/Footsteps/dirt/0.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dirt_jump
+    - Dirt_jump
+  - m_GUID: 942019cf9ecd5854ebeb343b12b7f779
+    m_Address: Assets/AddressableResources/Sounds/Footsteps/dirt/1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - dirt_land
+    - Dirt_land
+  - m_GUID: e708389b7a8f64a46aa12d201c187b69
+    m_Address: Assets/AddressableResources/Sounds/Footsteps/stone/0.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Stone_jump
+  - m_GUID: b796f7e3b1a4d7344b7ee8d6c077a68f
+    m_Address: Assets/AddressableResources/Sounds/Footsteps/stone/1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Stone_land
+  - m_GUID: 34364a0d1aa79ed47affe711d45cb8ab
+    m_Address: Assets/AddressableResources/Sounds/Footsteps/dirt/walk
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dirt_walk
+  - m_GUID: 7b0df4b7e501e914282832ec027f653b
+    m_Address: Assets/AddressableResources/Sounds/Footsteps/stone/walk
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Stone_walk
+  - m_GUID: c3f221fc236c8ad4491f7f1cbc47433b
+    m_Address: Assets/AddressableResources/Sounds/Footsteps/water/0.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Water_jump
+  - m_GUID: 8ff708c2ef19b434aa3ee5ab814e5723
+    m_Address: Assets/AddressableResources/Sounds/Footsteps/water/1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Water_land
+  - m_GUID: 7d22997c3222c124d91d351ddc1c6ee4
+    m_Address: Assets/AddressableResources/Sounds/Footsteps/wood/0.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wood_jump
+  - m_GUID: 623ad07c146cedd4db6b902fd1612618
+    m_Address: Assets/AddressableResources/Sounds/Footsteps/wood/1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wood_land
+  - m_GUID: bd5f0993cad8f9d4cbbe818c538c770b
+    m_Address: Assets/AddressableResources/Sounds/Footsteps/wood/walk
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wood_walk
+  - m_GUID: 08dfc10cc01c2514aa493c96f4782821
+    m_Address: Assets/AddressableResources/Sounds/Footsteps/water
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Water_walk
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 0622e1d499dea8b43830347f67784483, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 039842bc8c8ad28488f462df84e67347, type: 2}
+    - {fileID: 11400000, guid: f12da8472b3a46d4b8637dbb899758f9, type: 2}

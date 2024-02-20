@@ -1,5 +1,8 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
@@ -26,9 +29,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
-        [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
-        [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
-        [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+        [SerializeField] private List<AudioClip> footstepSounds;    // an array of footstep sounds that will be randomly selected from.
+        private AudioClip jumpSound;
+        private AudioClip landSound;
+
+        private string currentGround = "ZORT";
+
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -43,6 +49,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+
 
         // Use this for initialization
         private void Start()
@@ -95,14 +102,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void PlayLandingSound()
-        {
-            m_AudioSource.clip = m_LandSound;
-            m_AudioSource.Play();
-            m_NextStep = m_StepCycle + .5f;
-        }
-
-
         private void FixedUpdate()
         {
             if(DialogueManager.GetInstance().dialogueIsPlaying &&  m_CharacterController.isGrounded){ //if dialogue is playing dont move
@@ -148,14 +147,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MouseLook.UpdateCursorLock();
         }
 
-
-        private void PlayJumpSound()
-        {
-            m_AudioSource.clip = m_JumpSound;
-            m_AudioSource.Play();
-        }
-
-        
         private void ProgressStepCycle(float speed)
         {
             if (m_CharacterController.velocity.sqrMagnitude > 0 && (m_Input.x != 0 || m_Input.y != 0))
@@ -182,16 +173,81 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 return;
             }
-            // pick & play a random footstep sound from the array,
-            // excluding sound at index 0
-            int n = Random.Range(1, m_FootstepSounds.Length);
-            m_AudioSource.clip = m_FootstepSounds[n];
-            m_AudioSource.PlayOneShot(m_AudioSource.clip);
-            // move picked sound to index 0 so it's not picked next time
-            m_FootstepSounds[n] = m_FootstepSounds[0];
-            m_FootstepSounds[0] = m_AudioSource.clip;
+
+            // Select the appropriate footstep sounds array
+            DetectGround();
+
+        
+            // Play a random footstep sound
+            int n = Random.Range(1, footstepSounds.Count); 
+
+            if(n>0 && n<footstepSounds.Count){
+                m_AudioSource.clip = footstepSounds[n];
+                m_AudioSource.PlayOneShot(m_AudioSource.clip);
+                // move picked sound to index 0 so it's not picked next time
+                footstepSounds[n] = footstepSounds[0];
+                footstepSounds[0] = m_AudioSource.clip;
+            }
+
+            
+
+        
         }
 
+
+        private void PlayJumpSound()
+        {
+            m_AudioSource.clip = jumpSound;
+            m_AudioSource.Play();
+        }
+
+        private void PlayLandingSound()
+        {
+            m_AudioSource.clip = landSound;
+            m_AudioSource.Play();
+            m_NextStep = m_StepCycle + .5f;
+        }
+
+        private void DetectGround()
+        {
+            if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit) && hit.collider.tag != "Untagged")
+            {
+                if (hit.collider.tag == currentGround) return; // still the same ground
+
+                //else: new ground detected
+                //update current ground
+                currentGround = hit.collider.tag;
+                LoadSoundsForGround(currentGround);
+            }
+            //else: no ground detected or something is wrong with ground
+        }
+
+        private void LoadSoundsForGround(string groundTag)
+        {         
+            //addressable code to load footstep sounds
+            Addressables.LoadAssetAsync<AudioClip>(groundTag + "_jump").Completed += (audioClip) => {
+                jumpSound = audioClip.Result;
+            };
+            Addressables.LoadAssetAsync<AudioClip>(groundTag + "_land").Completed += (audioClip) => {
+                landSound = audioClip.Result;
+            };
+            Addressables.LoadAssetsAsync<AudioClip>(groundTag + "_walk", null).Completed += handle =>
+            {
+                footstepSounds = new List<AudioClip>();
+                if (handle.Status == AsyncOperationStatus.Succeeded)
+                {
+                    foreach (var audioClip in handle.Result)
+                    {
+                        Debug.Log(audioClip.name);
+                        footstepSounds.Add(audioClip);
+                    }
+                }
+                else
+                {
+                    Debug.LogError("Failed to load audio clips: " + handle.OperationException);
+                }
+            };
+        }
 
         private void UpdateCameraPosition(float speed)
         {

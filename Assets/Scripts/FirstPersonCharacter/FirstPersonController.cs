@@ -29,7 +29,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
-        [SerializeField] private List<AudioClip> footstepSounds;    // an array of footstep sounds that will be randomly selected from.
+        private List<AudioClip> footstepSounds;    // an array of footstep sounds that will be randomly selected from.
+        private int previousFootstepIndex;
+
         private AudioClip jumpSound;
         private AudioClip landSound;
 
@@ -64,6 +66,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+
+            DetectGround();
         }
 
 
@@ -178,16 +182,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
             DetectGround();
 
         
-            // Play a random footstep sound
-            int n = Random.Range(1, footstepSounds.Count); 
-
-            if(n>0 && n<footstepSounds.Count){
-                m_AudioSource.clip = footstepSounds[n];
-                m_AudioSource.PlayOneShot(m_AudioSource.clip);
-                // move picked sound to index 0 so it's not picked next time
-                footstepSounds[n] = footstepSounds[0];
-                footstepSounds[0] = m_AudioSource.clip;
+            int n = Random.Range(1, footstepSounds.Count);
+            while (n == previousFootstepIndex) // Check if the new index is the same as the previous one
+            {
+                n = Random.Range(1, footstepSounds.Count); // Generate a new random index
             }
+
+            previousFootstepIndex = n; // Store the current index as the previous one
+
+            m_AudioSource.clip = footstepSounds[n];
+            m_AudioSource.PlayOneShot(m_AudioSource.clip);
+            // move picked sound to index 0 so it's not picked next time
+
 
             
 
@@ -197,12 +203,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayJumpSound()
         {
+            DetectGround();
             m_AudioSource.clip = jumpSound;
             m_AudioSource.Play();
         }
 
         private void PlayLandingSound()
         {
+            DetectGround();
             m_AudioSource.clip = landSound;
             m_AudioSource.Play();
             m_NextStep = m_StepCycle + .5f;
@@ -210,16 +218,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void DetectGround()
         {
-            if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit) && hit.collider.tag != "Untagged")
+            if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit))
             {
                 if (hit.collider.tag == currentGround) return; // still the same ground
-
+                if (hit.collider.tag == "Untagged"){
+                    Debug.LogError("No ground detected, setting to dirt. Please tag the ground with the correct tag.");
+                    return;
+                } 
                 //else: new ground detected
                 //update current ground
                 currentGround = hit.collider.tag;
                 LoadSoundsForGround(currentGround);
             }
-            //else: no ground detected or something is wrong with ground
+            //else: no ground detected
         }
 
         private void LoadSoundsForGround(string groundTag)
@@ -238,7 +249,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 {
                     foreach (var audioClip in handle.Result)
                     {
-                        Debug.Log(audioClip.name);
                         footstepSounds.Add(audioClip);
                     }
                 }

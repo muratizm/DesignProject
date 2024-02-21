@@ -538,3 +538,13 @@
 
 ========= situation : ...
 
+========= situation : ...
+
+========= situation : Which poke do you choose?
+
+========= given choice0 : ahar
+========= given choice1 : bhar
+========= given choice2 : char
+=========choice made: char
+========= situation : You choosed char!
+

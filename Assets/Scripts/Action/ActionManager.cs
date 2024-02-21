@@ -12,7 +12,6 @@ public class ActionManager : MonoBehaviour
 {
     private static ActionManager instance;
     private StoryVariables storyVariables; 
-    private string path = "Assets/Choice/debug.txt";
 
     private Story currentStory;
     private BaseAction currentAction;
@@ -106,7 +105,7 @@ public class ActionManager : MonoBehaviour
     private void Display(TMP_Text tmp_text, string content){
         tmp_text.text = content;
         
-        File.AppendAllText(path, "========= situation : " + content + "\n");
+        File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "========= situation : " + content + "\n");
         choiceMade = false;
         
 
@@ -136,7 +135,7 @@ public class ActionManager : MonoBehaviour
         foreach (Choice choice in currentActionChoices){
             actionChoicesText[index].text = choice.text;
             actionChoices[index].gameObject.SetActive(true);
-            File.AppendAllText(path, "========= given choice" + index + " : " + actionChoicesText[index].text + "\n");
+            File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "========= given choice" + index + " : " + actionChoicesText[index].text + "\n");
             index++;
         }
 
@@ -178,7 +177,7 @@ public class ActionManager : MonoBehaviour
     public void MakeChoice(int index){
 
         currentStory.ChooseChoiceIndex(index);
-        File.AppendAllText(path, "=========choice made: " + actionChoicesText[index].text + "\n");
+        File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "=========choice made: " + actionChoicesText[index].text + "\n");
         choiceMade = true;
 
         ContinueStory();

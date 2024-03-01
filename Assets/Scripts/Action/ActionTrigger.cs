@@ -25,7 +25,6 @@ public class ActionTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            // Eğer oyuncu etkileşim bölgesine girdiyse, diyalogu başlat
             ActionManager.Instance.EnterActionMode(inkJSON, action);
         }
     }
@@ -35,15 +34,6 @@ public class ActionTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-        }
-    }
-
-    private void StartDialogue()
-    {
-        if (playerInRange)
-        {
-            // Burada diyalogu göstermek, bir arayüz açmak veya başka bir etkileşim gerçekleştirmek için gerekli kodu ekleyebilirsiniz.
-            Debug.Log(inkJSON.text);
         }
     }
 

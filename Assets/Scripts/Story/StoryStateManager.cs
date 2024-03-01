@@ -10,9 +10,6 @@ public class StoryStateManager : MonoBehaviour
     private Dictionary<string, StoryBaseState> states;
 
 
-    //bu burda olmayacak dediğim gibi daha güzel biryer bi sistem bulcaz bu işlere
-    public GameObject obstacle;
-
 
 
     [Header("Globals Ink File")]
@@ -40,8 +37,9 @@ public class StoryStateManager : MonoBehaviour
         {
             Debug.LogError("found more than one DialogueManager.");
             Destroy(gameObject);
-
         }
+
+
     }
 
     void Start()
@@ -85,18 +83,6 @@ public class StoryStateManager : MonoBehaviour
 
     public StoryVariables GetStoryVariables(){
         return storyVariables;
-    }
-
-
-
-
-    // bunu şimdilik buraya yazıyorum bunun daha güzel biryerde olması lazım bana kalırsa
-    public void Getridoftheobstacle(){
-        if(obstacle != null){
-             Debug.Log("Obstacle is gone");
-
-            obstacle.GetComponent<Animation>().Play("delete");
-        }
     }
 
 }

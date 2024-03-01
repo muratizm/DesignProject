@@ -5,22 +5,24 @@ using UnityEngine;
 
 public class StoryState1 : StoryBaseState
 {
+    StoryStateManager storyStateManager;
 
-    public override void EnterState(StoryStateManager storyStateManager)
+
+    public override void EnterState()
     {
         Debug.Log("Entering StoryState1");
+        storyStateManager = StoryStateManager.Instance;
     }
 
-    public override void ExitState(StoryStateManager storyStateManager)
+    public override void ExitState()
     {
         Debug.Log("Exiting StoryState1");
     }
 
-    public override void UpdateState(StoryStateManager storyStateManager)
+    public override void UpdateState()
     {
         
-        if( ((Ink.Runtime.StringValue) StoryStateManager.Instance.GetStoryState("curstate")).value == "osurduk"){
-            Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        if( ((Ink.Runtime.StringValue) storyStateManager.GetStoryState("curstate")).value == "osurduk"){
             storyStateManager.Getridoftheobstacle();
             storyStateManager.ChangeState("StoryState2");
         }

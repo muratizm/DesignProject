@@ -19,6 +19,7 @@ public class StoryStateManager : MonoBehaviour
     [SerializeField] private TextAsset globalsTextFile;
 
 
+
     void Awake()
     {
         if (Instance == null)
@@ -37,6 +38,7 @@ public class StoryStateManager : MonoBehaviour
         }
         else
         {
+            Debug.LogError("found more than one DialogueManager.");
             Destroy(gameObject);
 
         }
@@ -45,13 +47,13 @@ public class StoryStateManager : MonoBehaviour
     void Start()
     {
         
-        currentState.EnterState(this);
+        currentState.EnterState();
 
     }
 
     void Update()
     {
-        currentState.UpdateState(this);
+        currentState.UpdateState();
     }
 
 
@@ -65,10 +67,10 @@ public class StoryStateManager : MonoBehaviour
 
         if (currentState != null)
         {
-            currentState.ExitState(this);
+            currentState.ExitState();
         }
         currentState = states[newState];
-        currentState.EnterState(this);
+        currentState.EnterState();
     }
 
 

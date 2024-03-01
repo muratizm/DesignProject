@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class StoryState2 : StoryBaseState
 {
-    public override void EnterState(StoryStateManager storyStateManager)
-    {
+    StoryStateManager storyStateManager;
+
+    
+    public override void EnterState()
+    {   
         Debug.Log("Entering StoryState2");
+        storyStateManager = StoryStateManager.Instance;
     }
 
-    public override void ExitState(StoryStateManager storyStateManager)
+    public override void ExitState()
     {
         Debug.Log("Exiting StoryState2");
     }
 
-    public override void UpdateState(StoryStateManager storyStateManager)
+    public override void UpdateState()
     {
     }
 }

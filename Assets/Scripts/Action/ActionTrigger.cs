@@ -20,13 +20,13 @@ public class ActionTrigger : MonoBehaviour
 
     }
 
-        private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
             // Eğer oyuncu etkileşim bölgesine girdiyse, diyalogu başlat
-            ActionManager.GetInstance().EnterActionMode(inkJSON, action);
+            ActionManager.Instance.EnterActionMode(inkJSON, action);
         }
     }
 

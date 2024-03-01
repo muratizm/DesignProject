@@ -10,18 +10,16 @@ using System.IO;
 
 public class ActionManager : MonoBehaviour
 {
-    private static ActionManager instance;
+
+    public static ActionManager Instance  { get; private set; }
     private StoryVariables storyVariables; 
 
     private Story currentStory;
     private BaseAction currentAction;
+    private BaseAction noAction = new NoAction();
 
     public bool actionIsPlaying {get; private set;}
     
-
-
-    [Header("ActionScript")]
-    public BaseAction action;
 
 
     [Header("Action UI")]
@@ -38,17 +36,14 @@ public class ActionManager : MonoBehaviour
     [SerializeField] private Slider timerSlider;
     
     
-    public static ActionManager GetInstance(){
-        return instance;
-    }
     
 
     void Awake()
     {
-        if(instance != null){
+        if(Instance != null){
             Debug.LogError("found more than one DialogueManager.");
         }
-        instance = this;
+        Instance = this;
 
     }
 
@@ -69,7 +64,7 @@ public class ActionManager : MonoBehaviour
 
     void Update()
     {
-        currentAction?.UpdateAction(this);
+        currentAction?.UpdateAction();
     }
     
     public void EnterActionMode(TextAsset inkJSON, BaseAction actionScript){
@@ -80,7 +75,7 @@ public class ActionManager : MonoBehaviour
         storyVariables.StartListening(currentStory);        
         ContinueStory();
         currentAction = actionScript;
-        currentAction.EnterAction(this);
+        currentAction.EnterAction();
     }
 
 
@@ -166,8 +161,10 @@ public class ActionManager : MonoBehaviour
             yield return null;
         }
 
-        if (!choiceMade)
+        if (!choiceMade && currentActionChoices.Count > 0)
         {
+            Debug.Log("No choice made, making random choice");
+            //ai implementation will go here
             MakeChoice(UnityEngine.Random.Range(0, currentActionChoices.Count));
         }
 
@@ -175,13 +172,19 @@ public class ActionManager : MonoBehaviour
     }
 
     public void MakeChoice(int index){
+        // just made a choice
+        // exit the action
+        // noaction will be entered
+        currentAction.ExitAction();
+        currentAction = noAction;
+        currentAction.EnterAction();
 
         currentStory.ChooseChoiceIndex(index);
+
         File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "=========choice made: " + actionChoicesText[index].text + "\n");
         choiceMade = true;
 
         ContinueStory();
-
     }
 
     private void ExitDialogueMode()

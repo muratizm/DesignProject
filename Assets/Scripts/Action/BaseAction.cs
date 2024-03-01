@@ -5,6 +5,7 @@ using UnityEngine;
 public class BaseAction : MonoBehaviour
 
 {
-    public virtual void EnterAction(ActionManager story){}
-    public virtual void UpdateAction(ActionManager story){}
+    public virtual void EnterAction(){}
+    public virtual void UpdateAction(){}
+    public virtual void ExitAction(){}
 }

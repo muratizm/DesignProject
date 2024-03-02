@@ -940,3 +940,112 @@
 =========choice made: Osur! (v)
 ========= situation : You choosed "osurduk"!
 
+========= situation : 
+========= situation : 
+========= situation : 
+========= situation : Medeniyetimize hoş geldin
+
+========= situation : Demek sen kayıp medeniyetimizin sırrını çözmek üzere görevlendirilen yeni maceracımızsın.
+
+========= situation : Bu maceraya çıkmak büyük cesaret ister. Dilerim ki bu macerayı tamamlayarak hem medeniyetimizi kurtarır hem de ebeveynlerinle yeniden bir araya gelebilirsin.
+
+========= given choice0 : (saldırrrr)
+========= given choice1 : (İlgili ve Cesur)
+========= given choice2 : (Korkak)
+=========choice made: (Korkak)
+========= situation : Ben burayı sevmedim beni evime götürün
+
+========= situation : Medeniyetimize hoş geldin
+
+========= situation : Demek sen kayıp medeniyetimizin sırrını çözmek üzere görevlendirilen yeni maceracımızsın.
+
+========= situation : Bu maceraya çıkmak büyük cesaret ister. Dilerim ki bu macerayı tamamlayarak hem medeniyetimizi kurtarır hem de ebeveynlerinle yeniden bir araya gelebilirsin.
+
+========= given choice0 : (saldırrrr)
+========= given choice1 : (İlgili ve Cesur)
+========= given choice2 : (Korkak)
+=========choice made: (saldırrrr)
+========= situation : Sen ne diyon uşağım kelleni alirum ha!
+
+========= situation : Medeniyetimize hoş geldin
+
+========= situation : Demek sen kayıp medeniyetimizin sırrını çözmek üzere görevlendirilen yeni maceracımızsın.
+
+========= situation : Bu maceraya çıkmak büyük cesaret ister. Dilerim ki bu macerayı tamamlayarak hem medeniyetimizi kurtarır hem de ebeveynlerinle yeniden bir araya gelebilirsin.
+
+========= given choice0 : (saldırrrr)
+========= given choice1 : (İlgili ve Cesur)
+========= given choice2 : (Korkak)
+=========choice made: (İlgili ve Cesur)
+========= situation : Bu maceraya nerden başlayabilirim ey yüce Remy!
+
+========= situation : Medeniyetimize hoş geldin
+
+========= situation : Demek sen kayıp medeniyetimizin sırrını çözmek üzere görevlendirilen yeni maceracımızsın.
+
+========= situation : Bu maceraya çıkmak büyük cesaret ister. Dilerim ki bu macerayı tamamlayarak hem medeniyetimizi kurtarır hem de ebeveynlerinle yeniden bir araya gelebilirsin.
+
+========= given choice0 : (saldırrrr)
+========= given choice1 : (İlgili ve Cesur)
+========= given choice2 : (Korkak)
+=========choice made: (İlgili ve Cesur)
+========= situation : Bu maceraya nerden başlayabilirim ey yüce Remy!
+
+========= situation : Medeniyetimize hoş geldin
+
+========= situation : Demek sen kayıp medeniyetimizin sırrını çözmek üzere görevlendirilen yeni maceracımızsın.
+
+========= situation : Medeniyetimize hoş geldin
+
+========= situation : Demek sen kayıp medeniyetimizin sırrını çözmek üzere görevlendirilen yeni maceracımızsın.
+
+========= situation : Medeniyetimize hoş geldin
+
+========= situation : Medeniyetimize hoş geldin
+
+========= situation : Demek sen kayıp medeniyetimizin sırrını çözmek üzere görevlendirilen yeni maceracımızsın.
+
+========= situation : Bu maceraya çıkmak büyük cesaret ister. Dilerim ki bu macerayı tamamlayarak hem medeniyetimizi kurtarır hem de ebeveynlerinle yeniden bir araya gelebilirsin.
+
+========= given choice0 : (saldırrrr)
+========= given choice1 : (İlgili ve Cesur)
+========= given choice2 : (Korkak)
+=========choice made: (saldırrrr)
+========= situation : Sen ne diyon uşağım kelleni alirum ha!
+
+========= situation : Medeniyetimize hoş geldin
+
+========= situation : Demek sen kayıp medeniyetimizin sırrını çözmek üzere görevlendirilen yeni maceracımızsın.
+
+========= situation : Bu maceraya çıkmak büyük cesaret ister. Dilerim ki bu macerayı tamamlayarak hem medeniyetimizi kurtarır hem de ebeveynlerinle yeniden bir araya gelebilirsin.
+
+========= given choice0 : (saldırrrr)
+========= given choice1 : (İlgili ve Cesur)
+========= given choice2 : (Korkak)
+=========choice made: (İlgili ve Cesur)
+========= situation : Bu maceraya nerden başlayabilirim ey yüce Remy!
+
+========= situation : Medeniyetimize hoş geldin
+
+========= situation : Demek sen kayıp medeniyetimizin sırrını çözmek üzere görevlendirilen yeni maceracımızsın.
+
+========= situation : Bu maceraya çıkmak büyük cesaret ister. Dilerim ki bu macerayı tamamlayarak hem medeniyetimizi kurtarır hem de ebeveynlerinle yeniden bir araya gelebilirsin.
+
+========= given choice0 : (saldırrrr)
+========= given choice1 : (İlgili ve Cesur)
+========= given choice2 : (Korkak)
+=========choice made: (İlgili ve Cesur)
+========= situation : Bu maceraya nerden başlayabilirim ey yüce Remy!
+
+========= situation : Medeniyetimize hoş geldin
+
+========= situation : Demek sen kayıp medeniyetimizin sırrını çözmek üzere görevlendirilen yeni maceracımızsın.
+
+========= situation : Bu maceraya çıkmak büyük cesaret ister. Dilerim ki bu macerayı tamamlayarak hem medeniyetimizi kurtarır hem de ebeveynlerinle yeniden bir araya gelebilirsin.
+
+========= given choice0 : (saldırrrr)
+========= given choice1 : (İlgili ve Cesur)
+========= given choice2 : (Korkak)
+=========choice made: (İlgili ve Cesur)
+========= situation : Bu maceraya nerden başlayabilirim ey yüce Remy!
+

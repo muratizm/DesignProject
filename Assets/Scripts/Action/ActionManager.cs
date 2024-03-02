@@ -25,6 +25,7 @@ public class ActionManager : MonoBehaviour
     [Header("Action UI")]
     [SerializeField] private GameObject actionPanel;
     [SerializeField] private TextMeshProUGUI actionText;
+    [SerializeField] private float textSize = 31.0f;
 
 
     
@@ -44,6 +45,7 @@ public class ActionManager : MonoBehaviour
             Debug.LogError("found more than one DialogueManager.");
         }
         Instance = this;
+        actionText.fontSize = textSize;
 
     }
 
@@ -175,6 +177,7 @@ public class ActionManager : MonoBehaviour
         // just made a choice
         // exit the action
         // noaction will be entered
+
         currentAction.ExitAction();
         currentAction = noAction;
         currentAction.EnterAction();

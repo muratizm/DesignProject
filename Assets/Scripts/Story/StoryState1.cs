@@ -24,7 +24,7 @@ public class StoryState1 : StoryBaseState
     public override void UpdateState()
     {
         
-        if( ((Ink.Runtime.StringValue) storyStateManager.GetStoryState("curstate")).value == "osurduk"){
+        if( ((Ink.Runtime.StringValue) storyStateManager.GetStoryState("curstate")).value == "attack_to_tree"){
             storyOperations.GetRidOfTheObstacle();
             storyStateManager.ChangeState("StoryState2");
         }

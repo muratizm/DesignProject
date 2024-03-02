@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class ActionTrigger : MonoBehaviour
 {
-    private bool playerInRange;
     private BaseAction action;
 
 
@@ -15,7 +14,6 @@ public class ActionTrigger : MonoBehaviour
 
     void Awake()
     {
-        playerInRange = false;
         action = GetComponent<BaseAction>();
 
     }
@@ -24,17 +22,12 @@ public class ActionTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            playerInRange = true;
             ActionManager.Instance.EnterActionMode(inkJSON, action);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = false;
-        }
     }
 
 

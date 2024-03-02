@@ -12,14 +12,15 @@ public class DialogueManager : MonoBehaviour
 {
     private static DialogueManager instance;
     private StoryVariables storyVariables; 
-    private string path = "Assets/Choice/debug.txt";
 
 
-    [Header("Dialogue UI")]
+    [Header("Dialogue UI - Only works on Awake")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI speakerNameText;
     [SerializeField] private Image speakerImage;
+    [SerializeField] private float textSize = 31.0f;
+    [SerializeField] private float textDelay = Constants.WAIT_BETWEEN_LETTERS;
     private Animator layoutAnimator;
     private bool lineEnded = false;
 
@@ -47,7 +48,7 @@ public class DialogueManager : MonoBehaviour
             Debug.LogError("found more than one StoryStateManager.");
         }
         instance = this;
-
+        dialogueText.fontSize = textSize;
         
     }
 
@@ -126,12 +127,12 @@ public class DialogueManager : MonoBehaviour
          
         foreach(char letter in content){
             tmp_text.text += letter;
-            yield return new WaitForSeconds(Constants.WAIT_BETWEEN_LETTERS);
+            yield return new WaitForSeconds(textDelay);
         }
 
         lineEnded = true;
 
-        File.AppendAllText(path, "========= situation : " + content + "\n");
+        File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "========= situation : " + content + "\n");
         choiceMade = false;
 
         
@@ -158,7 +159,7 @@ public class DialogueManager : MonoBehaviour
         foreach (Choice choice in currentChoices){
             choicesText[index].text = choice.text;
             choices[index].gameObject.SetActive(true);
-            File.AppendAllText(path, "========= given choice" + index + " : " + choicesText[index].text + "\n");
+            File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "========= given choice" + index + " : " + choicesText[index].text + "\n");
             index++;
         }
 
@@ -213,7 +214,7 @@ public class DialogueManager : MonoBehaviour
             }
             currentStory.ChooseChoiceIndex(index);
             choiceMade = true;
-            File.AppendAllText(path, "=========choice made: " + choicesText[index].text + "\n");
+            File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "=========choice made: " + choicesText[index].text + "\n");
             
         }
         ContinueStory();

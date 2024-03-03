@@ -1183,3 +1183,15 @@
 =========choice made: (saldırrrr)
 ========= situation : Sen ne diyon uşağım kelleni alirum ha!
 
+========= situation : Medeniyetimize hoş geldin
+
+========= situation : Demek sen kayıp medeniyetimizin sırrını çözmek üzere görevlendirilen yeni maceracımızsın.
+
+========= situation : Bu maceraya çıkmak büyük cesaret ister. Dilerim ki bu macerayı tamamlayarak hem medeniyetimizi kurtarır hem de ebeveynlerinle yeniden bir araya gelebilirsin.
+
+========= given choice0 : (saldırrrr)
+========= given choice1 : (İlgili ve Cesur)
+========= given choice2 : (Korkak)
+=========choice made: (saldırrrr)
+========= situation : Sen ne diyon uşağım kelleni alirum ha!
+

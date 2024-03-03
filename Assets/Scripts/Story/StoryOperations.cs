@@ -5,6 +5,7 @@ using UnityEngine.Scripting;
 public class StoryOperations : MonoBehaviour
 {
     public static StoryOperations Instance { get; private set; }
+    [SerializeField] private GameObject obstacle;
 
     void Awake()
     {
@@ -21,7 +22,11 @@ public class StoryOperations : MonoBehaviour
 
 
 
-    public GameObject obstacle;
+    public void DeleteObjects(string name)
+    {
+        //delete every object that needed in this state
+        Destroy(GameObject.Find(name));
+    }
     
     public void GetRidOfTheObstacle(){
         if(obstacle != null){

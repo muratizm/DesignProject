@@ -5,7 +5,7 @@ using Ink.Runtime;
 
 public class NoAction : BaseAction
 {
-    ActionManager actionManager = ActionManager.Instance;
+    private ActionManager actionManager = ActionManager.Instance;
     public override void EnterAction()
     {
         Debug.Log("Entering NoAction");

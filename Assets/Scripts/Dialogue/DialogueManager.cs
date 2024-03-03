@@ -10,7 +10,8 @@ using System.IO;
 
 public class DialogueManager : MonoBehaviour
 {
-    private static DialogueManager instance;
+    private StoryStateManager storyStateManager;
+    private static DialogueManager Instance;
     private StoryVariables storyVariables; 
 
 
@@ -40,20 +41,24 @@ public class DialogueManager : MonoBehaviour
 
 
     public static DialogueManager GetInstance(){
-        return instance;
+        return Instance;
     }
-        void Awake()
+    void Awake()
     {
-        if(instance != null){
-            Debug.LogError("found more than one StoryStateManager.");
+        if (Instance != null && Instance != this)
+        {
+            Debug.LogWarning("Found more than one DialogueManager. Destroying the duplicate.");
+            Destroy(gameObject);
         }
-        instance = this;
+        Instance = this;
         dialogueText.fontSize = textSize;
         
     }
 
 
     private void Start() {
+        storyStateManager = StoryStateManager.Instance;
+
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
 
@@ -217,8 +222,12 @@ public class DialogueManager : MonoBehaviour
             File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "=========choice made: " + choicesText[index].text + "\n");
             
         }
+        storyStateManager.UpdateCurrentState();
+
         ContinueStory();
     }
+
+
     private void HandleTags(List<string> currentTags)
     {
         foreach(string tag in currentTags){

@@ -10,12 +10,12 @@ using System.IO;
 
 public class ActionManager : MonoBehaviour
 {
-
+    private StoryStateManager storyStateManager;
     public static ActionManager Instance  { get; private set; }
     private StoryVariables storyVariables; 
 
-    private Story currentStory;
-    private BaseAction currentAction;
+    private Story currentActionStory;
+    private BaseAction currentActionScript;
     private BaseAction noAction = new NoAction();
 
     public bool actionIsPlaying {get; private set;}
@@ -41,8 +41,10 @@ public class ActionManager : MonoBehaviour
 
     void Awake()
     {
-        if(Instance != null){
-            Debug.LogError("found more than one DialogueManager.");
+        if (Instance != null && Instance != this)
+        {
+            Debug.LogWarning("Found more than one DialogueManager. Destroying the duplicate.");
+            Destroy(gameObject);
         }
         Instance = this;
         actionText.fontSize = textSize;
@@ -51,6 +53,8 @@ public class ActionManager : MonoBehaviour
 
     void Start()
     {
+        storyStateManager = StoryStateManager.Instance;
+
         actionIsPlaying = false;
         actionPanel.SetActive(false);
 
@@ -66,18 +70,19 @@ public class ActionManager : MonoBehaviour
 
     void Update()
     {
-        currentAction?.UpdateAction();
+        currentActionScript?.UpdateAction();
     }
+
     
     public void EnterActionMode(TextAsset inkJSON, BaseAction actionScript){
-        currentStory = new Story(inkJSON.text);
+        currentActionStory = new Story(inkJSON.text);
         actionIsPlaying = true;
         actionPanel.SetActive(true);
 
-        storyVariables.StartListening(currentStory);        
+        storyVariables.StartListening(currentActionStory);        
         ContinueStory();
-        currentAction = actionScript;
-        currentAction.EnterAction();
+        currentActionScript = actionScript;
+        currentActionScript.EnterAction();
     }
 
 
@@ -89,9 +94,9 @@ public class ActionManager : MonoBehaviour
     
 
     public void ContinueStory(){
-        if(currentStory.canContinue)
+        if(currentActionStory.canContinue)
         {   
-            Display(actionText, currentStory.Continue());
+            Display(actionText, currentActionStory.Continue());
         }
         else{
             ExitDialogueMode();
@@ -106,7 +111,7 @@ public class ActionManager : MonoBehaviour
         choiceMade = false;
         
 
-        if(currentStory.currentTags.Contains("end3"))
+        if(currentActionStory.currentTags.Contains("end3"))
         {
             Invoke("ExitDialogueMode", 3);
         }
@@ -121,7 +126,7 @@ public class ActionManager : MonoBehaviour
         Debug.Log("displaying choices");
         StartCoroutine(StartCountdown(3f));
 
-        currentActionChoices = currentStory.currentChoices;
+        currentActionChoices = currentActionStory.currentChoices;
 
         if(currentActionChoices.Count > actionChoices.Length){
             Debug.LogError("more choices were given than the ui can support. there is not enough space for this choices. number of choices given: " + currentActionChoices);
@@ -174,15 +179,11 @@ public class ActionManager : MonoBehaviour
     }
 
     public void MakeChoice(int index){
-        // just made a choice
-        // exit the action
-        // noaction will be entered
 
-        currentAction.ExitAction();
-        currentAction = noAction;
-        currentAction.EnterAction();
+        ChangeAction(noAction);
+        currentActionStory.ChooseChoiceIndex(index);
 
-        currentStory.ChooseChoiceIndex(index);
+        storyStateManager.UpdateCurrentState();
 
         File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "=========choice made: " + actionChoicesText[index].text + "\n");
         choiceMade = true;
@@ -190,16 +191,33 @@ public class ActionManager : MonoBehaviour
         ContinueStory();
     }
 
+        public void ChangeAction(BaseAction newAction)
+    {
+        if (!newAction)
+        {
+            Debug.LogError("Action " + newAction + " does not exist.");
+            return;
+        }
+
+        if (currentActionScript != null)
+        {
+            currentActionScript.ExitAction();
+        }
+        currentActionScript = newAction;
+        currentActionScript.EnterAction();
+    }
+
+
     private void ExitDialogueMode()
     {
-        storyVariables.StartListening(currentStory);
+        storyVariables.StartListening(currentActionStory);
         actionIsPlaying = false;
         actionPanel.SetActive(false);
         actionText.text  = "";
     }
 
     public Story GetCurrentStory(){
-        return currentStory;
+        return currentActionStory;
     }
 
     public Ink.Runtime.Object GetStoryState(string variableName){

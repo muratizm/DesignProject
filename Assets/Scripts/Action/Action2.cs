@@ -5,8 +5,8 @@ using Ink.Runtime;
 
 public class Action2 : BaseAction
 {
-    ActionManager actionManager;
-    Story currentStory;
+    private ActionManager actionManager;
+    private Story currentStory;
     public override void EnterAction()
     {
         Debug.Log("Entering Action2");

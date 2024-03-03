@@ -5,7 +5,7 @@ using Ink.Runtime;
 
 public class Action1 : BaseAction
 {
-    ActionManager actionManager;
+    private ActionManager actionManager;
     Story currentStory;
     public override void EnterAction()
     {

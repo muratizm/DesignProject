@@ -19,14 +19,20 @@ public class StoryState1 : StoryBaseState
     public override void ExitState()
     {
         Debug.Log("Exiting StoryState1");
+        //delete every object that needed in this state
+        storyOperations.DeleteObjects("DemoEnvironment");
+    
     }
+
  
     public override void UpdateState()
     {
         
         if( ((Ink.Runtime.StringValue) storyStateManager.GetStoryState("curstate")).value == "attack_to_tree"){
             storyOperations.GetRidOfTheObstacle();
+
             storyStateManager.ChangeState("StoryState2");
+            
         }
     }
 }

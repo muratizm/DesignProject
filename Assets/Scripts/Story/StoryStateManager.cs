@@ -6,7 +6,7 @@ public class StoryStateManager : MonoBehaviour
 {
     public static StoryStateManager Instance { get; private set; }
     private StoryVariables storyVariables;
-    private StoryBaseState currentState;
+    private StoryBaseState currentStoryState;
     private Dictionary<string, StoryBaseState> states;
 
 
@@ -29,7 +29,7 @@ public class StoryStateManager : MonoBehaviour
                 // Add all your states here
             };
 
-            currentState = states["StoryState1"];
+            currentStoryState = states["StoryState1"];
             storyVariables = new StoryVariables(globalsTextFile);
 
         }
@@ -45,13 +45,14 @@ public class StoryStateManager : MonoBehaviour
     void Start()
     {
         
-        currentState.EnterState();
+        currentStoryState.EnterState();
 
     }
 
-    void Update()
+    public void UpdateCurrentState()
     {
-        currentState.UpdateState();
+        //its warned by MakeChoice() method
+        currentStoryState.UpdateState();
     }
 
 
@@ -62,13 +63,9 @@ public class StoryStateManager : MonoBehaviour
             Debug.LogError("State " + newState + " does not exist.");
             return;
         }
-
-        if (currentState != null)
-        {
-            currentState.ExitState();
-        }
-        currentState = states[newState];
-        currentState.EnterState();
+        currentStoryState?.ExitState();
+        currentStoryState = states[newState];
+        currentStoryState.EnterState();
     }
 
 

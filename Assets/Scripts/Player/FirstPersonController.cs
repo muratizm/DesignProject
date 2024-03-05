@@ -299,15 +299,27 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // keep track of whether or not the character is walking or running
             //m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
 
-            if(Input.GetKey(KeyCode.LeftShift) && staminaSeconds > 0.5f){
+            if(Input.GetKey(KeyCode.LeftShift) && !m_IsWalking){
                 Debug.Log("Running");
-                m_IsWalking = false;
-                staminaSeconds -= Time.deltaTime;
+                staminaSeconds -= Time.deltaTime;  
+                if(staminaSeconds <= 0){
+                    Debug.Log("Out of stamina");
+                    m_IsWalking = true;
+                }
             }
-            else{
+            else if (staminaSeconds < maxStaminaSeconds){
+                staminaSeconds += Time.deltaTime;
+            }
+
+            if(Input.GetKeyUp(KeyCode.LeftShift)){
+                Debug.Log("Stopped running");
                 m_IsWalking = true;
-                if(staminaSeconds < maxStaminaSeconds) staminaSeconds += Time.deltaTime;
             }
+            else if(Input.GetKeyDown(KeyCode.LeftShift)){
+                Debug.Log("Started running");
+                m_IsWalking = false;
+            }
+
 #endif
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;

@@ -5391,7 +5391,6 @@ GameObject:
   m_Component:
   - component: {fileID: 973871411}
   - component: {fileID: 973871413}
-  - component: {fileID: 973871412}
   m_Layer: 0
   m_Name: MinimapCamera
   m_TagString: Untagged
@@ -5414,14 +5413,6 @@ Transform:
   m_Father: {fileID: 2083635997}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!81 &973871412
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973871410}
-  m_Enabled: 1
 --- !u!20 &973871413
 Camera:
   m_ObjectHideFlags: 0
@@ -7470,6 +7461,10 @@ PrefabInstance:
       propertyPath: m_FovKick.Camera
       value: 
       objectReference: {fileID: 1583695208}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: maxStaminaSeconds
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_GravityMultiplier
       value: 1

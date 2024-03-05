@@ -1207,3 +1207,5 @@
 =========choice made: (saldırrrr)
 ========= situation : Sen ne diyon uşağım kelleni alirum ha!
 
+========= situation : Medeniyetimize hoş geldin
+

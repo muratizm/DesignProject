@@ -16,7 +16,7 @@ public class ActionManager : MonoBehaviour
 
     private Story currentActionStory;
     private BaseAction currentActionScript;
-    private BaseAction noAction = new NoAction();
+    private NoAction noAction;
 
     public bool actionIsPlaying {get; private set;}
     
@@ -48,7 +48,7 @@ public class ActionManager : MonoBehaviour
         }
         Instance = this;
         actionText.fontSize = textSize;
-
+        noAction = gameObject.AddComponent<NoAction>();
     }
 
     void Start()
@@ -180,10 +180,10 @@ public class ActionManager : MonoBehaviour
 
     public void MakeChoice(int index){
 
-        ChangeAction(noAction);
         currentActionStory.ChooseChoiceIndex(index);
 
         storyStateManager.UpdateCurrentState();
+        ChangeAction(noAction);
 
         File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "=========choice made: " + actionChoicesText[index].text + "\n");
         choiceMade = true;

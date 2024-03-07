@@ -287,7 +287,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void GetInput(out float speed)
         {
-            Debug.Log("Stamina: " + staminaSeconds);   
             // Read input
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
@@ -300,7 +299,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
 
             if(Input.GetKey(KeyCode.LeftShift) && !m_IsWalking){
-                Debug.Log("Running");
                 staminaSeconds -= Time.deltaTime;  
                 if(staminaSeconds <= 0){
                     Debug.Log("Out of stamina");

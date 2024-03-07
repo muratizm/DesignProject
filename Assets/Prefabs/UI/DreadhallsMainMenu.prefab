@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7317804560987334697}
   - component: {fileID: 7317804560987334696}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: DreadhallsMainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

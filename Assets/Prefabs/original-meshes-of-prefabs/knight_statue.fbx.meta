@@ -1,58 +1,9 @@
 fileFormatVersion: 2
-guid: 96667be06a95ec34689177434f53572b
+guid: fbb3cf1ff795183488ddd52c60efe0e0
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BrownLeather
-    second: {fileID: 7178276309841969182, guid: df013c1be1dc63845acca2d4a432005e,
-      type: 3}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Coal
-    second: {fileID: 2100000, guid: 2338de1696a8cb244a4c9c85cc0ffd0f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: GreyBrick
-    second: {fileID: 2100000, guid: f2ece064aef84784c8cdaea202a789d1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: LogEdgeWeathered
-    second: {fileID: -981239780133533289, guid: 8137cc0e6aec08341ad4d64b563e2066,
-      type: 3}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: OakBark
-    second: {fileID: 2100000, guid: 9738c093afaacc04286e32615a5bff01, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Sandstone
-    second: {fileID: -981239780133533289, guid: 8137cc0e6aec08341ad4d64b563e2066,
-      type: 3}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Stone
-    second: {fileID: 2100000, guid: f2ece064aef84784c8cdaea202a789d1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Wood
-    second: {fileID: -7681693395833196508, guid: 8137cc0e6aec08341ad4d64b563e2066,
-      type: 3}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WroughtIron
-    second: {fileID: 2100000, guid: 873e7079051a50542aab4ba4ebfccc7f, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

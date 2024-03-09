@@ -8,6 +8,7 @@ TagManager:
   - Stone
   - Dirt
   - Wood
+  - MinimapCamera
   layers:
   - Default
   - TransparentFX

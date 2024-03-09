@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
-public class Item : ScriptableObject
+public abstract class Item : ScriptableObject
 {
     [SerializeField]
     private string itemName;
@@ -16,18 +15,7 @@ public class Item : ScriptableObject
     public Sprite ItemIcon { get { return itemIcon; } }
 
 
-    void Start()
-    {
-        
-    }
-
-
-
-    public void Use() 
-    {
-        // Use the item
-        Debug.Log("Using " + itemName);
-    }
+    public abstract void Use();
 
     
 

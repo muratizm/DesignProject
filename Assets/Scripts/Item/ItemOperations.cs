@@ -3,10 +3,9 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.Scripting;
 
-public class StoryOperations : MonoBehaviour
+public class ItemOperations : MonoBehaviour
 {
-    public static StoryOperations Instance { get; private set; }
-    [SerializeField] private GameObject obstacle;
+    public static ItemOperations Instance { get; private set; }
 
     void Awake()
     {
@@ -22,20 +21,6 @@ public class StoryOperations : MonoBehaviour
     }
 
 
-
-    public void DeleteObjects(string name)
-    {
-        //delete every object that needed in this state
-        Destroy(GameObject.Find(name));
-    }
-    
-    public void GetRidOfTheObstacle(){
-        if(obstacle != null){
-             Debug.Log("Obstacle is gone");
-
-            obstacle.GetComponent<Animation>().Play("anim");
-        }
-    }
 
     
     public void UseOmniverseItem(float maxSize)

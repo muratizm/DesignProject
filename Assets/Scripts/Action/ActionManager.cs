@@ -10,6 +10,7 @@ using System.IO;
 
 public class ActionManager : MonoBehaviour
 {
+    private GameManager gameManager;
     private StoryStateManager storyStateManager;
     public static ActionManager Instance  { get; private set; }
     private StoryVariables storyVariables; 
@@ -35,15 +36,12 @@ public class ActionManager : MonoBehaviour
     private TextMeshProUGUI[] actionChoicesText;
     private bool choiceMade = false;
     [SerializeField] private Slider timerSlider;
-    
-    
-    
 
     void Awake()
     {
         if (Instance != null && Instance != this)
         {
-            Debug.LogWarning("Found more than one DialogueManager. Destroying the duplicate.");
+            Debug.LogWarning("Found more than one ActionManager. Destroying the duplicate.");
             Destroy(gameObject);
         }
         Instance = this;
@@ -54,6 +52,7 @@ public class ActionManager : MonoBehaviour
     void Start()
     {
         storyStateManager = StoryStateManager.Instance;
+        gameManager = GameManager.Instance;
 
         actionIsPlaying = false;
         actionPanel.SetActive(false);
@@ -70,7 +69,11 @@ public class ActionManager : MonoBehaviour
 
     void Update()
     {
-        currentActionScript?.UpdateAction();
+        if(gameManager.IsGamePaused){return;} //if game is paused, dont do anything
+
+        if (!currentActionScript){return;} //if no action is playing, dont do anything
+
+        currentActionScript.UpdateAction();
     }
 
     

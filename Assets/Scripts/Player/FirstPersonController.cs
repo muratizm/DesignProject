@@ -13,6 +13,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
+        private GameManager gameManager;
+        private DialogueManager dialogueManager;
                         
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
@@ -55,6 +57,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private AudioSource m_AudioSource;
 
 
+
         // Use this for initialization
         private void Start()
         {
@@ -69,6 +72,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
 
+            //
+
+            gameManager = GameManager.Instance;
+            dialogueManager = DialogueManager.Instance;
+
             DetectGround();
         }
 
@@ -76,10 +84,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            
+            if(gameManager.IsGamePaused){ return; } //if game is paused, dont do anything
+
+
             RotateView();
 
-            if(DialogueManager.GetInstance().dialogueIsPlaying){ //if dialogue is playing dont move
+            if(dialogueManager.dialogueIsPlaying){ //if dialogue is playing dont move
                 return;
             }
 
@@ -110,7 +120,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
-            if(DialogueManager.GetInstance().dialogueIsPlaying &&  m_CharacterController.isGrounded){ //if dialogue is playing dont move
+            if(gameManager.IsGamePaused){ return; } //if game is paused, dont do anything
+
+            
+            if(DialogueManager.Instance.dialogueIsPlaying &&  m_CharacterController.isGrounded){ //if dialogue is playing dont move
                return;
             }
                 float speed;

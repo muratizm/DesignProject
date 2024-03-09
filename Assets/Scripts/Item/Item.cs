@@ -21,10 +21,7 @@ public class Item : ScriptableObject
         
     }
 
-    void Update()
-    {
-        
-    }
+
 
     public void Use() 
     {

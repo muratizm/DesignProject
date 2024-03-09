@@ -20,7 +20,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             playerInRange = true;
             // Eğer oyuncu etkileşim bölgesine girdiyse, diyalogu başlat
-            DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+            DialogueManager.Instance.EnterDialogueMode(inkJSON);
         }
     }
 

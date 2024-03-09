@@ -10,8 +10,9 @@ using System.IO;
 
 public class DialogueManager : MonoBehaviour
 {
+    private GameManager gameManager;
     private StoryStateManager storyStateManager;
-    private static DialogueManager Instance;
+    public static DialogueManager Instance { get; private set; }
     private StoryVariables storyVariables; 
 
 
@@ -40,9 +41,6 @@ public class DialogueManager : MonoBehaviour
     public bool dialogueIsPlaying {get; private set;}
 
 
-    public static DialogueManager GetInstance(){
-        return Instance;
-    }
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -58,6 +56,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start() {
         storyStateManager = StoryStateManager.Instance;
+        gameManager = GameManager.Instance;
 
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
@@ -76,9 +75,13 @@ public class DialogueManager : MonoBehaviour
     }
 
     private void Update() {
-        if(!dialogueIsPlaying){
-            return;
-        }
+        if(gameManager.IsGamePaused){return;} //if game is paused, dont do anything
+
+        if(!dialogueIsPlaying){ return; } //if dialogue is not playing, dont do anything
+            
+      
+
+
         if(Input.GetKeyDown(KeyCode.Return) && lineEnded){
             MakeChoice(selectedChoiceIndex);
         }

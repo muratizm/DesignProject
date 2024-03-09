@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance { get; private set; }
+    private GameManager gameManager;
 
     [SerializeField]
     private Item[] inventory = new Item[5];
@@ -27,11 +28,14 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
+        gameManager = GameManager.Instance;
         UpdateInventorySlots();
     }
 
     void Update()
     {
+        if(gameManager.IsGamePaused){return;} //if game is paused, dont do anything
+
         if (selectedSlot != -1) // If an item is selected
         {
             if (Input.GetKeyDown(KeyCode.Escape))

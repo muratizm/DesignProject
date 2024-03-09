@@ -1581,3 +1581,19 @@
 =========choice made: Yok ET ! (x)
 ========= situation : You choosed "yokettik"!
 
+========= situation : Medeniyetimize hoş geldin
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : Medeniyetimize hoş geldin
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+

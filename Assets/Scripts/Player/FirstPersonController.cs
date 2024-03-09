@@ -323,11 +323,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             if(Input.GetKeyUp(KeyCode.LeftShift)){
-                Debug.Log("Stopped running");
                 m_IsWalking = true;
             }
             else if(Input.GetKeyDown(KeyCode.LeftShift)){
-                Debug.Log("Started running");
                 m_IsWalking = false;
             }
 

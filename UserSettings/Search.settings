@@ -10,6 +10,9 @@ scopes = {
 	"last_search.DD5CDD96" = "loadscene"
 	"OpenInspectorPreview.DD5CDD96" = "0"
 	"currentGroup.DD5CDD96" = "all"
+	"last_search.DE949528" = "inspector"
+	"OpenInspectorPreview.DE949528" = "0"
+	"currentGroup.DE949528" = "all"
 }
 providers = {
 	adb = {

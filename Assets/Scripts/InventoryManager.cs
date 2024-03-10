@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
@@ -7,11 +8,19 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance { get; private set; }
     private GameManager gameManager;
 
-    [SerializeField]
-    private Item[] inventory = new Item[5];
+    
+    private static int crystal;
+    public static int Crystal { get { return crystal; } private set { crystal = value; } }
+
+
+    [Header("Inventory")]
+    [SerializeField] private Item[] inventory = new Item[5];
     [SerializeField] private Image[] inventorySlots; // Assign in the Inspector
     [SerializeField] private GameObject itemUsingPanel; // Assign in the Inspector
     private int selectedSlot = -1;
+
+    [Header("Crystal")]
+    [SerializeField] private TextMeshProUGUI crystalText; // Assign in the Inspector
 
 
     void Awake()
@@ -29,12 +38,12 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         gameManager = GameManager.Instance;
-        UpdateInventorySlots();
+        UpdateAllInventory();
     }
 
     void Update()
     {
-        if(gameManager.IsGamePaused){return;} //if game is paused, dont do anything
+        if(gameManager.IsGamePaused){return;} // if game is paused, dont do anything
 
         if (selectedSlot != -1) // If an item is selected
         {
@@ -89,6 +98,16 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+
+    public void AddCrystal() 
+    {
+        Crystal++;
+        UpdateCrystalSlot();
+        Debug.Log("we found Crystal, Count: " + Crystal);
+    }
+
+
+
     void HandleInventoryAction(int slotIndex) 
     {
         if (inventory[slotIndex] != null)
@@ -129,11 +148,56 @@ public class InventoryManager : MonoBehaviour
         inventorySlots[index].sprite = (inventory[index] != null) ? inventory[index].ItemIcon : null;
     }
 
-    void UpdateInventorySlots()
+    void UpdateCrystalSlot()
     {
+        // Update the UI to show the new crystal count
+        crystalText.text = Crystal.ToString();
+    }
+
+    void UpdateAllInventory()
+    {
+        UpdateCrystalSlot();
         for (int i = 0; i < inventory.Length; i++)
         {
             UpdateInventorySlot(i);
         }
+    }
+
+    public void SaveInventory()
+    {
+        Debug.Log("Inventory Saved");
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (inventory[i] != null)
+            {
+                PlayerPrefs.SetString("InventorySlot" + i, inventory[i].ItemName);
+            }
+            else
+            {
+                PlayerPrefs.SetString("InventorySlot" + i, "");
+            }
+        }
+        PlayerPrefs.SetInt("Crystal", Crystal);
+        Debug.Log("Crystal123: " + Crystal);
+    }
+
+    public void LoadInventory()
+    {
+        Debug.Log("Inventory Loaded");
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            string itemName = PlayerPrefs.GetString("InventorySlot" + i);
+            if (itemName != "")
+            {
+                inventory[i] = Resources.Load<Item>("Items/" + itemName);
+            }
+            else
+            {
+                inventory[i] = null;
+            }
+        }
+        Crystal = PlayerPrefs.GetInt("Crystal");
+        Debug.Log("Crystal123: " + Crystal);
+        UpdateAllInventory();
     }
 }

@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SaveGame(){
+    public void SaveGame(){ // called when the player presses the save button in the pause panel
         Debug.Log("Game Saved");
 
         // player related data
@@ -53,7 +53,8 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("PlayerPositionX", player.transform.position.x);
         PlayerPrefs.SetFloat("PlayerPositionY", player.transform.position.y);
         PlayerPrefs.SetFloat("PlayerPositionZ", player.transform.position.z);
-        //PlayerPrefs.SetInt("PlayerMoney", player.money);
+        
+        InventoryManager.Instance.SaveInventory();
         //PlayerPrefs.SetString("CurrentStory", currentStory);
 
         // no need to save settings, as they are saved when the player presses the save button in the settings panel
@@ -67,7 +68,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Loaded");
         // load position, health, items, money, current story, all past decisions, etc.
         player.transform.position = new Vector3(PlayerPrefs.GetFloat("PlayerPositionX"), PlayerPrefs.GetFloat("PlayerPositionY"), PlayerPrefs.GetFloat("PlayerPositionZ"));
-        //player.money = PlayerPrefs.GetInt("PlayerMoney");
+        
+        InventoryManager.Instance.LoadInventory();
+
         //currentStory = PlayerPrefs.GetString("CurrentStory");
     }
 

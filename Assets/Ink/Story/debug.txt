@@ -1605,3 +1605,55 @@
 =========choice made: Yok ET ! (x)
 ========= situation : You choosed "yokettik"!
 
+========= situation : Medeniyetimize hoş geldin
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Osur! (v)
+========= situation : You choosed "osurduk"!
+
+========= situation : Medeniyetimize hoş geldin
+
+========= given choice0 : Yok ET ! (x)
+========= given choice1 : Yavasca acmayi dene (c)
+========= given choice2 : Osur! (v)
+=========choice made: Yok ET ! (x)
+========= situation : You choosed "yokettik"!
+
+========= situation : Medeniyetimize hoş geldin
+
+========= situation : Demek sen kayıp medeniyetimizin sırrını çözmek üzere görevlendirilen yeni maceracımızsın.
+
+========= situation : Bu maceraya çıkmak büyük cesaret ister. Dilerim ki bu macerayı tamamlayarak hem medeniyetimizi kurtarır hem de ebeveynlerinle yeniden bir araya gelebilirsin.
+
+========= given choice0 : (saldırrrr)
+========= given choice1 : (İlgili ve Cesur)
+========= given choice2 : (Korkak)
+=========choice made: (İlgili ve Cesur)
+========= situation : Bu maceraya nerden başlayabilirim ey yüce Remy!
+
+========= situation : Medeniyetimize hoş geldin
+
+========= situation : Demek sen kayıp medeniyetimizin sırrını çözmek üzere görevlendirilen yeni maceracımızsın.
+
+========= situation : Bu maceraya çıkmak büyük cesaret ister. Dilerim ki bu macerayı tamamlayarak hem medeniyetimizi kurtarır hem de ebeveynlerinle yeniden bir araya gelebilirsin.
+
+========= given choice0 : (saldırrrr)
+========= given choice1 : (İlgili ve Cesur)
+========= given choice2 : (Korkak)
+=========choice made: (Korkak)
+========= situation : Ben burayı sevmedim beni evime götürün
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice0 : (Attaaaacck!!)
+========= given choice1 : (Curious and Brave)
+========= given choice2 : (Coward)
+=========choice made: (Coward)
+========= situation : Ben burayı sevmedim beni evime götürün
+

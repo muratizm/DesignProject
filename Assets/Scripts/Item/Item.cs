@@ -4,14 +4,15 @@ using UnityEngine;
 
 public abstract class Item : ScriptableObject
 {
-    [SerializeField]
-    private string itemName;
+    [SerializeField] private string itemName;
     public string ItemName { get { return itemName; } }
-    [SerializeField]
-    private bool isConsumable; // If true, the item will be removed from the inventory after use
+
+
+    [SerializeField] private bool isConsumable; // If true, the item will be removed from the inventory after use
     public bool IsConsumable { get { return isConsumable; } }
-    [SerializeField]
-    private Sprite itemIcon;
+    
+
+    [SerializeField] private Sprite itemIcon;
     public Sprite ItemIcon { get { return itemIcon; } }
 
 

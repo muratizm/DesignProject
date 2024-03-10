@@ -3,14 +3,14 @@ INCLUDE ../globals.ink
 -> main
 
 === main ===
-Medeniyetimize hoş geldin
-Demek sen kayıp medeniyetimizin sırrını çözmek üzere görevlendirilen yeni maceracımızsın.
-Bu maceraya çıkmak büyük cesaret ister. Dilerim ki bu macerayı tamamlayarak hem medeniyetimizi kurtarır hem de ebeveynlerinle yeniden bir araya gelebilirsin.
-    + [(saldırrrr)]
+Welcome to our civilization!
+So, you are our new adventurer assigned to solve the secret of our lost civilization.
+It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+    + [(Attaaaacck!!)]
         -> stupidlybrave
-    + [(İlgili ve Cesur) ]
+    + [(Curious and Brave) ]
         -> adventurerbrave
-    + [(Korkak) ]
+    + [(Coward) ]
         -> coward
 
 === stupidlybrave ===

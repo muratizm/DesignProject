@@ -10,6 +10,7 @@ public class SceneCoordinator : MonoBehaviour
 
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject pauseScenePanel;
+    [SerializeField] private GameObject taskPanel;
 
     private SceneCoordinator(){}
 
@@ -58,8 +59,34 @@ public class SceneCoordinator : MonoBehaviour
 
     public void PressedEscape(){
         if(settingsPanel.activeSelf)    { CloseSettings();} 
-        else if(pauseScenePanel.activeSelf)    { ClosePauseMenu();} 
+        else if(pauseScenePanel.activeSelf)    { ClosePauseMenu();}
+        else if(taskPanel.activeSelf)    { CloseTaskButton();}
         else    { OpenPauseMenu();}
+    }
+
+
+    
+    public void OnPressedTAB() // tab button means tasks button
+    {
+        // if taskPanel is active, deactivate it, if taskPanel is deactive, activate it
+        if (taskPanel.activeSelf) CloseTaskButton(); else OpenTasks();
+    }
+
+
+    public void CloseTaskButton()
+    {
+        taskPanel.SetActive(false); // deactivate taskPanel
+        GameManager.Instance.IsGamePaused = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    public void OpenTasks()
+    {
+        taskPanel.SetActive(true); // activate taskPanel
+        GameManager.Instance.IsGamePaused = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
 

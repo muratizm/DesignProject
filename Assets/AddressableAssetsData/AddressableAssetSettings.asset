@@ -43,6 +43,7 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 61554e65e8c36eb47925666a4419dd5c, type: 2}
   - {fileID: 11400000, guid: b13427d9c0ac9bb4b9736a179be551d1, type: 2}
+  - {fileID: 11400000, guid: e868d3e2140e5914bb7b6345173de99e, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -96,6 +97,8 @@ MonoBehaviour:
     - Stone_walk
     - Water_walk
     - Wood_walk
+    - item_omnivision
+    - item_ringaringa
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 0cda4c79f4608944e8e19fb36330038b, type: 2}

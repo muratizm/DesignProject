@@ -7,6 +7,8 @@ public abstract class Item : ScriptableObject
     [SerializeField] private string itemName;
     public string ItemName { get { return itemName; } }
 
+    [SerializeField] public string itemTag;
+
 
     [SerializeField] private bool isConsumable; // If true, the item will be removed from the inventory after use
     public bool IsConsumable { get { return isConsumable; } }

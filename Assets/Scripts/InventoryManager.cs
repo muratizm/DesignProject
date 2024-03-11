@@ -1,12 +1,15 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using System.Collections;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance { get; private set; }
     private GameManager gameManager;
+    private GameObject prefabToLoad;
 
     
     private static int crystal;
@@ -38,7 +41,6 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         gameManager = GameManager.Instance;
-        UpdateAllInventory();
     }
 
     void Update()
@@ -85,6 +87,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+
     public void AddItem(Item item) 
     {
         for (int i = 0; i < inventory.Length; i++)
@@ -108,7 +111,7 @@ public class InventoryManager : MonoBehaviour
 
 
 
-    void HandleInventoryAction(int slotIndex) 
+    void HandleInventoryAction(int slotIndex) // called when the player presses a number key to select an inventory slot
     {
         if (inventory[slotIndex] != null)
         {
@@ -117,7 +120,9 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void OnUseButton() 
+    
+
+    public void OnUseButton() // called when the player presses the "Use" button inside of ItemUsingPanel
     {
         inventory[selectedSlot].Use();
         if (inventory[selectedSlot].IsConsumable)
@@ -128,33 +133,52 @@ public class InventoryManager : MonoBehaviour
         OnCloseButton();
     }
 
-    public void OnDropButton()
+    public void OnDropButton() // called when the player presses the "Drop" button inside of ItemUsingPanel
     {
-        Debug.Log("Dropping " + inventory[selectedSlot].ItemName);
-        inventory[selectedSlot] = null;
-        UpdateInventorySlot(selectedSlot);
-        OnCloseButton();
+        StartCoroutine(DropButtonCoroutine());
     }
 
-    public void OnCloseButton()
+    
+    public void OnCloseButton() // called when the player presses the "X" button inside of ItemUsingPanel
     {
         itemUsingPanel.SetActive(false);
         selectedSlot = -1;
     }
 
+    private IEnumerator DropButtonCoroutine() // responsible for dropping the selected item
+    {
+        Debug.Log("Dropping " + inventory[selectedSlot].ItemName);
 
-    void UpdateInventorySlot(int index)
+        yield return StartCoroutine(CreateItemDrop()); // wait for the item to be created before removing it from the inventory
+
+        inventory[selectedSlot] = null;
+        UpdateInventorySlot(selectedSlot);
+        OnCloseButton();
+    }
+
+    IEnumerator CreateItemDrop()
+    {
+        yield return LoadPrefabOfItem(inventory[selectedSlot].itemTag);  // Wait for loading
+        GameObject itemDrop = Instantiate(prefabToLoad, Player.Instance.transform.position + Player.Instance.transform.forward * 2.0f, Quaternion.identity);
+        itemDrop.GetComponent<ItemObject>().Item = inventory[selectedSlot];
+    }
+    
+
+
+
+    void UpdateInventorySlot(int index) // responsible for updating the specific inventory slot
     {
         inventorySlots[index].sprite = (inventory[index] != null) ? inventory[index].ItemIcon : null;
     }
 
-    void UpdateCrystalSlot()
+
+    void UpdateCrystalSlot() // responsible for updating the crystal count
     {
         // Update the UI to show the new crystal count
         crystalText.text = Crystal.ToString();
     }
 
-    void UpdateAllInventory()
+    void UpdateAllInventory() // responsible for updating all the inventory slots and the crystal count
     {
         UpdateCrystalSlot();
         for (int i = 0; i < inventory.Length; i++)
@@ -163,14 +187,14 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void SaveInventory()
+    public void SaveInventory() // responsible for saving the inventory data to the PlayerPrefs
     {
         Debug.Log("Inventory Saved");
         for (int i = 0; i < inventory.Length; i++)
         {
             if (inventory[i] != null)
             {
-                PlayerPrefs.SetString("InventorySlot" + i, inventory[i].ItemName);
+                PlayerPrefs.SetString("InventorySlot" + i, inventory[i].name); // Save the name of the scriptable object
             }
             else
             {
@@ -181,7 +205,7 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("Crystal123: " + Crystal);
     }
 
-    public void LoadInventory()
+    public void LoadInventory() // responsible for loading the inventory data from the PlayerPrefs
     {
         Debug.Log("Inventory Loaded");
         for (int i = 0; i < inventory.Length; i++)
@@ -189,7 +213,8 @@ public class InventoryManager : MonoBehaviour
             string itemName = PlayerPrefs.GetString("InventorySlot" + i);
             if (itemName != "")
             {
-                inventory[i] = Resources.Load<Item>("Items/" + itemName);
+                inventory[i] = Resources.Load<Item>(Constants.Paths.RESOURCES_SCRIPTIBLEOBJECTS_ITEMS_FOLDER + itemName); // Load the scriptable object with its name
+                UpdateInventorySlot(i);
             }
             else
             {
@@ -197,7 +222,23 @@ public class InventoryManager : MonoBehaviour
             }
         }
         Crystal = PlayerPrefs.GetInt("Crystal");
-        Debug.Log("Crystal123: " + Crystal);
         UpdateAllInventory();
+
     }
+    IEnumerator LoadPrefabOfItem(string itemTag)
+    {
+        var handle = Addressables.LoadAssetAsync<GameObject>(itemTag);
+        yield return handle; // Wait for loading to complete
+
+        if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+        {
+            Debug.Log("Loaded: " + handle.Result.name);
+            prefabToLoad = handle.Result;
+        }
+        else
+        {
+            Debug.LogError("Failed to load prefab");
+        }
+    }
+
 }

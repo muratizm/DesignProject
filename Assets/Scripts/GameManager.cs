@@ -39,9 +39,22 @@ public class GameManager : MonoBehaviour
     }
 
     void Update(){
+        // check if escape is pressed no matter what
         if(Input.GetKeyDown(KeyCode.Escape)){
             sceneCoordinator.PressedEscape();
         }
+
+        // if game is paused, dont do anything else than checking for escape
+        if(IsGamePaused){ return; }
+
+        // if game is not paused, do the following
+        // check for other inputs
+
+        if(Input.GetKeyDown(KeyCode.Tab)){ 
+            // tasks open only if the game is not paused
+            sceneCoordinator.OnPressedTAB();
+        }
+
     }
 
     public void SaveGame(){ // called when the player presses the save button in the pause panel

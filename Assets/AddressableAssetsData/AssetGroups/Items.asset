@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Items
+  m_EditorClassIdentifier: 
+  m_GroupName: Items
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 06a1b9856efa728458082c59c1c59ad4
+  m_SerializeEntries:
+  - m_GUID: 7a04b2caf7043ed49a3f59be8216baaa
+    m_Address: Assets/Prefabs/MapShowerObject.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - zort
+    - item_omnivision
+  - m_GUID: 637b9889740eb5745a3781db69ae5423
+    m_Address: Assets/Prefabs/Ringaringa.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - item_ringaringa
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 0622e1d499dea8b43830347f67784483, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ef5682900f97dfd44a254e7b4ddf6b34, type: 2}
+    - {fileID: 11400000, guid: fcb970e0b0a9d644598688a028566bb6, type: 2}

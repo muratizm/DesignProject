@@ -151,9 +151,21 @@ public class InventoryManager : MonoBehaviour
 
         yield return StartCoroutine(CreateItemDrop()); // wait for the item to be created before removing it from the inventory
 
-        inventory[selectedSlot] = null;
-        UpdateInventorySlot(selectedSlot);
+        RemoveItemFromInventory(selectedSlot);
         OnCloseButton();
+    }
+
+    private void RemoveItemFromInventory(int index) 
+    {
+        inventory[index] = null;
+        for(int i = index; i < inventory.Length - 1; i++)
+        {
+            if (inventory[i + 1] == null) {break;}
+            inventory[i] = inventory[i + 1];
+            inventory[i + 1] = null;
+            UpdateInventorySlot(i);
+        }
+        UpdateInventorySlot(inventory.Length - 1);
     }
 
     IEnumerator CreateItemDrop()

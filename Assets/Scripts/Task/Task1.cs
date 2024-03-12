@@ -4,8 +4,7 @@ public class Task1 : BaseTask
 {
     public override void EnterTask()
     {
-        // Implementation for entering Task1
-        Debug.Log("Entering Task1");
+        base.EnterTask();
     }
 
     public override void UpdateTask()
@@ -16,6 +15,8 @@ public class Task1 : BaseTask
 
         // learn the most optimized way to check for somethings every frame
 
+        base.UpdateTask(); // runs the timer, checks if game is paused, etc
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             AchieveTask();
@@ -25,7 +26,11 @@ public class Task1 : BaseTask
 
     public override void AchieveTask()
     {
-        // Implementation for achieving Task1
-        Debug.Log("Task1 achieved");
+        base.AchieveTask();
+    }
+
+    public override void ExitTask()
+    {
+        base.ExitTask();
     }
 }

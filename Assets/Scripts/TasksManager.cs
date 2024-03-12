@@ -60,24 +60,48 @@ public class TasksManager : MonoBehaviour
         }
     }
 
-    public void RemoveTask(BaseTask task)
+    public void RemoveTask(BaseTask task) // remove the task from the array (shift the array to left)
     {
-        for (int i = 0; i < tasks.Length; i++)
+        int index = -1;
+
+        for (int i = 0; i < tasks.Length; i++) // find the index of the task
         {
             if (tasks[i] == task)
             {
-                tasks[i] = null;
-                taskSlots[i].SetActive(false);
-                return;
+                index = i;
+                break;
             }
         }
+
+        if (index == -1) {return;} // if task is not found, return
+
+        tasks[index] = null; // remove the task from the array
+
+        for(int i = index; i < tasks.Length - 1; i++) // shift the array to left
+        {
+            if (tasks[i + 1] == null) {break;}
+            tasks[i] = tasks[i + 1];
+            tasks[i + 1] = null;
+            UpdateTaskSlot(i);
+        }
+        UpdateTaskSlot(tasks.Length - 1); 
+
     }
 
     private void UpdateTaskSlot(int index)
     {
         // update UI
-        taskSlots[index].SetActive(true);
-        taskSlots[index].GetComponentInChildren<TextMeshProUGUI>().text = tasks[index].TaskName;
+        if (tasks[index] == null)
+        {
+            taskSlots[index].SetActive(false);
+            return;
+        }
+        else
+        {
+            taskSlots[index].SetActive(true);
+            taskSlots[index].GetComponentInChildren<TextMeshProUGUI>().text = tasks[index].TaskName;
+        }
+
     }
 
 

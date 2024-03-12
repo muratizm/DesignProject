@@ -62,6 +62,11 @@ public class GameManager : MonoBehaviour
             TasksManager.Instance.AddTask(denemeTask);
         }
 
+        if(Input.GetKeyDown(KeyCode.N)){
+            // inventory open only if the game is not paused
+            TasksManager.Instance.RemoveTask(denemeTask);
+        }
+
     }
 
     public void SaveGame(){ // called when the player presses the save button in the pause panel

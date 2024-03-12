@@ -9053,6 +9053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6069900e4c93ffe4e9c200e48bdad306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  taskName: 
 --- !u!65 &974641813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18154,6 +18155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6069900e4c93ffe4e9c200e48bdad306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  taskName: MUratt
 --- !u!1 &2119384605
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class BaseAction : MonoBehaviour
+public abstract class BaseAction : MonoBehaviour
 
 {
     public virtual void EnterAction(){}

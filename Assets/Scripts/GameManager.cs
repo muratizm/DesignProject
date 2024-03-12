@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Scripting;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     public bool IsGamePaused;
 
 
+    [SerializeField] private BaseTask denemeTask;
 
 
 
@@ -53,6 +55,11 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Tab)){ 
             // tasks open only if the game is not paused
             sceneCoordinator.OnPressedTAB();
+        }
+
+        if(Input.GetKeyDown(KeyCode.M)){
+            // inventory open only if the game is not paused
+            TasksManager.Instance.AddTask(denemeTask);
         }
 
     }

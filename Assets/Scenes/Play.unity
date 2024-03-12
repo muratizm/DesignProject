@@ -1962,7 +1962,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -0.055522, y: -111.36607}
-  m_SizeDelta: {x: 291.68936, y: 0}
+  m_SizeDelta: {x: 291.68936, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &219150204
 MonoBehaviour:
@@ -3480,7 +3480,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &390514636
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17941,15 +17941,17 @@ GameObject:
   m_Component:
   - component: {fileID: 2118857106}
   - component: {fileID: 2118857113}
-  - component: {fileID: 2118857112}
-  - component: {fileID: 2118857116}
   - component: {fileID: 2118857111}
   - component: {fileID: 2118857110}
   - component: {fileID: 2118857109}
   - component: {fileID: 2118857108}
   - component: {fileID: 2118857114}
   - component: {fileID: 2118857107}
+  - component: {fileID: 2118857112}
   - component: {fileID: 2118857115}
+  - component: {fileID: 2118857118}
+  - component: {fileID: 2118857117}
+  - component: {fileID: 2118857116}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -18072,7 +18074,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsGamePaused: 0
-  denemeTask: {fileID: 2118857116}
 --- !u!114 &2118857113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18152,10 +18153,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 2118857105}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b53dbf59db2af347bdc0419d295137b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskName: 333
+--- !u!114 &2118857117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118857105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d63d2dbfd4e4ab4eb98a0a5c8208935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskName: 222
+--- !u!114 &2118857118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118857105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6069900e4c93ffe4e9c200e48bdad306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskName: MUratt
+  taskName: 111
 --- !u!1 &2119384605
 GameObject:
   m_ObjectHideFlags: 0

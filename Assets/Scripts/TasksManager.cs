@@ -12,7 +12,7 @@ public class TasksManager : MonoBehaviour
 
 
     [Header("Tasks")]
-    [SerializeField] private BaseTask[] tasks = new BaseTask[10];
+    [SerializeField] public BaseTask[] tasks = new BaseTask[10];
     [SerializeField] private GameObject taskPanel; 
     [SerializeField] private GameObject[] taskSlots;
     
@@ -79,7 +79,6 @@ public class TasksManager : MonoBehaviour
 
         for(int i = index; i < tasks.Length - 1; i++) // shift the array to left
         {
-            if (tasks[i + 1] == null) {break;}
             tasks[i] = tasks[i + 1];
             tasks[i + 1] = null;
             UpdateTaskSlot(i);

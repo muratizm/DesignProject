@@ -160,7 +160,6 @@ public class InventoryManager : MonoBehaviour
         inventory[index] = null;
         for(int i = index; i < inventory.Length - 1; i++)
         {
-            if (inventory[i + 1] == null) {break;}
             inventory[i] = inventory[i + 1];
             inventory[i + 1] = null;
             UpdateInventorySlot(i);

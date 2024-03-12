@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public bool IsGamePaused;
 
 
-    [SerializeField] private BaseTask denemeTask;
 
 
 
@@ -46,25 +45,25 @@ public class GameManager : MonoBehaviour
             sceneCoordinator.PressedEscape();
         }
 
+        
+        if(Input.GetKeyDown(KeyCode.Tab)){ 
+            // tasks open only if the game is not paused
+            sceneCoordinator.OnPressedTAB();
+        }
+
         // if game is paused, dont do anything else than checking for escape
         if(IsGamePaused){ return; }
 
         // if game is not paused, do the following
         // check for other inputs
 
-        if(Input.GetKeyDown(KeyCode.Tab)){ 
-            // tasks open only if the game is not paused
-            sceneCoordinator.OnPressedTAB();
-        }
 
-        if(Input.GetKeyDown(KeyCode.M)){
-            // inventory open only if the game is not paused
-            TasksManager.Instance.AddTask(denemeTask);
-        }
 
-        if(Input.GetKeyDown(KeyCode.N)){
+        
+
+        if(Input.GetKeyDown(KeyCode.K)){
             // inventory open only if the game is not paused
-            TasksManager.Instance.RemoveTask(denemeTask);
+            TasksManager.Instance.RemoveTask(TasksManager.Instance.tasks[0]);
         }
 
     }

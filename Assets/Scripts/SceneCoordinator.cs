@@ -68,6 +68,8 @@ public class SceneCoordinator : MonoBehaviour
     
     public void OnPressedTAB() // tab button means tasks button
     {
+        if (pauseScenePanel.activeSelf || settingsPanel.activeSelf) {return;} // if settingsPanel is active, do not open taskPanel
+
         // if taskPanel is active, deactivate it, if taskPanel is deactive, activate it
         if (taskPanel.activeSelf) CloseTaskButton(); else OpenTasks();
     }

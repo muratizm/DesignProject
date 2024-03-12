@@ -30,9 +30,12 @@ public class StoryState1 : StoryBaseState
         
         if( ((Ink.Runtime.StringValue) storyStateManager.GetStoryState("curstate")).value == "attack_to_tree"){
             storyOperations.GetRidOfTheObstacle();
+            storyOperations.AddTask1();
 
             storyStateManager.ChangeState("StoryState2");
             
         }
     }
+
+
 }

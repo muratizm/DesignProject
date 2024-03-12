@@ -43,12 +43,14 @@ public class TasksManager : MonoBehaviour
 
         foreach (BaseTask task in tasks)
         {
-            //task.UpdateTask(); // should write very optimized code in tasks update methods
+            if (task == null) {continue;}
+            task.UpdateTask(); // should write very optimized code in tasks update methods
         }
     }
 
     public void AddTask(BaseTask task) 
     {
+        task.EnterTask();
         for (int i = 0; i < tasks.Length; i++)
         {
             if (tasks[i] == null)
@@ -60,19 +62,14 @@ public class TasksManager : MonoBehaviour
         }
     }
 
-    public void RemoveTask(BaseTask task) // remove the task from the array (shift the array to left)
+    public void RemoveTask(BaseTask task) // by Task
     {
-        int index = -1;
+        int index = FindIndex(task);
+        RemoveTask(index);
+    }
 
-        for (int i = 0; i < tasks.Length; i++) // find the index of the task
-        {
-            if (tasks[i] == task)
-            {
-                index = i;
-                break;
-            }
-        }
-
+    public void RemoveTask(int index) // by index
+    {
         if (index == -1) {return;} // if task is not found, return
 
         tasks[index] = null; // remove the task from the array
@@ -87,7 +84,7 @@ public class TasksManager : MonoBehaviour
 
     }
 
-    private void UpdateTaskSlot(int index)
+    public void UpdateTaskSlot(int index) // by index
     {
         // update UI
         if (tasks[index] == null)
@@ -98,9 +95,28 @@ public class TasksManager : MonoBehaviour
         else
         {
             taskSlots[index].SetActive(true);
-            taskSlots[index].GetComponentInChildren<TextMeshProUGUI>().text = tasks[index].TaskName;
+            taskSlots[index].GetComponentInChildren<TextMeshProUGUI>().text = tasks[index].TaskName + " -- Less then " + (tasks[index].LeftMinutes+1) + "minutes left.";
         }
+    }
 
+    public void UpdateTaskSlot(BaseTask task) // by Task
+    {
+        int index = FindIndex(task);
+        if (index == -1) {Debug.Log("Couldn't update the slot, because could not find it!"); return;}
+        UpdateTaskSlot(index);
+    }
+
+
+    public int FindIndex(BaseTask task)
+    {
+        for (int i = 0; i < tasks.Length; i++)
+        {
+            if (tasks[i] == task)
+            {
+                return i;
+            }
+        }
+        return -1;
     }
 
 

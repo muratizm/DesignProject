@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Task1 : BaseTask
 {
+
     public override void EnterTask()
     {
         base.EnterTask();

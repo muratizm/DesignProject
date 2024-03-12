@@ -6,6 +6,9 @@ using UnityEngine.Scripting;
 public class StoryOperations : MonoBehaviour
 {
     public static StoryOperations Instance { get; private set; }
+    private StoryStateManager storyStateManager;
+    private TasksManager tasksManager;
+
     [SerializeField] private GameObject obstacle;
 
     void Awake()
@@ -19,6 +22,12 @@ public class StoryOperations : MonoBehaviour
             Debug.LogError("found more than one StoryOperations.");
             Destroy(gameObject);
         }
+    }
+
+    void Start()
+    {
+        storyStateManager = StoryStateManager.Instance;
+        tasksManager = TasksManager.Instance;
     }
 
 
@@ -37,6 +46,12 @@ public class StoryOperations : MonoBehaviour
         }
     }
 
+    public void AddTask1(){
+        Task1 task1 = gameObject.AddComponent<Task1>();
+        task1.taskName = "Task313131";
+        task1.TimeToAchieve = 70f;
+        tasksManager.AddTask(task1);
+    }
     
     public void UseOmniverseItem(float maxSize)
     {

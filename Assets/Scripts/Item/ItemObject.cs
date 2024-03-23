@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ItemObject : MonoBehaviour
 {
+
     [SerializeField]
     private Item item;
     public Item Item { get { return item; } set { item = value; }}
@@ -13,7 +14,8 @@ public class ItemObject : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            InventoryManager.Instance.AddItem(item);
+            //InventoryManager.Instance.AddItem(item);
+            Player.Instance.TakeItem(item);
             Destroy(gameObject);
         }
     }

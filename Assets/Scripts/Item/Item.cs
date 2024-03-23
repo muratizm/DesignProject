@@ -5,16 +5,16 @@ using UnityEngine;
 public abstract class Item : ScriptableObject
 {
     [SerializeField] private string itemName;
-    public string ItemName { get { return itemName; } }
-
-    [SerializeField] public string itemTag;
-
-
+    [SerializeField] private string itemTag; // addressable tag
+    [SerializeField] private bool isBuggy;   
     [SerializeField] private bool isConsumable; // If true, the item will be removed from the inventory after use
-    public bool IsConsumable { get { return isConsumable; } }
-    
-
     [SerializeField] private Sprite itemIcon;
+
+
+    public string ItemName { get { return itemName; } }
+    public string ItemTag { get { return itemTag; } }
+    public bool IsBuggy { get { return isBuggy; } }
+    public bool IsConsumable { get { return isConsumable; } }
     public Sprite ItemIcon { get { return itemIcon; } }
 
 

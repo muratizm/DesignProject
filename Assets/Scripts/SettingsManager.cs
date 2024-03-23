@@ -77,7 +77,6 @@ public class SettingsManager : MonoBehaviour
         volumeSlider.value = newVolume;
         resolutionDropdown.value = newResolutionIndex;
         windowModeDropdown.value = newWindowModeIndex;
-        Debug.Log("Updated settings panel: " + newVolume + " " + newResolutionIndex + " " + newWindowModeIndex);
     }
 
 

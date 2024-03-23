@@ -163,7 +163,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             ProgressStepCycle(2*speed);
             UpdateCameraPosition(speed);
 
-            m_MouseLook.UpdateCursorLock();
         }
 
         private void ProgressStepCycle(float speed)

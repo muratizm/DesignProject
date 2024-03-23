@@ -1,88 +1,68 @@
+using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
 
-public class KillTheBugs : MonoBehaviour
+public class KillTheBugs : MiniGame
 {
-    [SerializeField] private Image item;
-    [SerializeField] private Image[] bugs;
+    [SerializeField] private Image backgroundItem;
+    [SerializeField] private Sprite itemSprite; 
+    [SerializeField] private Sprite bugSprite;
+    List<Bug> bugs = new List<Bug>();
 
-    private int totalBugs;
-    private int deadBugs = 0;
 
-    private Sprite itemSprite; 
-    private Sprite bugSprite;
+    public override void StartGame(){
 
-    [SerializeField] private float timeToClean = 2f;
+        InitializeBackgroundItem();
+        GenerateBugs(5);
 
-    private void Start()
-    {
-        GameManager.Instance.IsGamePaused = true;
-        
-        // Initialization code goes here
-        itemSprite = Resources.Load<Sprite>("item");
-        bugSprite = Resources.Load<Sprite>("bug");
-        Debug.Log("itemSprite: " + itemSprite);
-        Debug.Log("bugSprite: " + bugSprite);
-
-        totalBugs = bugs.Length;
-
-        item.sprite = itemSprite;
-        GenerateBugs();
-
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-
+        timeToFinish = 10;
+        base.StartGame();
     }
 
 
-    private void Update()
+    private void GenerateBugs(int number)
     {
-        RandomWalk();
-
-
-    }
-
-    private void GenerateBugs()
-    {
-        for (int i = 0; i < totalBugs; i++)
+        for (int i = 0; i < number; i++)
         {
-            bugs[i].gameObject.SetActive(true);
-            bugs[i].sprite = bugSprite;
-        }
-    }
-
-    private void RandomWalk(){
-        // change bugs position
-        for (int i = 0; i < totalBugs; i++)
-        {
-            bugs[i].transform.position += new Vector3(Random.Range(-15f, 15f), Random.Range(-15f, 15f), 0f) * Time.deltaTime;
+            GameObject bugObject = new GameObject("Bug");
+            bugObject.transform.SetParent(gameObject.transform);
+            Bug bug = bugObject.AddComponent<Bug>();
+            bug.Create(this, bugSprite, backgroundItem);
+            bugs.Add(bug);
         }
     }
 
 
-    public void OnClickBug(GameObject bug)
+    // This method initializes the background item with aspect ratio of the sprite
+    private void InitializeBackgroundItem()
+    { 
+        backgroundItem = gameObject.transform.Find("BackgroundItem").GetComponent<Image>();
+        backgroundItem.sprite = itemSprite;
+
+        // Get the RectTransform of the GameObject
+        RectTransform rectBackground = backgroundItem.GetComponent<RectTransform>();
+
+        // Calculate the aspect ratio of the sprite
+        float spriteAspectRatio = (float)itemSprite.texture.width / itemSprite.texture.height;
+
+
+        float newHeight = rectBackground.sizeDelta.y; // new height is the same as the original height
+        float newWidth = newHeight * spriteAspectRatio; // adjust the width according to the aspect ratio
+
+        // Apply the new width and height
+        rectBackground.sizeDelta = new Vector2(newWidth, newHeight);
+    }
+
+    public void OnClickBug(Bug bug)
     {
-        Debug.Log("OnClickBug");
-        Debug.Log("bug is dead");
-        deadBugs++;
-        if (deadBugs == totalBugs)
+        bugs.Remove(bug);
+        if (bugs.Count == 0)
         {
-            FinishGame();
+            ExitGame(true);
         }
-
-        // Disable the bug GameObject
-        bug.SetActive(false);
     }
 
-
-
-
-    private void FinishGame()
-    {
-        Debug.Log("Game finished");
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-    }
 }

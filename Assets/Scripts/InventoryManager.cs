@@ -28,14 +28,11 @@ public class InventoryManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
+        if (Instance != null)
         {
             Destroy(gameObject);
         }
+        Instance = this;
     }
 
     void Start()
@@ -169,7 +166,7 @@ public class InventoryManager : MonoBehaviour
 
     IEnumerator CreateItemDrop()
     {
-        yield return LoadPrefabOfItem(inventory[selectedSlot].itemTag);  // Wait for loading
+        yield return LoadPrefabOfItem(inventory[selectedSlot].ItemTag);  // Wait for loading
         GameObject itemDrop = Instantiate(prefabToLoad, Player.Instance.transform.position + Player.Instance.transform.forward * 2.0f, Quaternion.identity);
         itemDrop.GetComponent<ItemObject>().Item = inventory[selectedSlot];
     }

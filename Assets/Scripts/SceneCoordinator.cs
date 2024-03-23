@@ -23,6 +23,7 @@ public class SceneCoordinator : MonoBehaviour
         }
         Instance = this;
         
+        
     }
 
     public void OpenScene(string sceneName){
@@ -45,16 +46,14 @@ public class SceneCoordinator : MonoBehaviour
         pauseScenePanel.SetActive(true);
         GameManager.Instance.IsGamePaused = true;
         Time.timeScale = 0;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        UnlockCursor();
     }
 
     public void ClosePauseMenu(){
         pauseScenePanel.SetActive(false);
         GameManager.Instance.IsGamePaused = false;
         Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        LockCursor();
     }
 
     public void PressedEscape(){
@@ -79,14 +78,25 @@ public class SceneCoordinator : MonoBehaviour
     {
         taskPanel.SetActive(false); // deactivate taskPanel
         GameManager.Instance.IsGamePaused = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Debug.Log("Closing task panel");
+        LockCursor();
     }
 
     public void OpenTasks()
     {
         taskPanel.SetActive(true); // activate taskPanel
         GameManager.Instance.IsGamePaused = true;
+        UnlockCursor();
+    }
+
+    public void LockCursor ()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    public void UnlockCursor ()
+    {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Scripting;
 using UnityEngine.UI;
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         Instance = this;
+        
+        SceneCoordinator.Instance.LockCursor();
     }
 
 
@@ -97,6 +100,8 @@ public class GameManager : MonoBehaviour
 
         //currentStory = PlayerPrefs.GetString("CurrentStory");
     }
+
+
 
     void OnDestroy(){
     }

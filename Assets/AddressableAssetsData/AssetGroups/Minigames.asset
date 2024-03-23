@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Minigames
+  m_EditorClassIdentifier: 
+  m_GroupName: Minigames
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 36ffdb2be03db9d4b93fe7f59143acb9
+  m_SerializeEntries:
+  - m_GUID: 79a836822a7810b489baf768877f26af
+    m_Address: Assets/Prefabs/VisualAssets/2d/MiniGames/KillTheBugsGame.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - minigame_bugs
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 0622e1d499dea8b43830347f67784483, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 7b52f90109f8fea43be4e9777e523ad6, type: 2}
+    - {fileID: 11400000, guid: c49c64930bc70894dadcd7a1f40fd397, type: 2}

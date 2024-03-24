@@ -8,9 +8,20 @@ public class AssetLoader : MonoBehaviour
 
     public static AssetLoader Instance { get { return _assetLoader; } private set { return; } }
 
-    public void LoadAssetAsync<T>(string address, System.Action<T> onComplete)
+    void Awake()
     {
-        Addressables.LoadAssetAsync<T>(address).Completed += (AsyncOperationHandle<T> handle) =>
+        if (_assetLoader != null)
+        {
+            Debug.Log("There is already an instance of AssetLoader in the scene");
+            Destroy(gameObject);
+            return;
+        }
+        _assetLoader = this;
+    }
+
+    public void LoadAssetAsync<T>(string label, System.Action<T> onComplete)
+    {
+        Addressables.LoadAssetAsync<T>(label).Completed += (AsyncOperationHandle<T> handle) =>
         {
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
@@ -18,7 +29,7 @@ public class AssetLoader : MonoBehaviour
             }
             else
             {
-                Debug.LogError($"Failed to load asset at address: {address}");
+                Debug.LogError($"Failed to load asset at address: {label}");
                 onComplete?.Invoke(default);
             }
         };

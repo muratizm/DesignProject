@@ -84,6 +84,7 @@ namespace DigitalOpus.MB.MBEditor
             prefabBaker = null;
         }
 
+        [Obsolete]
         public override void OnInspectorGUI()
         {
             prefabBaker.Update();
@@ -148,6 +149,7 @@ namespace DigitalOpus.MB.MBEditor
             prefabBaker.SetIsDifferentCacheDirty();
         }
 
+        [Obsolete]
         public void PopulatePrefabRowsFromTextureBaker(MB3_BatchPrefabBaker prefabBaker)
         {
             MB3_TextureBaker texBaker = prefabBaker.GetComponent<MB3_TextureBaker>();

@@ -72,26 +72,14 @@ public class MinigameManager : MonoBehaviour
     {
         GameObject bugsMinigame = null;
 
-        Addressables.LoadAssetsAsync<GameObject>(label, null).Completed += handle =>
+        AssetLoader.Instance.LoadAssetAsync<GameObject>(label, (result) =>
         {
-            if (handle.Status == AsyncOperationStatus.Succeeded)
-            {
-                foreach (var gameObject in handle.Result)
-                {
-                    bugsMinigame = Instantiate(gameObject, Vector3.zero, Quaternion.identity, minigamesParent.transform);
-                    bugsMinigame.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            bugsMinigame = Instantiate(result, Vector3.zero, Quaternion.identity, minigamesParent.transform);
+            bugsMinigame.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
-                    if(bugsMinigame == null) {return;}
+            if(bugsMinigame == null) {return;}
 
-                    bugsMinigame.GetComponent<MiniGame>().StartGame();
-                    // 792FIXME: burda <killthebugs> olmamalı minigame olmalı ama şuan başka işim var
-                    // 793FIXME: hata çıkabilri diye şimdi bakmıyorum sonra bak buraya
-                }
-            }
-            else
-            {
-                Debug.LogError("Failed to load minigame from addressables");
-            }
-        };
+            bugsMinigame.GetComponent<MiniGame>().StartGame();
+        });
     }
 }

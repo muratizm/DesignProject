@@ -1765,3 +1765,5 @@
 =========choice made: (Curious and Brave)
 ========= situation : Bu maceraya nerden başlayabilirim ey yüce Remy!
 
+========= situation : Welcome to our civilization!
+

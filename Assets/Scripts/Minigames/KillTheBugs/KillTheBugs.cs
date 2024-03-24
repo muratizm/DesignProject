@@ -56,6 +56,7 @@ public class KillTheBugs : MiniGame
         rectBackground.sizeDelta = new Vector2(newWidth, newHeight);
     }
 
+
     public void OnClickBug(Bug bug)
     {
         bugs.Remove(bug);

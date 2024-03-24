@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class Player : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class Player : MonoBehaviour
     public static Player Instance { get { return _player;} private set { return;} }
 
     private InventoryManager _inventoryManager;
+    private FirstPersonController _firstPersonController;
     private MinigameManager _minigameManager;
+    Timer timer;
 
 
     void Awake()
@@ -26,6 +29,17 @@ public class Player : MonoBehaviour
     {
         _minigameManager = MinigameManager.Instance;
         _inventoryManager = InventoryManager.Instance;
+        _firstPersonController = FirstPersonController.Instance;
+    }
+
+    public void Injure(float timeToRecover)
+    {
+        timer = new Timer();
+        timer.SetTimer(timeToRecover);
+        timer.OnTimerComplete += () => _firstPersonController.IsInjured = false;
+        StartCoroutine(timer.TimerCoroutine());
+        
+        _firstPersonController.IsInjured = true;
     }
 
     public void TakeItem(Item item)

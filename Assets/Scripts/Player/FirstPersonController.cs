@@ -13,13 +13,27 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
+        private static FirstPersonController _firstPersonController;
+        public static FirstPersonController Instance { get { return _firstPersonController;} private set { return;} }
+
         private GameManager gameManager;
         private DialogueManager dialogueManager;
                         
         [SerializeField] private bool m_IsWalking;
+        [SerializeField] private bool m_IsRunning;
+        [SerializeField] private bool isInjured;
         [SerializeField] private float m_WalkSpeed;
-        
-        [SerializeField] private float m_RunSpeed;
+        [SerializeField] private float m_InjuredSpeed;
+        [SerializeField] private float m_RunningFactor;
+
+        public bool IsWalking { get { return m_IsWalking; } set { m_IsWalking = value; } }
+        public bool IsRunning { get { return m_IsRunning; } set { m_IsRunning = value; } }
+        public bool IsInjured { get { return isInjured; } set { isInjured = value; } }
+
+
+
+
+
         [SerializeField] private float maxStaminaSeconds;
         private float staminaSeconds;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
@@ -55,6 +69,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+
+
+        void Awake()
+        {
+            if (_firstPersonController != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            _firstPersonController = this;
+        }
 
 
 
@@ -305,32 +330,25 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             bool waswalking = m_IsWalking;
 
-#if !MOBILE_INPUT
-            // On standalone builds, walk/run speed is modified by a key press.
-            // keep track of whether or not the character is walking or running
-            //m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
 
-            if(Input.GetKey(KeyCode.LeftShift) && !m_IsWalking){
-                staminaSeconds -= Time.deltaTime;  
-                if(staminaSeconds <= 0){
-                    Debug.Log("Out of stamina");
-                    m_IsWalking = true;
-                }
-            }
-            else if (staminaSeconds < maxStaminaSeconds){
-                staminaSeconds += Time.deltaTime;
-            }
+            CalculateStamina();
 
+
+           
             if(Input.GetKeyUp(KeyCode.LeftShift)){
                 m_IsWalking = true;
+                m_IsRunning = false;
             }
             else if(Input.GetKeyDown(KeyCode.LeftShift)){
+                m_IsRunning = true;
                 m_IsWalking = false;
             }
 
-#endif
-            // set the desired speed to be walking or running
-            speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
+            float temp = isInjured ? m_InjuredSpeed : m_WalkSpeed;
+            speed = m_IsRunning ? (temp) * m_RunningFactor : (temp);
+
+
+            //speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
             m_Input = new Vector2(horizontal, vertical);
 
             // normalize input if it exceeds 1 in combined length:
@@ -345,6 +363,20 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 StopAllCoroutines();
                 StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
+            }
+        }
+
+
+        private void CalculateStamina(){
+            if(Input.GetKey(KeyCode.LeftShift) && !m_IsWalking){
+                staminaSeconds -= Time.deltaTime;  
+                if(staminaSeconds <= 0){
+                    Debug.Log("Out of stamina");
+                    m_IsWalking = true;
+                }
+            }
+            else if (staminaSeconds < maxStaminaSeconds){
+                staminaSeconds += Time.deltaTime;
             }
         }
 

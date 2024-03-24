@@ -43,6 +43,16 @@ public class GameManager : MonoBehaviour
     }
 
     void Update(){
+        // test new feature
+        if(Input.GetKeyDown(KeyCode.N)){
+            Debug.Log("New Feature pressed");
+            player.GetComponent<Player>().Injure(2f);
+        }
+
+
+
+
+
         // check if escape is pressed no matter what
         if(Input.GetKeyDown(KeyCode.Escape)){
             sceneCoordinator.PressedEscape();
@@ -53,6 +63,8 @@ public class GameManager : MonoBehaviour
             // tasks open only if the game is not paused
             sceneCoordinator.OnPressedTAB();
         }
+
+
 
         // if game is paused, dont do anything else than checking for escape
         if(IsGamePaused){ return; }

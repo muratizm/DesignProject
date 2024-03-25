@@ -100,7 +100,8 @@ MonoBehaviour:
     - Wood_walk
     - item_omnivision
     - item_ringaringa
-    - minigame_bugs
+    - minigame_clickrush
+    - minigame_clickthespots
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 0cda4c79f4608944e8e19fb36330038b, type: 2}

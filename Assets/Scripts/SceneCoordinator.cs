@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SearchService;
@@ -11,7 +12,10 @@ public class SceneCoordinator : MonoBehaviour
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject pauseScenePanel;
     [SerializeField] private GameObject taskPanel;
+    [SerializeField] private GameObject celebratePanel;
 
+
+    private MinigameManager _minigameManager;
     private SceneCoordinator(){}
 
     void Awake()
@@ -22,9 +26,16 @@ public class SceneCoordinator : MonoBehaviour
             Destroy(gameObject);
         }
         Instance = this;
-        
-        
+
     }
+
+    void Start ()
+    {
+        _minigameManager = MinigameManager.Instance;
+        _minigameManager.OnMinigameFinished += () => OpenCelebratePanel();
+    }
+
+
 
     public void OpenScene(string sceneName){
         SceneManager.LoadScene(sceneName);
@@ -64,7 +75,6 @@ public class SceneCoordinator : MonoBehaviour
     }
 
 
-    
     public void OnPressedTAB() // tab button means tasks button
     {
         if (pauseScenePanel.activeSelf || settingsPanel.activeSelf) {return;} // if settingsPanel is active, do not open taskPanel
@@ -87,6 +97,17 @@ public class SceneCoordinator : MonoBehaviour
         taskPanel.SetActive(true); // activate taskPanel
         GameManager.Instance.IsGamePaused = true;
         UnlockCursor();
+    }
+
+    private void OpenCelebratePanel()
+    {
+        celebratePanel.SetActive(true);
+        Invoke("CloseCelebratePanel", 0.5f);
+    }
+
+    private void CloseCelebratePanel()
+    {
+        celebratePanel.SetActive(false);
     }
 
     public void LockCursor ()

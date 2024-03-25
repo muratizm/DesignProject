@@ -23,8 +23,8 @@ public class MinigameManager : MonoBehaviour
     public enum MinigameType
     {
         Bugs,
-        Memory,
-        Math
+        ClickRush,
+        RememberSpots
     }
 
     private void Awake()
@@ -48,13 +48,15 @@ public class MinigameManager : MonoBehaviour
         {
             case MinigameType.Bugs:
                 Debug.Log("Starting Bugs minigame");
-                StartSelectedGame(Constants.Labels.BUGS_MINIGAME);
+                StartBugsGame(Constants.Labels.SPOTS_MINIGAME);
                 break;
-            case MinigameType.Memory:
-                Debug.Log("Starting Memory minigame");
+            case MinigameType.ClickRush:
+                Debug.Log("Starting ClickRush minigame");
+                StartAnyGame(Constants.Labels.CLICKRUSH_MINIGAME);
                 break;
-            case MinigameType.Math:
-                Debug.Log("Starting Math minigame");
+            case MinigameType.RememberSpots:
+                Debug.Log("Starting Remember Spots minigame");
+                StartRememberSpotsGame(Constants.Labels.SPOTS_MINIGAME);
                 break;
             default:
                 Debug.Log("Invalid minigame type");
@@ -68,18 +70,53 @@ public class MinigameManager : MonoBehaviour
         OnMinigameFinished?.Invoke();
     }
 
-    public void StartSelectedGame(string label)
+    private void StartBugsGame(string label)
     {
-        GameObject bugsMinigame = null;
-
+        GameObject minigame = null;
         AssetLoader.Instance.LoadAssetAsync<GameObject>(label, (result) =>
         {
-            bugsMinigame = Instantiate(result, Vector3.zero, Quaternion.identity, minigamesParent.transform);
-            bugsMinigame.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            minigame = Instantiate(result, Vector3.zero, Quaternion.identity, minigamesParent.transform);
+            minigame.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
-            if(bugsMinigame == null) {return;}
+            if(minigame == null) {return;}
 
-            bugsMinigame.GetComponent<MiniGame>().StartGame();
+            
+
+            ClickTheSpots clickTheSpots = minigame.GetComponent<ClickTheSpots>();
+            clickTheSpots.SetType("Bug");
+            clickTheSpots.StartGame();
+        });
+    }
+
+
+    private void StartRememberSpotsGame(string label)
+    {
+        GameObject minigame = null;
+        AssetLoader.Instance.LoadAssetAsync<GameObject>(label, (result) =>
+        {
+            minigame = Instantiate(result, Vector3.zero, Quaternion.identity, minigamesParent.transform);
+            minigame.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+
+            if(minigame == null) {return;}
+
+            ClickTheSpots clickTheSpots = minigame.GetComponent<ClickTheSpots>();
+            clickTheSpots.SetType("Light");
+            clickTheSpots.StartGame();
+        });
+    }
+
+
+    private void StartAnyGame(string label)
+    {
+        GameObject minigame = null;
+        AssetLoader.Instance.LoadAssetAsync<GameObject>(label, (result) =>
+        {
+            minigame = Instantiate(result, Vector3.zero, Quaternion.identity, minigamesParent.transform);
+            minigame.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+
+            if(minigame == null) {return;}
+
+            minigame.GetComponent<MiniGame>().StartGame();
         });
     }
 }

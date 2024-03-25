@@ -50,6 +50,11 @@ public class Player : MonoBehaviour
 
             _minigameManager.OnMinigameFinished += () => HandleMinigameFinished(item);
         }
+        else if(item.IsMemories){
+            _minigameManager.StartMinigame(MinigameManager.MinigameType.RememberSpots);
+
+            _minigameManager.OnMinigameFinished += () => HandleMinigameFinished(item);
+        }
         else
         {
             _inventoryManager.AddItem(item);

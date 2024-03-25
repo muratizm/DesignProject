@@ -15,13 +15,12 @@ public class ClickRush : MiniGame
     [SerializeField] private float _difficulty = 1; // 1 is the hardest, 0 is the easiest
     private float _targetScore = 100;
     private float _currentScore = 0;
-    private float _clickAmount = 10;
+    private float _clickAmount = 20;
     private float _timeToFinish = 3;
 
 
 
     public override void StartGame(){
-        Debug.Log("Starting ClickRush");
         timeToFinish = _timeToFinish * (1-_difficulty + 1f);
         base.StartGame();
     }
@@ -34,7 +33,6 @@ public class ClickRush : MiniGame
 
     public void OnClick()
     {
-        Debug.Log("Clicked");
         _currentScore += _clickAmount * (1-_difficulty + 0.25f);
         if (_currentScore >= _targetScore)
         {
@@ -47,7 +45,7 @@ public class ClickRush : MiniGame
     private void ApplyGravity()
     {
         if(_currentScore > 0)
-            _currentScore -= .1f;
+            _currentScore -= .5f;
         UpdateScore();
     }
 

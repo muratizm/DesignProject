@@ -15,7 +15,10 @@ public static class Constants
     }
 
     public static class Labels {
-        public const string BUGS_MINIGAME = "minigame_bugs";
+        public const string SPOTS_MINIGAME = "minigame_clickthespots";
+        public const string CLICKRUSH_MINIGAME = "minigame_clickrush";
+
+        
         public const string MEMORY_MINIGAME = "Memory";
         public const string MATH_MINIGAME = "Math";
     }

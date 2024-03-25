@@ -22,6 +22,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - minigame_bugs
+    - minigame_clickthespots
+  - m_GUID: 4d9043030f88a524ca0672820b89b231
+    m_Address: Assets/Prefabs/VisualAssets/2d/MiniGames/ClickRush.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - minigame_clickrush
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0622e1d499dea8b43830347f67784483, type: 2}
   m_SchemaSet:

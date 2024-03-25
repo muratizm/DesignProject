@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         // test new feature
         if(Input.GetKeyDown(KeyCode.N)){
             Debug.Log("New Feature pressed");
-            player.GetComponent<Player>().Injure(2f);
+            MinigameManager.Instance.StartMinigame(MinigameManager.MinigameType.ClickRush);
         }
 
 

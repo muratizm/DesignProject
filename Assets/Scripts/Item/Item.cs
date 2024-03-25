@@ -7,6 +7,7 @@ public abstract class Item : ScriptableObject
     [SerializeField] private string itemName;
     [SerializeField] private string itemTag; // addressable tag
     [SerializeField] private bool isBuggy;   
+    [SerializeField] private bool isMemories;
     [SerializeField] private bool isConsumable; // If true, the item will be removed from the inventory after use
     [SerializeField] private Sprite itemIcon;
 
@@ -14,6 +15,7 @@ public abstract class Item : ScriptableObject
     public string ItemName { get { return itemName; } }
     public string ItemTag { get { return itemTag; } }
     public bool IsBuggy { get { return isBuggy; } }
+    public bool IsMemories { get { return isMemories; } }
     public bool IsConsumable { get { return isConsumable; } }
     public Sprite ItemIcon { get { return itemIcon; } }
 

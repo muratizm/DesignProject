@@ -17,6 +17,7 @@ public class MiniGame : MonoBehaviour
     public virtual void StartGame()
     {
         // Initialization code goes here
+        Debug.Log("Starting MiniGame");
         SceneCoordinator.Instance.UnlockCursor();
 
         slider = gameObject.transform.Find("Slider").GetComponent<Slider>();
@@ -40,6 +41,7 @@ public class MiniGame : MonoBehaviour
 
     public virtual void ExitGame(bool isWon = false)
     {
+        Debug.Log("Exiting MiniGame");
         isMiniGameRunning = false;
         MinigameManager.Instance.EndMinigame(isWon);
         GameManager.Instance.IsGamePaused = false;

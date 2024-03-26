@@ -20,7 +20,8 @@ public class StoryState1 : StoryBaseState
     {
         Debug.Log("Exiting StoryState1");
         //delete every object that needed in this state
-        storyOperations.DeleteObjects("DemoEnvironment");
+        
+        //storyOperations.DeleteObjects("DemoEnvironment");
     
     }
 

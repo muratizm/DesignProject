@@ -34,6 +34,7 @@ public class TasksManager : MonoBehaviour
     void Start()
     {
         gameManager = GameManager.Instance;
+        UpdateTaskSlots();
     }   
 
 
@@ -96,6 +97,14 @@ public class TasksManager : MonoBehaviour
         {
             taskSlots[index].SetActive(true);
             taskSlots[index].GetComponentInChildren<TextMeshProUGUI>().text = tasks[index].TaskName + " -- Less then " + (tasks[index].LeftMinutes+1) + "minutes left.";
+        }
+    }
+
+    private void UpdateTaskSlots()
+    {
+        for (int i = 0; i < tasks.Length; i++)
+        {
+            UpdateTaskSlot(i);
         }
     }
 

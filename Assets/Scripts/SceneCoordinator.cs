@@ -88,7 +88,6 @@ public class SceneCoordinator : MonoBehaviour
     {
         taskPanel.SetActive(false); // deactivate taskPanel
         GameManager.Instance.IsGamePaused = false;
-        Debug.Log("Closing task panel");
         LockCursor();
     }
 

@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class Task1 : BaseTask
 {
-
+    InventoryManager _inventoryManager;
     public override void EnterTask()
     {
         base.EnterTask();
+        _inventoryManager = InventoryManager.Instance;
+        _inventoryManager.InventoryChanged += InventoryManager_InventoryChanged;
     }
 
     public override void UpdateTask()
@@ -18,12 +20,37 @@ public class Task1 : BaseTask
 
         base.UpdateTask(); // runs the timer, checks if game is paused, etc
 
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        // now, we can check for the input to achieve the task
+
+
+    }
+
+
+    private void InventoryManager_InventoryChanged(object sender, System.EventArgs e)
+    {
+        Debug.Log("Inventory Changed Notification Received from InventoryManager to Task1"); 
+        CheckInventory(_inventoryManager.GetInventory());
+        Debug.Log("Inventory Changed");
+        
+    }
+
+
+    private void CheckInventory(Item[] items){
+        Debug.Log("Checking Inventory");
+        int ringCounter = 0;
+        foreach (Item item in items)
         {
+            if(item.ItemType == Item.Type.Ring){
+                ringCounter++;
+            }
+        }
+        if(ringCounter >= 3){   
             AchieveTask();
         }
-        Debug.Log("Updating Task1");
     }
+
+
 
     public override void AchieveTask()
     {

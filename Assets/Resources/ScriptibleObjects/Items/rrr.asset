@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: rrr
   m_EditorClassIdentifier: 
   itemName: Ringaringa
+  itemType: 3
   itemTag: item_ringaringa
+  isBuggy: 0
+  isMemories: 0
   isConsumable: 0
   itemIcon: {fileID: 21300062, guid: 36bbf91eb47491242b75b7e2df16947f, type: 3}

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using System.Collections;
+using System;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -16,14 +17,23 @@ public class InventoryManager : MonoBehaviour
     public static int Crystal { get { return crystal; } private set { crystal = value; } }
 
 
+
     [Header("Inventory")]
     [SerializeField] private Item[] inventory = new Item[5];
     [SerializeField] private Image[] inventorySlots; // Assign in the Inspector
     [SerializeField] private GameObject itemUsingPanel; // Assign in the Inspector
     private int selectedSlot = -1;
 
+
     [Header("Crystal")]
     [SerializeField] private TextMeshProUGUI crystalText; // Assign in the Inspector
+
+
+    public delegate void InventoryChangedEventHandler(object sender, EventArgs e);
+    public event InventoryChangedEventHandler InventoryChanged;
+
+
+
 
 
     void Awake()
@@ -93,9 +103,11 @@ public class InventoryManager : MonoBehaviour
             {
                 inventory[i] = item;
                 UpdateInventorySlot(i);
+                InventoryChanged?.Invoke(this, EventArgs.Empty);
                 return;
             }
         }
+
     }
 
 
@@ -104,6 +116,8 @@ public class InventoryManager : MonoBehaviour
         Crystal++;
         UpdateCrystalSlot();
         Debug.Log("we found Crystal, Count: " + Crystal);
+        InventoryChanged?.Invoke(this, EventArgs.Empty);
+
     }
 
 
@@ -128,11 +142,15 @@ public class InventoryManager : MonoBehaviour
             UpdateInventorySlot(selectedSlot);
         }
         OnCloseButton();
+        InventoryChanged?.Invoke(this, EventArgs.Empty);
+
     }
 
     public void OnDropButton() // called when the player presses the "Drop" button inside of ItemUsingPanel
     {
         StartCoroutine(DropButtonCoroutine());
+        InventoryChanged?.Invoke(this, EventArgs.Empty);
+
     }
 
     
@@ -248,5 +266,12 @@ public class InventoryManager : MonoBehaviour
             Debug.LogError("Failed to load prefab");
         }
     }
+
+
+    public Item[] GetInventory()
+    {
+        return inventory;
+    }
+
 
 }

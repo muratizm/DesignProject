@@ -4,7 +4,21 @@ using UnityEngine;
 
 public abstract class Item : ScriptableObject
 {
+    public enum Type
+    {
+        Book,
+        Paper,
+        Key,
+        Ring,
+        Crystal,
+        Tool // for example map showing tool etc.
+
+    }
+
+
+
     [SerializeField] private string itemName;
+    [SerializeField] private Type itemType;
     [SerializeField] private string itemTag; // addressable tag
     [SerializeField] private bool isBuggy;   
     [SerializeField] private bool isMemories;
@@ -13,6 +27,7 @@ public abstract class Item : ScriptableObject
 
 
     public string ItemName { get { return itemName; } }
+    public Type ItemType { get { return itemType; } }
     public string ItemTag { get { return itemTag; } }
     public bool IsBuggy { get { return isBuggy; } }
     public bool IsMemories { get { return isMemories; } }

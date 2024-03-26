@@ -38,6 +38,7 @@ public class StoryOperations : MonoBehaviour
         Destroy(GameObject.Find(name));
     }
     
+    
     public void GetRidOfTheObstacle(){
         if(obstacle != null){
              Debug.Log("Obstacle is gone");
@@ -46,6 +47,8 @@ public class StoryOperations : MonoBehaviour
         }
     }
 
+
+
     public void AddTask1(){
         Task1 task1 = gameObject.AddComponent<Task1>();
         task1.taskName = "Task313131";
@@ -53,10 +56,12 @@ public class StoryOperations : MonoBehaviour
         tasksManager.AddTask(task1);
     }
     
+
     public void UseOmniverseItem(float maxSize)
     {
         StartCoroutine(ShowEverywhere(maxSize));
     }
+
 
     IEnumerator ShowEverywhere(float maxSize)
     {

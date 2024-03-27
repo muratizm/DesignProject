@@ -17,5 +17,5 @@ MonoBehaviour:
   itemTag: item_ringaringa
   isBuggy: 0
   isMemories: 0
-  isConsumable: 0
+  isConsumable: 1
   itemIcon: {fileID: 21300062, guid: 36bbf91eb47491242b75b7e2df16947f, type: 3}

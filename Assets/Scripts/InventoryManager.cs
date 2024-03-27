@@ -48,6 +48,7 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         gameManager = GameManager.Instance;
+        InventoryChanged += UpdateAllInventory;
     }
 
     void Update()
@@ -138,8 +139,7 @@ public class InventoryManager : MonoBehaviour
         inventory[selectedSlot].Use();
         if (inventory[selectedSlot].IsConsumable)
         {
-            inventory[selectedSlot] = null;
-            UpdateInventorySlot(selectedSlot);
+            RemoveItemFromInventory(selectedSlot);
         }
         OnCloseButton();
         InventoryChanged?.Invoke(this, EventArgs.Empty);
@@ -182,6 +182,7 @@ public class InventoryManager : MonoBehaviour
         UpdateInventorySlot(inventory.Length - 1);
     }
 
+
     IEnumerator CreateItemDrop()
     {
         yield return LoadPrefabOfItem(inventory[selectedSlot].ItemTag);  // Wait for loading
@@ -189,8 +190,6 @@ public class InventoryManager : MonoBehaviour
         itemDrop.GetComponent<ItemObject>().Item = inventory[selectedSlot];
     }
     
-
-
 
     void UpdateInventorySlot(int index) // responsible for updating the specific inventory slot
     {
@@ -204,7 +203,7 @@ public class InventoryManager : MonoBehaviour
         crystalText.text = Crystal.ToString();
     }
 
-    void UpdateAllInventory() // responsible for updating all the inventory slots and the crystal count
+    void UpdateAllInventory(object sender, System.EventArgs e) // responsible for updating all the inventory slots and the crystal count
     {
         UpdateCrystalSlot();
         for (int i = 0; i < inventory.Length; i++)
@@ -248,7 +247,7 @@ public class InventoryManager : MonoBehaviour
             }
         }
         Crystal = PlayerPrefs.GetInt("Crystal");
-        UpdateAllInventory();
+        UpdateAllInventory(this, EventArgs.Empty);
 
     }
     IEnumerator LoadPrefabOfItem(string itemTag)

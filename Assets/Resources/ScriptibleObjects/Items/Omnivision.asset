@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Omnivision
   m_EditorClassIdentifier: 
   itemName: Omnivision
+  itemType: 0
   itemTag: zort
-  isConsumable: 0
+  isBuggy: 0
+  isMemories: 0
+  isConsumable: 1
   itemIcon: {fileID: 21300000, guid: 9866a92691696b346901281f2b329034, type: 3}
   maxSize: 250

@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Omnivision Buggy
   m_EditorClassIdentifier: 
   itemName: Omnivision
+  itemType: 0
   itemTag: minigame_bugs
   isBuggy: 1
-  isConsumable: 0
+  isMemories: 0
+  isConsumable: 1
   itemIcon: {fileID: 21300000, guid: 9866a92691696b346901281f2b329034, type: 3}
   maxSize: 250

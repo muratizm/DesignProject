@@ -1965,3 +1965,39 @@
 =========choice made: (Curious and Brave)
 ========= situation : Bu maceraya nerden başlayabilirim ey yüce Remy!
 
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice0 : (Attaaaacck!!)
+========= given choice1 : (Curious and Brave)
+========= given choice2 : (Coward)
+=========choice made: (Coward)
+========= situation : Ben burayı sevmedim beni evime götürün
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice0 : (Attaaaacck!!)
+========= given choice1 : (Curious and Brave)
+========= given choice2 : (Coward)
+=========choice made: (Coward)
+========= situation : Ben burayı sevmedim beni evime götürün
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice0 : (Attaaaacck!!)
+========= given choice1 : (Curious and Brave)
+========= given choice2 : (Coward)
+=========choice made: (Curious and Brave)
+========= situation : Bu maceraya nerden başlayabilirim ey yüce Remy!
+

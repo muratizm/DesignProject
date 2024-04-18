@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Scripting;
 using UnityEngine.UI;
 
@@ -28,7 +29,6 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
         
-        SceneCoordinator.Instance.LockCursor();
     }
 
 
@@ -36,9 +36,13 @@ public class GameManager : MonoBehaviour
         // initialize variables
         sceneCoordinator = SceneCoordinator.Instance;
         player = GameObject.FindGameObjectWithTag("Player");
+        SceneCoordinator.Instance.LockCursor();
 
-        // load game
-        LoadGame();
+        if(SceneManager.GetActiveScene().name != Constants.SCENE_HOME){
+
+            // load game
+            LoadGame();
+        }
 
     }
 

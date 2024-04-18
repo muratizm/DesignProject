@@ -7,6 +7,8 @@ public static class Constants
     public const string SPEAKER_TAG = "speaker";
     public const string LAYOUT_TAG = "layout";
 
+    public const string SCENE_HOME = "HomeScene";
+
     public static class Paths {
 
         public const string DIALOGUE_HISTORY_TEXT = "Assets/Ink/Story/debug.txt";

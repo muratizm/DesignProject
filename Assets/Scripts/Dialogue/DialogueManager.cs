@@ -38,7 +38,8 @@ public class DialogueManager : MonoBehaviour
 
     private Story currentStory;
 
-    public bool dialogueIsPlaying {get; private set;}
+    private bool isDialoguePlaying;
+    public bool IsDialoguePlaying { get { return isDialoguePlaying; } private set { isDialoguePlaying = value; } }
 
 
     void Awake()
@@ -58,7 +59,7 @@ public class DialogueManager : MonoBehaviour
         storyStateManager = StoryStateManager.Instance;
         gameManager = GameManager.Instance;
 
-        dialogueIsPlaying = false;
+        IsDialoguePlaying = false;
         dialoguePanel.SetActive(false);
 
         storyVariables = StoryStateManager.Instance.GetStoryVariables();
@@ -77,7 +78,7 @@ public class DialogueManager : MonoBehaviour
     private void Update() {
         if(gameManager.IsGamePaused){return;} //if game is paused, dont do anything
 
-        if(!dialogueIsPlaying){ return; } //if dialogue is not playing, dont do anything
+        if(!IsDialoguePlaying){ return; } //if dialogue is not playing, dont do anything
             
       
 
@@ -96,7 +97,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterDialogueMode(TextAsset inkJSON){
         currentStory = new Story(inkJSON.text);
-        dialogueIsPlaying = true;
+        IsDialoguePlaying = true;
         dialoguePanel.SetActive(true);
 
         storyVariables.StartListening(currentStory);
@@ -110,7 +111,7 @@ public class DialogueManager : MonoBehaviour
     {
         storyVariables.StartListening(currentStory);
 
-        dialogueIsPlaying = false;
+        IsDialoguePlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text  = "";
     }

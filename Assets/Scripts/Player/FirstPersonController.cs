@@ -114,7 +114,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             RotateView();
 
-            if(dialogueManager.dialogueIsPlaying){ //if dialogue is playing dont move
+            if(dialogueManager != null && dialogueManager.IsDialoguePlaying){ //if dialogue is playing dont move
                 return;
             }
 
@@ -148,23 +148,23 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if(gameManager.IsGamePaused){ return; } //if game is paused, dont do anything
 
             
-            if(DialogueManager.Instance.dialogueIsPlaying &&  m_CharacterController.isGrounded){ //if dialogue is playing dont move
+            if(dialogueManager != null && dialogueManager.IsDialoguePlaying &&  m_CharacterController.isGrounded){ //if dialogue is playing dont move
                return;
             }
-                float speed;
-                GetInput(out speed);
-                // always move along the camera forward as it is the direction that it being aimed at
-                Vector3 desiredMove = transform.forward*m_Input.y + transform.right*m_Input.x;
 
-                // get a normal for the surface that is being touched to move along it
-                RaycastHit hitInfo;
-                Physics.SphereCast(transform.position, m_CharacterController.radius, Vector3.down, out hitInfo,
-                                m_CharacterController.height/2f, Physics.AllLayers, QueryTriggerInteraction.Ignore);
-                desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
+            float speed;
+            GetInput(out speed);
+            // always move along the camera forward as it is the direction that it being aimed at
+            Vector3 desiredMove = transform.forward*m_Input.y + transform.right*m_Input.x;
 
-                m_MoveDir.x = desiredMove.x*speed;
-                m_MoveDir.z = desiredMove.z*speed;
+            // get a normal for the surface that is being touched to move along it
+            RaycastHit hitInfo;
+            Physics.SphereCast(transform.position, m_CharacterController.radius, Vector3.down, out hitInfo,
+                            m_CharacterController.height/2f, Physics.AllLayers, QueryTriggerInteraction.Ignore);
+            desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
 
+            m_MoveDir.x = desiredMove.x*speed;
+            m_MoveDir.z = desiredMove.z*speed;
 
 
             if (m_CharacterController.isGrounded)

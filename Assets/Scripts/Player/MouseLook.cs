@@ -40,20 +40,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_CameraTargetRot = ClampRotationAroundXAxis (m_CameraTargetRot);
                 Debug.Log("MouseLook LookRotation 2 " + m_CameraTargetRot + " ");
 
-            if(smooth)
-            {
-                character.localRotation = Quaternion.Slerp (character.localRotation, m_CharacterTargetRot,
-                    smoothTime * Time.deltaTime);
-                camera.localRotation = Quaternion.Slerp (camera.localRotation, m_CameraTargetRot,
-                    smoothTime * Time.deltaTime);
-                    Debug.Log("MouseLook LookRotation 3 " + m_CameraTargetRot + " " );
-            }
-            else
-            {
-                character.localRotation = m_CharacterTargetRot;
-                camera.localRotation = m_CameraTargetRot;
-                Debug.Log("MouseLook LookRotation 4 " + m_CameraTargetRot  );
-            }
+
+            character.localRotation = Quaternion.Slerp (character.localRotation, m_CharacterTargetRot,
+                smoothTime * Time.deltaTime);
+            camera.localRotation = Quaternion.Slerp (camera.localRotation, m_CameraTargetRot,
+                smoothTime * Time.deltaTime);
+            Debug.Log("MouseLook LookRotation 3 " + m_CameraTargetRot + " " );
+            Debug.Log("MouseLook LookRotation 4 " + camera.localRotation );
 
         }
 

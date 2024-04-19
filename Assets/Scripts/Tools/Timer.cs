@@ -18,7 +18,6 @@ public class Timer
     {
         this.duration = duration;
         elapsedTime = 0f;
-
     }
 
 

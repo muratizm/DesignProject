@@ -22,7 +22,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI speakerNameText;
     [SerializeField] private Image speakerImage;
     [SerializeField] private float textSize = 31.0f;
-    [SerializeField] private float textDelay = Constants.WAIT_BETWEEN_LETTERS;
+    [SerializeField] private float textDelay = Constants.Times.WAIT_BETWEEN_LETTERS;
     private Animator layoutAnimator;
     private bool lineEnded = false;
 
@@ -242,12 +242,12 @@ public class DialogueManager : MonoBehaviour
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
 
-            if(tagKey == Constants.SPEAKER_TAG){
+            if(tagKey == Constants.Tags.SPEAKER_TAG){
                 speakerNameText.text = tagValue;
                 tagValue = (Resources.Load<Sprite>("Icons/Speakers/" + tagValue) != null) ? tagValue : "default";
                 speakerImage.sprite = Resources.Load<Sprite>("Icons/Speakers/" + tagValue);          
             }
-            if(tagKey == Constants.LAYOUT_TAG){
+            if(tagKey == Constants.Tags.LAYOUT_TAG){
                 layoutAnimator.Play(tagValue);
             }
         }

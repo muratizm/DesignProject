@@ -2001,3 +2001,131 @@
 =========choice made: (Curious and Brave)
 ========= situation : Bu maceraya nerden başlayabilirim ey yüce Remy!
 
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice0 : (Attaaaacck!!)
+========= given choice1 : (Curious and Brave)
+========= given choice2 : (Coward)
+=========choice made: (Attaaaacck!!)
+========= situation : Sen ne diyon uşağım kelleni alirum ha!
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : ecret of our lost civilization.
+
+========= thought bubble : adventure you will be able to save our .
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : ecret of our lost civilization.
+
+========= thought bubble : adventure you will be able to save our .
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : ecret of our lost civilization.
+
+========= thought bubble : adventure you will be able to save our .
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : ecret of our lost civilization.
+
+========= thought bubble : adventure you will be able to save our .
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : ecret of our lost civilization.
+
+========= thought bubble : ecret of our lost civilization.
+
+========= thought bubble : adventure you will be able to save our .
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : ecret of our lost civilization.
+
+========= thought bubble : adventure you will be able to save our .
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : ecret of our lost civilization.
+
+========= thought bubble : adventure you will be able to save our .
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : ecret of our lost civilization.
+
+========= thought bubble : adventure you will be able to save our .
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : ecret of our lost civilization.
+
+========= thought bubble : adventure you will be able to save our .
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : ecret of our lost civilization.
+
+========= thought bubble : adventure you will be able to save our .
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : ecret of our lost civilization.
+
+========= thought bubble : adventure you will be able to save our .
+
+========= thought bubble : Lorem ipsum dolor sit amet.
+
+========= thought bubble : Bu ses de ne??!
+
+========= thought bubble : Acaba rahmetli dedemin gizli sandığından mı geliyor?
+
+========= thought bubble : Aman dedecim yapma etme gece gece.
+
+========= thought bubble : Neyse bi bakim bari. Hadi bismillah!
+
+========= thought bubble : Bu ses de ne??!
+
+========= thought bubble : Acaba rahmetli dedemin gizli sandığından mı geliyor?
+
+========= thought bubble : Bu ses de ne??!
+
+========= thought bubble : Acaba rahmetli dedemin gizli sandığından mı geliyor?
+
+========= thought bubble : Aman dedecim yapma etme gece gece.
+
+========= thought bubble : Neyse bi bakim bari. Hadi bismillah!
+
+========= thought bubble : Bu ses de ne??!
+
+========= thought bubble : Bu ses de ne??!
+
+========= thought bubble : Acaba rahmetli dedemin gizli sandığından mı geliyor?
+
+========= thought bubble : Aman dedecim yapma etme gece gece.
+
+========= thought bubble : Neyse bi bakim bari. Hadi bismillah!
+

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Ring", menuName = "Inventory/Item/Ring")]
-public class Ring : Item
+public class RingSO : ItemSO
 {
     public override void Use()
     {

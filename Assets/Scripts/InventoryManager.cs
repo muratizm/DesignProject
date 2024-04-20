@@ -19,7 +19,7 @@ public class InventoryManager : MonoBehaviour
 
 
     [Header("Inventory")]
-    [SerializeField] private Item[] inventory = new Item[5];
+    [SerializeField] private ItemSO[] inventory = new ItemSO[5];
     [SerializeField] private Image[] inventorySlots; // Assign in the Inspector
     [SerializeField] private GameObject itemUsingPanel; // Assign in the Inspector
     private int selectedSlot = -1;
@@ -96,7 +96,7 @@ public class InventoryManager : MonoBehaviour
     }
 
 
-    public void AddItem(Item item) 
+    public void AddItem(ItemSO item) 
     {
         for (int i = 0; i < inventory.Length; i++)
         {
@@ -238,7 +238,7 @@ public class InventoryManager : MonoBehaviour
             string itemName = PlayerPrefs.GetString("InventorySlot" + i);
             if (itemName != "")
             {
-                inventory[i] = Resources.Load<Item>(Constants.Paths.RESOURCES_SCRIPTIBLEOBJECTS_ITEMS_FOLDER + itemName); // Load the scriptable object with its name
+                inventory[i] = Resources.Load<ItemSO>(Constants.Paths.RESOURCES_SCRIPTIBLEOBJECTS_ITEMS_FOLDER + itemName); // Load the scriptable object with its name
                 UpdateInventorySlot(i);
             }
             else
@@ -267,7 +267,7 @@ public class InventoryManager : MonoBehaviour
     }
 
 
-    public Item[] GetInventory()
+    public ItemSO[] GetInventory()
     {
         return inventory;
     }

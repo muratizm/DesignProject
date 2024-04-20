@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Omnivision Buggy
   m_EditorClassIdentifier: 
   itemName: Omnivision
-  itemType: 0
+  itemType: 5
   itemTag: minigame_bugs
   isBuggy: 1
   isMemories: 0

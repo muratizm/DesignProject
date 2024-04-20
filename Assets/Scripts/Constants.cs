@@ -13,7 +13,9 @@ public static class Constants
 
     public static class Times {
         public const float WAIT_BETWEEN_LETTERS = .025f; 
-        public const float THOUGHT_BUBBLE_DURATION = 2.0f;
+        public const float THOUGHT_BUBBLE_DURATION = 1.0f;
+        public const int FADEIN_DURATION_MS = 2000;
+        public const int FADEOUT_DURATION_MS = 1500;
     }
 
 

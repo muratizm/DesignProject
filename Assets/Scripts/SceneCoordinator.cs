@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,7 +14,8 @@ public class SceneCoordinator : MonoBehaviour
     [SerializeField] private GameObject pauseScenePanel;
     [SerializeField] private GameObject taskPanel;
     [SerializeField] private GameObject celebratePanel;
-
+    [SerializeField] private GameObject fadePanel;
+    private Animation fadeAnimation;
 
     private MinigameManager _minigameManager;
     private SceneCoordinator(){}
@@ -33,9 +35,10 @@ public class SceneCoordinator : MonoBehaviour
     {
         _minigameManager = MinigameManager.Instance;
         _minigameManager.OnMinigameFinished += () => OpenCelebratePanel();
+
+        fadeAnimation = fadePanel.GetComponent<Animation>();
+        FadeIn();
     }
-
-
 
     public void OpenScene(string sceneName){
         SceneManager.LoadScene(sceneName);
@@ -74,7 +77,6 @@ public class SceneCoordinator : MonoBehaviour
         else    { OpenPauseMenu();}
     }
 
-
     public void OnPressedTAB() // tab button means tasks button
     {
         if (pauseScenePanel.activeSelf || settingsPanel.activeSelf) {return;} // if settingsPanel is active, do not open taskPanel
@@ -82,7 +84,6 @@ public class SceneCoordinator : MonoBehaviour
         // if taskPanel is active, deactivate it, if taskPanel is deactive, activate it
         if (taskPanel.activeSelf) CloseTaskButton(); else OpenTasks();
     }
-
 
     public void CloseTaskButton()
     {
@@ -98,10 +99,11 @@ public class SceneCoordinator : MonoBehaviour
         UnlockCursor();
     }
 
-    private void OpenCelebratePanel()
+    private async void OpenCelebratePanel()
     {
         celebratePanel.SetActive(true);
-        Invoke("CloseCelebratePanel", 0.5f);
+        await Task.Delay(500);
+        CloseCelebratePanel();
     }
 
     private void CloseCelebratePanel()
@@ -121,5 +123,31 @@ public class SceneCoordinator : MonoBehaviour
         Cursor.visible = true;
     }
 
+    public async void OpenNewScene(string sceneName){
+        FadeOut();
+        await Task.Delay(Constants.Times.FADEOUT_DURATION_MS);
+        SceneManager.LoadScene(sceneName);
+    }
 
+    public async void FadeAnimation(){
+        FadeOut();
+        await Task.Delay(Constants.Times.FADEOUT_DURATION_MS); // wait for the fadeOut finish
+
+        await Task.Delay(1000); // wait extra 1 second for more realistic effect
+        FadeIn();
+    }
+
+    private void FadeOut()
+    {
+        fadePanel.SetActive(true);
+        fadeAnimation.Play("FadeOut");
+    }
+
+    private async void FadeIn()
+    {
+        fadePanel.SetActive(true);
+        fadeAnimation.Play("FadeIn");
+        await Task.Delay(Constants.Times.FADEIN_DURATION_MS); // wait for 1 second to finish the fadeIn animation
+        fadePanel.SetActive(false);
+    }
 }

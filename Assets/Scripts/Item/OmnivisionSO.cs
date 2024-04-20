@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Omnivison", menuName = "Inventory/Item/Omnivision")]
-public class Omnivision : Item
+public class OmnivisionSO : ItemSO
 {
     private Camera minimapCamera;
     [SerializeField] private float maxSize = 250f;

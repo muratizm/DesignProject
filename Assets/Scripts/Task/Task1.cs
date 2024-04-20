@@ -36,12 +36,12 @@ public class Task1 : BaseTask
     }
 
 
-    private void CheckInventory(Item[] items){
+    private void CheckInventory(ItemSO[] items){
         Debug.Log("Checking Inventory");
         int ringCounter = 0;
-        foreach (Item item in items)
+        foreach (ItemSO item in items)
         {
-            if(item.ItemType == Item.Type.Ring){
+            if(item.ItemType == ItemSO.Type.Ring){
                 ringCounter++;
             }
         }

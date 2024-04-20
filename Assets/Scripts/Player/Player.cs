@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
         _firstPersonController.IsInjured = true;
     }
 
-    public void TakeItem(Item item)
+    public void TakeItem(ItemSO item)
     {
         if(item.IsBuggy)
         {
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void HandleMinigameFinished(Item item)
+    void HandleMinigameFinished(ItemSO item)
     {
         _minigameManager.OnMinigameFinished -= () => HandleMinigameFinished(item);
 

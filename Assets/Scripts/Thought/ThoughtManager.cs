@@ -24,7 +24,7 @@ public class ThoughtManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI thoughtBubbleText;
     [SerializeField] private float textSize = 12.0f;
     [SerializeField] private float textDelay = Constants.Times.WAIT_BETWEEN_LETTERS;
-    [SerializeField] private float thoughtDuration = Constants.Times.THOUGHT_BUBBLE_DURATION;
+    private float thoughtDuration = Constants.Times.THOUGHT_BUBBLE_DURATION;
     private bool isThinking = false;
 
 

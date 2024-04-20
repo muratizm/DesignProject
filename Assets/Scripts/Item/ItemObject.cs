@@ -6,8 +6,8 @@ public class ItemObject : MonoBehaviour
 {
 
     [SerializeField]
-    private Item item;
-    public Item Item { get { return item; } set { item = value; }}
+    private ItemSO item;
+    public ItemSO Item { get { return item; } set { item = value; }}
 
 
     void OnTriggerEnter(Collider other)

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Omnivision
   m_EditorClassIdentifier: 
   itemName: Omnivision
-  itemType: 0
-  itemTag: zort
+  itemType: 5
+  itemTag: '-'
   isBuggy: 0
   isMemories: 0
   isConsumable: 1

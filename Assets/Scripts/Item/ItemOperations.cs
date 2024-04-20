@@ -21,7 +21,11 @@ public class ItemOperations : MonoBehaviour
     }
 
 
+    public void UseBookItem(Sprite[] pages)
+    {
+        // show book
 
+    }
     
     public void UseOmniverseItem(float maxSize)
     {

@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
+    private ItemObject itemObject;
     private bool _isPlayerInRange = false;
     private bool _isChestOpened = false;
     private Animator _chestAnimator;
@@ -11,6 +13,8 @@ public class Chest : MonoBehaviour
     private void Start()
     {
         _chestAnimator = GetComponent<Animator>();
+        itemObject = gameObject.GetComponentInChildren<ItemObject>();
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,14 +38,23 @@ public class Chest : MonoBehaviour
         if (_isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("E key pressed");
-            if (!_isChestOpened)
+            if (_isChestOpened)
             {
-                Debug.Log("Chest is not opened");
-                OpenChest();
+                Debug.Log("Chest was opened for now");
+                if(itemObject != null)
+                {
+                    Player.Instance.TakeItem(itemObject.Item);
+                    Destroy(itemObject.gameObject);
+                    itemObject = null;
+                }
+                else{
+                    Debug.Log("Chest is closing");
+                    CloseChest();   
+                }
             }
             else
             {
-                CloseChest();
+                OpenChest();
             }
         }
     }

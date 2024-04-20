@@ -24,7 +24,7 @@ public class ItemOperations : MonoBehaviour
     public void UseBookItem(Sprite[] pages)
     {
         // show book
-
+        SceneCoordinator.Instance.OpenBookPanel();
     }
     
     public void UseOmniverseItem(float maxSize)

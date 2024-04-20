@@ -25,7 +25,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_InjuredSpeed;
         [SerializeField] private float m_RunningFactor;
-
+        [SerializeField] private bool m_canRotateView = true;
+        public bool CanRotateView { get { return m_canRotateView; } set { m_canRotateView = value; } }
         public bool IsWalking { get { return m_IsWalking; } set { m_IsWalking = value; } }
         public bool IsRunning { get { return m_IsRunning; } set { m_IsRunning = value; } }
         public bool IsInjured { get { return isInjured; } set { isInjured = value; } }
@@ -111,14 +112,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if(gameManager.IsGamePaused){ return; } //if game is paused, dont do anything
 
-
-            RotateView();
+            if(m_canRotateView){
+                RotateView();
+            }
 
             if(dialogueManager != null && dialogueManager.IsDialoguePlaying){ //if dialogue is playing dont move
                 return;
             }
 
-            RotateView();
+
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {

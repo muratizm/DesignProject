@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class SceneCoordinator : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class SceneCoordinator : MonoBehaviour
     [SerializeField] private GameObject taskPanel;
     [SerializeField] private GameObject celebratePanel;
     [SerializeField] private GameObject fadePanel;
+    [SerializeField] private GameObject bookPanel;
     private Animation fadeAnimation;
 
     private MinigameManager _minigameManager;
@@ -74,6 +76,8 @@ public class SceneCoordinator : MonoBehaviour
         if(settingsPanel.activeSelf)    { CloseSettings();} 
         else if(pauseScenePanel.activeSelf)    { ClosePauseMenu();}
         else if(taskPanel.activeSelf)    { CloseTaskButton();}
+        else if(bookPanel.activeSelf)    { CloseBookPanel();}
+        else if (GameManager.Instance.IsGamePaused)    { ClosePauseMenu();}
         else    { OpenPauseMenu();}
     }
 
@@ -109,6 +113,20 @@ public class SceneCoordinator : MonoBehaviour
     private void CloseCelebratePanel()
     {
         celebratePanel.SetActive(false);
+    }
+
+    public void OpenBookPanel()
+    {
+        bookPanel.SetActive(true);
+        FirstPersonController.Instance.CanRotateView = false;
+        UnlockCursor();
+    }
+
+    public void CloseBookPanel()
+    {
+        bookPanel.SetActive(false);
+        FirstPersonController.Instance.CanRotateView = true;
+        LockCursor();
     }
 
     public void LockCursor ()

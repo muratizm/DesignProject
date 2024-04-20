@@ -10866,6 +10866,7 @@ MonoBehaviour:
   thoughtBubbleText: {fileID: 2572769397792142470}
   textSize: 12
   textDelay: 0.025
+  thoughtDuration: 2.5
 --- !u!114 &3497787614082445509
 MonoBehaviour:
   m_ObjectHideFlags: 0

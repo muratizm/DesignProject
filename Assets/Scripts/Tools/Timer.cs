@@ -23,10 +23,8 @@ public class Timer
 
     public IEnumerator TimerCoroutine()
     {
-        Debug.Log("TimerCoroutine");
         while (elapsedTime < duration)
         {
-            Debug.Log(elapsedTime);
             elapsedTime += Time.deltaTime;
             OnTimerTick?.Invoke();
             yield return null;

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.Scripting;
@@ -24,7 +25,7 @@ public class ItemOperations : MonoBehaviour
     public void UseBookItem(Sprite[] pages)
     {
         // show book
-        SceneCoordinator.Instance.OpenBookPanel();
+        SceneCoordinator.Instance.OpenBookPanel(pages);
     }
     
     public void UseOmniverseItem(float maxSize)

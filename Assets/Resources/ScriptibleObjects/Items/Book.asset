@@ -22,3 +22,5 @@ MonoBehaviour:
   pages:
   - {fileID: 21300008, guid: bf863c1f5968393428ffda61834c097c, type: 3}
   - {fileID: 21300008, guid: ef4a8d855fd835e42b625eb8c707a861, type: 3}
+  - {fileID: 21300010, guid: e14bbe2e2c7636d469e52ddb56b46f0c, type: 3}
+  - {fileID: 21300010, guid: e14bbe2e2c7636d469e52ddb56b46f0c, type: 3}

@@ -115,9 +115,10 @@ public class SceneCoordinator : MonoBehaviour
         celebratePanel.SetActive(false);
     }
 
-    public void OpenBookPanel()
+    public void OpenBookPanel(Sprite[] pages)
     {
         bookPanel.SetActive(true);
+        bookPanel.GetComponent<Book>().bookPages = pages;
         FirstPersonController.Instance.CanRotateView = false;
         UnlockCursor();
     }
@@ -155,13 +156,13 @@ public class SceneCoordinator : MonoBehaviour
         FadeIn();
     }
 
-    private void FadeOut()
+    public void FadeOut()
     {
         fadePanel.SetActive(true);
         fadeAnimation.Play("FadeOut");
     }
 
-    private async void FadeIn()
+    public async void FadeIn()
     {
         fadePanel.SetActive(true);
         fadeAnimation.Play("FadeIn");

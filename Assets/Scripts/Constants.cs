@@ -3,11 +3,17 @@ using System.Collections.Generic;
 
 public static class Constants
 {
+    public static class Positions {
+        public const float PLAYER_START_DEFAULT_X = -20f;
+        public const float PLAYER_START_DEFAULT_Y = 40f;
+        public const float PLAYER_START_DEFAULT_Z = -80f;
+    }
+
 
 
     //Scene names
     public const string SCENE_HOME = "HomeScene";
-
+    public const string SCENE_PLAY = "Play";
 
 
 
@@ -30,6 +36,12 @@ public static class Constants
         public const string DIALOGUE_HISTORY_TEXT = "Assets/Ink/Story/debug.txt";
         public const string RESOURCES_SCRIPTIBLEOBJECTS_ITEMS_FOLDER = "ScriptibleObjects/Items/";
         public const string HIERARCHY_MINIGAME_PANEL = "Canvas/MinigamePanel";
+
+        public static class Sounds {
+            public const string CHEST_OPEN = "Sounds/SFX/chest_open";
+            public const string CHEST_CLOSE = "Sounds/SFX/chest_close";
+            public const string PAGE_FLIP = "Sounds/SFX/page_flip";
+        }
     }
 
     public static class Labels {

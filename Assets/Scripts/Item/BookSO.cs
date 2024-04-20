@@ -9,6 +9,11 @@ public class BookSO : ItemSO
     public override void Use()
     {
         // Implement the logic to show us everywhere
-        ItemOperations.Instance.UseBookItem(pages);        
+        if (ItemTag == "GrandfathersBook"){
+            StoryOperations.Instance.HomeSceneOpenBook(pages);
+        }
+        else{
+            ItemOperations.Instance.UseBookItem(pages);        
+        }
     }
 }

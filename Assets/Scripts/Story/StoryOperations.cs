@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Threading.Tasks;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.Scripting;
@@ -47,7 +49,24 @@ public class StoryOperations : MonoBehaviour
         }
     }
 
+    public async void HomeSceneOpenBook(Sprite[] pages)
+    {
+        SceneCoordinator.Instance.FadeOut();
+        await Task.Delay(Constants.Times.FADEOUT_DURATION_MS);
 
+        ItemOperations.Instance.UseBookItem(pages);
+        
+        SceneCoordinator.Instance.FadeIn();
+        await Task.Delay(Constants.Times.FADEIN_DURATION_MS);
+    }
+
+    public async void PassOut()
+    {
+        SceneCoordinator.Instance.FadeOut();
+        await Task.Delay(Constants.Times.FADEOUT_DURATION_MS);
+
+        SceneCoordinator.Instance.OpenScene(Constants.SCENE_PLAY);
+    }
 
     public void AddTask1(){
         Task1 task1 = gameObject.AddComponent<Task1>();

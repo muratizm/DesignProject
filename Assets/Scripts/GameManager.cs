@@ -110,11 +110,13 @@ public class GameManager : MonoBehaviour
     public void LoadGame(){
         Debug.Log("Game Loaded");
         // load position, health, items, money, current story, all past decisions, etc.
-        player.transform.position = new Vector3(PlayerPrefs.GetFloat("PlayerPositionX"), PlayerPrefs.GetFloat("PlayerPositionY"), PlayerPrefs.GetFloat("PlayerPositionZ"));
+        player.transform.position = new Vector3(
+            PlayerPrefs.GetFloat("PlayerPositionX", Constants.Positions.PLAYER_START_DEFAULT_X),
+            PlayerPrefs.GetFloat("PlayerPositionY", Constants.Positions.PLAYER_START_DEFAULT_Y),
+            PlayerPrefs.GetFloat("PlayerPositionZ", Constants.Positions.PLAYER_START_DEFAULT_Z));
         
         InventoryManager.Instance.LoadInventory();
 
-        //currentStory = PlayerPrefs.GetString("CurrentStory");
     }
 
 

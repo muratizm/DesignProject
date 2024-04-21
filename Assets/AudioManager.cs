@@ -17,7 +17,6 @@ public class AudioManager : MonoBehaviour
         }
         instance = this;
 
-        DontDestroyOnLoad(gameObject);
         musicSource = gameObject.AddComponent<AudioSource>();
         sfxSource = gameObject.AddComponent<AudioSource>();
         uiSource = gameObject.AddComponent<AudioSource>();

@@ -116,7 +116,6 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.GetFloat("PlayerPositionZ", Constants.Positions.PLAYER_START_DEFAULT_Z));
         
         InventoryManager.Instance.LoadInventory();
-
     }
 
 

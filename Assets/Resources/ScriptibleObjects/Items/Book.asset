@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BookSO
   itemName: Book
   itemType: 0
-  itemTag: '-'
+  itemTag: item_book
   isBuggy: 0
   isMemories: 0
   isConsumable: 0

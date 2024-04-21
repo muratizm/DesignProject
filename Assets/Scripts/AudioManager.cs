@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 
 
@@ -23,15 +24,32 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    public void PlayMusic(string path, float volume = 1f)
+    public async void PlayMusic(string path, float volume = 1f)
     {
         AudioClip clip = AssetLibrary.GetAudioClip(path);
 
-        if (clip == null) { Debug.LogWarning("Music: " + path + " not found!"); return; }
-        if (musicSource.clip == clip) return;
+        // Fade out current music if it exists
+        if (clip != null) 
+        { 
+            while (musicSource.volume > 0f)
+            {
+                musicSource.volume -= Time.deltaTime * 2; // adjust the 2 to change the fade speed
+                await Task.Delay(10);
+            }
 
+            musicSource.Stop();          
+        }
+
+        // Play new music
         musicSource.clip = clip;
         musicSource.Play();
+
+        // Fade in new music
+        while (musicSource.volume < volume)
+        {
+            musicSource.volume += Time.deltaTime * 2; // adjust the 2 to change the fade speed
+            await Task.Delay(10);
+        }
     }
 
     public void PlaySFX(string path, float volume = 0.5f)

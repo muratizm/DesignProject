@@ -37,6 +37,8 @@ public class MinigameManager : MonoBehaviour
         }
         _minigameManager = this;
         minigamesParent = GameObject.Find(Constants.Paths.HIERARCHY_MINIGAME_PANEL);
+        Debug.Log("MinigameManager initialized");
+        
     }
 
 
@@ -119,4 +121,10 @@ public class MinigameManager : MonoBehaviour
             minigame.GetComponent<MiniGame>().StartGame();
         });
     }
+
+
+        public void ClearSubscribers()
+        {
+            OnMinigameFinished = null;
+        }
 }

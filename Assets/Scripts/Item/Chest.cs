@@ -62,14 +62,14 @@ public class Chest : MonoBehaviour
     private void OpenChest()
     {
         _chestAnimator.Play("ChestOpening");
-        AudioManager.Instance.PlaySFX(Constants.Paths.Sounds.CHEST_OPEN);
+        AudioManager.Instance.PlaySFX(Constants.Paths.Sounds.SFX.CHEST_OPEN);
         _isChestOpened = true;
     }
 
     private void CloseChest()
     {
         _chestAnimator.Play("ChestClosing");
-        AudioManager.Instance.PlaySFX(Constants.Paths.Sounds.CHEST_CLOSE);
+        AudioManager.Instance.PlaySFX(Constants.Paths.Sounds.SFX.CHEST_CLOSE);
         _isChestOpened = false;
     }
 

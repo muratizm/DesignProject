@@ -65,7 +65,7 @@ public class StoryOperations : MonoBehaviour
         SceneCoordinator.Instance.FadeOut();
         await Task.Delay(Constants.Times.FADEOUT_DURATION_MS);
 
-        SceneCoordinator.Instance.OpenScene(Constants.SCENE_PLAY);
+        SceneCoordinator.Instance.OpenScene(Constants.Scenes.SCENE_PLAY);
     }
 
     public void AddTask1(){

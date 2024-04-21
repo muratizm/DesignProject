@@ -352,7 +352,7 @@ public class Book : MonoBehaviour {
     {
         if (pageDragging)
         {
-            AudioManager.Instance.PlaySFX(Constants.Paths.Sounds.PAGE_FLIP);
+            AudioManager.Instance.PlaySFX(Constants.Paths.Sounds.SFX.PAGE_FLIP);
             pageDragging = false;
             float distanceToLeft = Vector2.Distance(c, ebl);
             float distanceToRight = Vector2.Distance(c, ebr);

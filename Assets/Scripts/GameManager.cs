@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         SceneCoordinator.Instance.LockCursor();
 
-        if(SceneManager.GetActiveScene().name != Constants.SCENE_HOME){
+        if(SceneManager.GetActiveScene().name != Constants.Scenes.SCENE_HOME){
 
             // load game
             LoadGame();

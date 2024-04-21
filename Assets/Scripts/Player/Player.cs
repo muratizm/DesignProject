@@ -44,29 +44,31 @@ public class Player : MonoBehaviour
 
     public void TakeItem(ItemSO item)
     {
+        Debug.Log("Player took item: " + item.name);
         if(item.IsBuggy)
         {
             _minigameManager.StartMinigame(MinigameManager.MinigameType.Bugs);
-
+            Debug.Log("Minigame started1");
             _minigameManager.OnMinigameFinished += () => HandleMinigameFinished(item);
         }
         else if(item.IsMemories){
             _minigameManager.StartMinigame(MinigameManager.MinigameType.RememberSpots);
-
+            Debug.Log("Minigame started2");
             _minigameManager.OnMinigameFinished += () => HandleMinigameFinished(item);
         }
         else
         {
+            Debug.Log("Item added to inventory");
             _inventoryManager.AddItem(item);
         }
     }
 
     void HandleMinigameFinished(ItemSO item)
     {
-        _minigameManager.OnMinigameFinished -= () => HandleMinigameFinished(item);
-
+        _minigameManager.ClearSubscribers();
         if (_minigameManager.IsWon)
         {
+            Debug.Log("Minigame won");
             _inventoryManager.AddItem(item);
         }
     }

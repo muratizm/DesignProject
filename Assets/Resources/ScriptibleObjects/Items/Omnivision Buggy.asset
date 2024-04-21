@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Omnivision
   itemType: 5
-  itemTag: minigame_bugs
+  itemTag: item_omnivision
   isBuggy: 1
   isMemories: 0
   isConsumable: 1

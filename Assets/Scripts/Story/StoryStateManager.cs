@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StoryStateManager : MonoBehaviour
 {
@@ -24,12 +25,13 @@ public class StoryStateManager : MonoBehaviour
             Instance = this;
             states = new Dictionary<string, StoryBaseState>
             {
+                { "StoryState0", new StoryState0() },
                 { "StoryState1", new StoryState1() },
                 { "StoryState2", new StoryState2() },
                 // Add all your states here
             };
 
-            currentStoryState = states["StoryState1"];
+
             storyVariables = new StoryVariables(globalsTextFile);
 
         }
@@ -45,8 +47,16 @@ public class StoryStateManager : MonoBehaviour
     void Start()
     {
         
-        currentStoryState.EnterState();
 
+            if (SceneManager.GetActiveScene().name == "HomeScene")
+            {
+                ChangeState("StoryState0");
+            }
+            else
+            {
+                ChangeState("StoryState1"); //  burda playerprefs falan bi şekilde
+                // şuan içinde bulundugum stroy state i alıp ona göre değiştirme yapılacak
+            }
     }
 
     public void UpdateCurrentState()

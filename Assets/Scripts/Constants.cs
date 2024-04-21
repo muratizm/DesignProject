@@ -10,10 +10,11 @@ public static class Constants
     }
 
 
+    public static class Scenes {
+        public const string SCENE_HOME = "HomeScene";
+        public const string SCENE_PLAY = "Play";
+    }
 
-    //Scene names
-    public const string SCENE_HOME = "HomeScene";
-    public const string SCENE_PLAY = "Play";
 
 
 
@@ -38,9 +39,16 @@ public static class Constants
         public const string HIERARCHY_MINIGAME_PANEL = "Canvas/MinigamePanel";
 
         public static class Sounds {
-            public const string CHEST_OPEN = "Sounds/SFX/chest_open";
-            public const string CHEST_CLOSE = "Sounds/SFX/chest_close";
-            public const string PAGE_FLIP = "Sounds/SFX/page_flip";
+            public static class SFX {
+                public const string BUTTON_CLICK = "Sounds/SFX/button_click";
+                public const string CHEST_OPEN = "Sounds/SFX/chest_open";
+                public const string CHEST_CLOSE = "Sounds/SFX/chest_close";
+                public const string PAGE_FLIP = "Sounds/SFX/page_flip";
+            }
+            public static class MUSIC {
+                public const string HOME = "Sounds/Music/homescene";
+                public const string STORY1 = "Sounds/Music/entrance";
+            }
         }
     }
 

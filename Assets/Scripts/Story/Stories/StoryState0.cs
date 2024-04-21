@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Ink.Runtime;
 using UnityEngine;
 
-public class StoryState1 : StoryBaseState
+public class StoryState0 : StoryBaseState
 {
     private StoryStateManager _storyStateManager;
     private StoryOperations _storyOperations;
@@ -12,12 +12,12 @@ public class StoryState1 : StoryBaseState
 
     public override void EnterState()
     {
-        Debug.Log("Entering StoryState1");
+        Debug.Log("Entering StoryState0");
         _storyStateManager = StoryStateManager.Instance;
         _storyOperations = StoryOperations.Instance;
         _audioManager = AudioManager.Instance;
 
-        _audioManager.PlayMusic(Constants.Paths.Sounds.MUSIC.STORY1, 0.1f);
+        _audioManager.PlayMusic(Constants.Paths.Sounds.MUSIC.HOME, 0.5f);
     }
 
     public override void ExitState()

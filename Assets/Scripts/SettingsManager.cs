@@ -86,14 +86,12 @@ public class SettingsManager : MonoBehaviour
         PlayerPrefs.SetInt("resolution", newResolutionIndex);
         PlayerPrefs.SetInt("windowMode", newWindowModeIndex);
         PlayerPrefs.Save();
-        Debug.Log("Saved settings: " + newVolume + " " + newResolutionIndex + " " + newWindowModeIndex);
     }
 
     private void LoadSettingsPlayerPrefs(){ // settings panel : loads the settings from player prefs
         newVolume = PlayerPrefs.GetInt("volume", 100);
         newResolutionIndex = PlayerPrefs.GetInt("resolution", 0);
         newWindowModeIndex = PlayerPrefs.GetInt("windowMode", 0);
-        Debug.Log("Loaded settings: " + newVolume + " " + newResolutionIndex + " " + newWindowModeIndex);
     }
 
 

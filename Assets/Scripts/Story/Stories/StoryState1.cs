@@ -32,13 +32,18 @@ public class StoryState1 : StoryBaseState
  
     public override void UpdateState()
     {
-        
-        if( ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value == "attack_to_tree"){
+        Debug.Log("Updating StoryState1");
+        if( ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value == "respect_to_tree"){
             _storyOperations.GetRidOfTheObstacle();
             _storyOperations.AddTask1();
 
             _storyStateManager.ChangeState("StoryState2");
-            
+        }
+        else if( ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value == "attack_to_tree"){
+            _storyOperations.BranchFall();
+            _storyOperations.AddTask1();
+
+            _storyStateManager.ChangeState("StoryState3");
         }
     }
 

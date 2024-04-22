@@ -11,7 +11,14 @@ public class StoryOperations : MonoBehaviour
     private StoryStateManager storyStateManager;
     private TasksManager tasksManager;
 
-    [SerializeField] private GameObject obstacle;
+    public static class StoryState1
+    {
+        public const string NAME = "StoryState1";
+        public const string SS1_OBSTACLE = "SS1_Obstacle";
+        public const string SS1_BRANCH = "SS1_Branch";
+    }
+    [SerializeField] private GameObject ss1_obstacle;
+    [SerializeField] private GameObject ss1_branch;
 
     void Awake()
     {
@@ -42,10 +49,18 @@ public class StoryOperations : MonoBehaviour
     
     
     public void GetRidOfTheObstacle(){
-        if(obstacle != null){
-             Debug.Log("Obstacle is gone");
+        if(ss1_obstacle != null){
+            Debug.Log("Obstacle is falling!");
+            ss1_obstacle.GetComponent<Animation>().Play("anim");
+        }
+    }
 
-            obstacle.GetComponent<Animation>().Play("anim");
+    public void BranchFall(){
+        if(ss1_branch != null){
+            Debug.Log("Branch is falling!");
+
+            Rigidbody rb = ss1_branch.AddComponent<Rigidbody>();
+            rb.mass = 100;
         }
     }
 
@@ -70,7 +85,7 @@ public class StoryOperations : MonoBehaviour
 
     public void AddTask1(){
         Task1 task1 = gameObject.AddComponent<Task1>();
-        task1.taskName = "Task313131";
+        task1.taskName = "Task1 Task1 ";
         task1.TimeToAchieve = 70f;
         tasksManager.AddTask(task1);
     }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d0542de0e51e64eb8962e32726bd7e, type: 3}
-  m_Name: rrr
+  m_Name: Ring
   m_EditorClassIdentifier: 
   itemName: Ringaringa
   itemType: 3

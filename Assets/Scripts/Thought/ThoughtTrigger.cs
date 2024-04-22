@@ -2,18 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThoughtTrigger : MonoBehaviour
+public class ThoughtTrigger : StoryTrigger
 {
-    [Header("Ink JSON")]
-    [SerializeField] private TextAsset inkJSON;
-
-        private void OnTriggerEnter(Collider other)
+    public override void TriggerResult()
     {
-        if (other.CompareTag("Player"))
-        {
-            // Eğer oyuncu etkileşim bölgesine girdiyse, diyalogu başlat
-            ThoughtManager.Instance.EnterThoughtBubble(inkJSON);
-        }
+        ThoughtManager.Instance.EnterThoughtBubble(inkJSON);
     }
 
 }

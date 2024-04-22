@@ -215,7 +215,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 if (hit.collider.tag == currentGround) return; // still the same ground
                 if (hit.collider.tag == "Untagged"){
-                    Debug.LogError("No ground detected, setting to dirt. Please tag the ground with the correct tag.");
+                    Debug.Log("No ground detected. For your information.");
                     return;
                 } 
                 //else: new ground detected

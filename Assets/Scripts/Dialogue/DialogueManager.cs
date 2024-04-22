@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
 
 
     [Header("Choices")]
-    [SerializeField] private GameObject[] choices;
+    [SerializeField] private GameObject[] choiceObjects;
     List<Choice> currentChoices;
     private TextMeshProUGUI[] choicesText;
     private int selectedChoiceIndex = -1;
@@ -67,9 +67,9 @@ public class DialogueManager : MonoBehaviour
 
         layoutAnimator = dialoguePanel.GetComponent<Animator>();
 
-        choicesText = new TextMeshProUGUI[choices.Length];
+        choicesText = new TextMeshProUGUI[choiceObjects.Length];
         int index = 0;
-        foreach (GameObject choice in choices){
+        foreach (GameObject choice in choiceObjects){
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++; 
         }
@@ -154,28 +154,29 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplayChoices(){
         currentChoices = currentStory.currentChoices;
-        if(currentChoices.Count != 0){
-            StartCoroutine(StartCountdown(3f));
 
-        }
+        if(currentChoices.Count == 0){return;} //if there are no choices, dont display anything
 
-        if(currentChoices.Count > choices.Length){
+    
+        StartCoroutine(StartCountdown(3f)); //start countdown for choice selection
+
+        if(currentChoices.Count > choiceObjects.Length){
             Debug.LogError("more choices were given than the ui can support. there is not enough space for this choices. number of choices given: " + currentChoices);
         }
 
         //reveal choices that are given in story
+        
+        for(int i = 0; i < choiceObjects.Length; i++){ // 4 choices (last one is askAI choice)
+            choiceObjects[i].gameObject.SetActive(true);
+        }
+
         int index = 0;
-        foreach (Choice choice in currentChoices){
+        foreach(Choice choice in currentChoices){ // 3 real choices 
             choicesText[index].text = choice.text;
-            choices[index].gameObject.SetActive(true);
-            File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "========= given choice" + index + " : " + choicesText[index].text + "\n");
+            File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "========= given choice : " + choice.text + "\n");
             index++;
         }
 
-        //hide remaining choices
-        for(int i = index; i < choices.Length; i++){
-            choices[i].gameObject.SetActive(false);
-        }
 
         if(currentChoices.Count > 0){
             selectedChoiceIndex = 0;
@@ -218,17 +219,24 @@ public class DialogueManager : MonoBehaviour
     public void MakeChoice(int index){
         if(index != -1){
             UnhighlightChoice();
-            for(int i = 0; i < choices.Length; i++){ //hide all choices
-                choices[i].gameObject.SetActive(false);
+            HideAllChoices();
+
+            if(index == Constants.ASKAI_CHOICE_INDEX){
+                index = AI.Instance.AskAI(currentStory);
             }
+
             currentStory.ChooseChoiceIndex(index);
             choiceMade = true;
             File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "=========choice made: " + choicesText[index].text + "\n");
-            
-        }
-        storyStateManager.UpdateCurrentState();
 
+        }
+
+        //burası büyülü yer amk
+ 
+        storyStateManager.UpdateCurrentState();
         ContinueStory();
+        
+
     }
 
 
@@ -254,21 +262,21 @@ public class DialogueManager : MonoBehaviour
     }
     private void GoPastChoice(){
         UnhighlightChoice();
-        selectedChoiceIndex = (selectedChoiceIndex == 0) ? (currentChoices.Count-1) : selectedChoiceIndex - 1;
+        selectedChoiceIndex = (selectedChoiceIndex == 0) ? (choiceObjects.Count() - 1) : selectedChoiceIndex - 1;
         HighlightSelectedChoice();
     }
 
     private void GoNextChoice(){
         UnhighlightChoice();
-        selectedChoiceIndex = (selectedChoiceIndex == (currentChoices.Count-1)) ? 0 : selectedChoiceIndex + 1;
+        selectedChoiceIndex = (selectedChoiceIndex == (choiceObjects.Count() - 1)) ? 0 : selectedChoiceIndex + 1;
         HighlightSelectedChoice();
     }
 
 
 
     private void HighlightSelectedChoice(){
-        Button button = choices[selectedChoiceIndex].GetComponent<Button>();
-        if (choices[selectedChoiceIndex] != null)
+        Button button = choiceObjects[selectedChoiceIndex].GetComponent<Button>();
+        if (choiceObjects[selectedChoiceIndex] != null)
         {
             button.GetComponent<Image>().color = new Color(.25f, 1f, 0f, .1f);
         }
@@ -279,13 +287,19 @@ public class DialogueManager : MonoBehaviour
 
     public void UnhighlightChoice()
     {
-        Button button = choices[selectedChoiceIndex].GetComponent<Button>();
-        if (choices[selectedChoiceIndex] != null)
+        Button button = choiceObjects[selectedChoiceIndex].GetComponent<Button>();
+        if (choiceObjects[selectedChoiceIndex] != null)
         {
             button.GetComponent<Image>().color = new Color(.25f, 1f, 0f, 0f);
         }
         else{
             Debug.Log("This button is null!");
+        }
+    }
+
+    private void HideAllChoices(){
+        for(int i = 0; i < choiceObjects.Length; i++){
+            choiceObjects[i].gameObject.SetActive(false);
         }
     }
 

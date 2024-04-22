@@ -15,11 +15,12 @@ It takes great courage to go on this adventure. I hope that by completing this a
 
 === stupidlybrave ===
 Sen ne diyon uşağım kelleni alirum ha! 
+~ curstate = "attack_to_tree"
 -> END
 
 === adventurerbrave ===
 Bu maceraya nerden başlayabilirim ey yüce Remy!
-~ curstate = "attack_to_tree"
+~ curstate = "respect_to_tree"
 -> END
 
 === coward ===

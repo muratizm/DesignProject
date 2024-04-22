@@ -2,20 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour
+public class DialogueTrigger : StoryTrigger
 {
-    [Header("Ink JSON")]
-    [SerializeField] private TextAsset inkJSON;
-
-
-    private void OnTriggerEnter(Collider other)
+    public override void TriggerResult()
     {
-        if (other.CompareTag("Player"))
-        {
-            // Eğer oyuncu etkileşim bölgesine girdiyse, diyalogu başlat
-            DialogueManager.Instance.EnterDialogueMode(inkJSON);
-        }
+        DialogueManager.Instance.EnterDialogueMode(inkJSON);
     }
-
 
 }

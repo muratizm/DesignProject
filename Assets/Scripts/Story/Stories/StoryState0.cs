@@ -33,13 +33,6 @@ public class StoryState0 : StoryBaseState
     public override void UpdateState()
     {
         
-        if( ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value == "attack_to_tree"){
-            _storyOperations.GetRidOfTheObstacle();
-            _storyOperations.AddTask1();
-
-            _storyStateManager.ChangeState("StoryState2");
-            
-        }
     }
 
 

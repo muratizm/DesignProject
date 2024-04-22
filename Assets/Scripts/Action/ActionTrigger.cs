@@ -5,31 +5,10 @@ using Ink.Runtime;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
-public class ActionTrigger : MonoBehaviour
+public class ActionTrigger : StoryTrigger
 {
-    private BaseAction action;
-
-
-    [Header("Ink JSON")]
-    [SerializeField] private TextAsset inkJSON;
-
-    void Awake()
+    public override void TriggerResult()
     {
-        action = GetComponent<BaseAction>();
-
+        ActionManager.Instance.EnterActionMode(inkJSON, GetComponent<BaseAction>());
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            ActionManager.Instance.EnterActionMode(inkJSON, action);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-    }
-
-
 }

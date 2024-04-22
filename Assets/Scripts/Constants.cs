@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 public static class Constants
 {
+    public const int ASKAI_CHOICE_INDEX = 3; // 4th choice in the list
+
+
     public static class Positions {
         public const float PLAYER_START_DEFAULT_X = -20f;
         public const float PLAYER_START_DEFAULT_Y = 40f;

@@ -144,13 +144,13 @@ public class SceneCoordinator : MonoBehaviour
 
     public async void OpenNewScene(string sceneName){
         FadeOut();
-        await Task.Delay(Constants.Times.FADEOUT_DURATION_MS);
+        await Task.Delay(Constants.Durations.FADEOUT_DURATION_MS);
         SceneManager.LoadScene(sceneName);
     }
 
     public async void FadeAnimation(){
         FadeOut();
-        await Task.Delay(Constants.Times.FADEOUT_DURATION_MS); // wait for the fadeOut finish
+        await Task.Delay(Constants.Durations.FADEOUT_DURATION_MS); // wait for the fadeOut finish
 
         await Task.Delay(1000); // wait extra 1 second for more realistic effect
         FadeIn();
@@ -166,7 +166,7 @@ public class SceneCoordinator : MonoBehaviour
     {
         fadePanel.SetActive(true);
         fadeAnimation.Play("FadeIn");
-        await Task.Delay(Constants.Times.FADEIN_DURATION_MS); // wait for 1 second to finish the fadeIn animation
+        await Task.Delay(Constants.Durations.FADEIN_DURATION_MS); // wait for 1 second to finish the fadeIn animation
         fadePanel.SetActive(false);
     }
 }

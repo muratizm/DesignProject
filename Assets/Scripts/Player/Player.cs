@@ -35,9 +35,9 @@ public class Player : MonoBehaviour
     public void Injure(float timeToRecover)
     {
         timer = new Timer();
-        timer.SetTimer(timeToRecover);
         timer.OnTimerComplete += () => _firstPersonController.IsInjured = false;
-        StartCoroutine(timer.TimerCoroutine());
+        timer.SetTimer(timeToRecover);
+        timer.StartTimer();
         
         _firstPersonController.IsInjured = true;
     }

@@ -36,7 +36,7 @@ public class MiniGame : MonoBehaviour
     public virtual void StartTimer()
     {
         timer.SetTimer(timeToFinish);
-        StartCoroutine(timer.TimerCoroutine());
+        timer.StartTimer();
     }
 
     public virtual void ExitGame(bool isWon = false)

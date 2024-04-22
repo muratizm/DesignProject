@@ -67,18 +67,18 @@ public class StoryOperations : MonoBehaviour
     public async void HomeSceneOpenBook(Sprite[] pages)
     {
         SceneCoordinator.Instance.FadeOut();
-        await Task.Delay(Constants.Times.FADEOUT_DURATION_MS);
+        await Task.Delay(Constants.Durations.FADEOUT_DURATION_MS);
 
         ItemOperations.Instance.UseBookItem(pages);
         
         SceneCoordinator.Instance.FadeIn();
-        await Task.Delay(Constants.Times.FADEIN_DURATION_MS);
+        await Task.Delay(Constants.Durations.FADEIN_DURATION_MS);
     }
 
     public async void PassOut()
     {
         SceneCoordinator.Instance.FadeOut();
-        await Task.Delay(Constants.Times.FADEOUT_DURATION_MS);
+        await Task.Delay(Constants.Durations.FADEOUT_DURATION_MS);
 
         SceneCoordinator.Instance.OpenScene(Constants.Scenes.SCENE_PLAY);
     }

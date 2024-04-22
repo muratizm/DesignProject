@@ -45,7 +45,7 @@ public class AboutPanel : MonoBehaviour
         foreach (char letter in credits) 
         {
             creditsText.text += letter; 
-            yield return new WaitForSeconds(Constants.Times.WAIT_BETWEEN_LETTERS);
+            yield return new WaitForSeconds(Constants.Durations.WAIT_BETWEEN_LETTERS);
         }
         textFinished = true;
     }

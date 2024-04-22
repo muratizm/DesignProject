@@ -23,8 +23,8 @@ public class ThoughtManager : MonoBehaviour
     [SerializeField] private GameObject thoughtBubblePanel;
     [SerializeField] private TextMeshProUGUI thoughtBubbleText;
     [SerializeField] private float textSize = 12.0f;
-    [SerializeField] private float textDelay = Constants.Times.WAIT_BETWEEN_LETTERS;
-    [SerializeField] private float thoughtDuration = Constants.Times.THOUGHT_BUBBLE_DURATION;
+    [SerializeField] private float textDelay = Constants.Durations.WAIT_BETWEEN_LETTERS;
+    [SerializeField] private float thoughtDuration = Constants.Durations.THOUGHT_BUBBLE_DURATION;
     private bool isThinking = false;
 
 
@@ -83,7 +83,7 @@ public class ThoughtManager : MonoBehaviour
         if(currentStory.canContinue){
             StartCoroutine(DisplayThoughtInSeconds(thoughtBubbleText, currentStory.Continue()));
             timer.SetTimer(thoughtDuration);
-            StartCoroutine(timer.TimerCoroutine());
+            timer.StartTimer();
         }
         else{
             ExitThoughtBubble();

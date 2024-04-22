@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using System.Linq;
 using Ink.UnityIntegration;
 using System.IO;
+using System.Threading;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class DialogueManager : MonoBehaviour
     private StoryStateManager storyStateManager;
     public static DialogueManager Instance { get; private set; }
     private StoryVariables storyVariables; 
+    private Timer timer = new Timer();
+    
 
 
     [Header("Dialogue UI - Only works on Awake")]
@@ -22,7 +25,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI speakerNameText;
     [SerializeField] private Image speakerImage;
     [SerializeField] private float textSize = 31.0f;
-    [SerializeField] private float textDelay = Constants.Times.WAIT_BETWEEN_LETTERS;
+    [SerializeField] private float textDelay = Constants.Durations.WAIT_BETWEEN_LETTERS;
     private Animator layoutAnimator;
     private bool lineEnded = false;
 
@@ -63,9 +66,13 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(false);
 
         storyVariables = StoryStateManager.Instance.GetStoryVariables();
-
-
         layoutAnimator = dialoguePanel.GetComponent<Animator>();
+
+        timer.OnTimerComplete += () => TimeIsUp();
+        timer.OnTimerTick += () => UpdateTimerSlider(timer.ElapsedTime);
+        AI.Instance.OnAITurnEnd += () => RestartTimer();
+
+
 
         choicesText = new TextMeshProUGUI[choiceObjects.Length];
         int index = 0;
@@ -80,8 +87,6 @@ public class DialogueManager : MonoBehaviour
 
         if(!IsDialoguePlaying){ return; } //if dialogue is not playing, dont do anything
             
-      
-
 
         if(Input.GetKeyDown(KeyCode.Return) && lineEnded){
             MakeChoice(selectedChoiceIndex);
@@ -157,15 +162,15 @@ public class DialogueManager : MonoBehaviour
 
         if(currentChoices.Count == 0){return;} //if there are no choices, dont display anything
 
-    
-        StartCoroutine(StartCountdown(3f)); //start countdown for choice selection
+        // burda kaldın 792
+        timer.SetTimer(Constants.Durations.DIALOGUE_WAIT_FOR_INPUT);
+        timer.StartTimer();
 
         if(currentChoices.Count > choiceObjects.Length){
             Debug.LogError("more choices were given than the ui can support. there is not enough space for this choices. number of choices given: " + currentChoices);
         }
 
         //reveal choices that are given in story
-        
         for(int i = 0; i < choiceObjects.Length; i++){ // 4 choices (last one is askAI choice)
             choiceObjects[i].gameObject.SetActive(true);
         }
@@ -188,57 +193,40 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    
-    IEnumerator StartCountdown(float duration)
-    {
-        float timePassed = 0;
-
-        while (timePassed < duration)
-        {
-            // If a choice has been made, stop the countdown
-            if (choiceMade)
-            {
-                timerSlider.value = 0; // Reset the slider
-                yield break;
-            }
-
-            timePassed += Time.deltaTime;
-            timerSlider.value = 1 - (timePassed / duration); // Update the slider
-
-            yield return null;
+    private void TimeIsUp(){
+        if(!choiceMade){
+            MakeChoice(Constants.ASKAI_CHOICE_INDEX);
         }
-
-        if (!choiceMade)
-        {
-            MakeChoice(UnityEngine.Random.Range(0, currentChoices.Count));
-        }
-
-        timerSlider.value = 0; // Reset the slider
     }
 
     public void MakeChoice(int index){
+        if(index == Constants.ASKAI_CHOICE_INDEX)
+        {
+            timer.PauseTimer();
+            AI.Instance.AskAI(currentStory, timer);
+            return;
+        }
+
         if(index != -1){
             UnhighlightChoice();
             HideAllChoices();
-
-            if(index == Constants.ASKAI_CHOICE_INDEX){
-                index = AI.Instance.AskAI(currentStory);
-            }
-
+            
             currentStory.ChooseChoiceIndex(index);
             choiceMade = true;
+            ResetSelectedChoice();
             File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "=========choice made: " + choicesText[index].text + "\n");
 
         }
 
-        //burası büyülü yer amk
- 
         storyStateManager.UpdateCurrentState();
         ContinueStory();
         
 
     }
 
+    private void UpdateTimerSlider(float timePassed, float duration = Constants.Durations.DIALOGUE_WAIT_FOR_INPUT){
+        timerSlider.value = 1 - (timePassed / duration);
+    }
 
     private void HandleTags(List<string> currentTags)
     {
@@ -303,6 +291,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private void ResetSelectedChoice(){
+        selectedChoiceIndex = -1;
+    }
     public Ink.Runtime.Object GetStoryState(string variableName){
         Ink.Runtime.Object variableValue = null;
         storyVariables.variables.TryGetValue(variableName, out variableValue);
@@ -312,5 +303,11 @@ public class DialogueManager : MonoBehaviour
         return variableValue;
     }
 
+
+    public void RestartTimer(){
+        Debug.Log("Timer is restarted");
+        timer.SetTimer(Constants.Durations.DIALOGUE_WAIT_FOR_INPUT);
+        timer.StartTimer();
+    }
 
 }

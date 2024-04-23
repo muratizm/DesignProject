@@ -7,6 +7,6 @@ public class GoldenLeafSO : ItemSO
 {
     public override void Use()
     {
-
+        Debug.Log("Using " + name);
     }
 }

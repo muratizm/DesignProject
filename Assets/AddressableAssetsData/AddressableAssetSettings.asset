@@ -101,6 +101,7 @@ MonoBehaviour:
     - item_omnivision
     - item_ringaringa
     - item_map
+    - item_goldenleaf
     - minigame_clickrush
     - minigame_clickthespots
   m_SchemaTemplates: []

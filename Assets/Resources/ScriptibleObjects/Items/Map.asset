@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Map
   m_EditorClassIdentifier: 
   itemName: Map
-  itemType: 5
+  itemType: 1
   itemTag: item_map
   isBuggy: 0
   isMemories: 0

@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2738344462457574248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 785332027720706050}
+  - component: {fileID: 6722603828452314626}
+  - component: {fileID: 1593848002654786639}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &785332027720706050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738344462457574248}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.1070168, y: 3.5807, z: 0.052624736}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8843269127001147279}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6722603828452314626
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738344462457574248}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1593848002654786639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738344462457574248}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6705399, y: 0.69456685, z: 3.9786067}
+  m_Center: {x: -0.011322925, y: -0.038012736, z: 0.9180822}
 --- !u!1 &8509055422573093548
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,6 +65,7 @@ GameObject:
   - component: {fileID: 8843269127001147279}
   - component: {fileID: 706582125771023876}
   - component: {fileID: -221244151255529679}
+  - component: {fileID: 1946111337377447641}
   m_Layer: 0
   m_Name: GoldenLeaf
   m_TagString: Untagged
@@ -25,14 +80,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8509055422573093548}
-  m_LocalRotation: {x: 0.02241034, y: 0.29939508, z: -0.7112655, w: 0.63557994}
+  m_LocalRotation: {x: 0.70317733, y: -0.004780854, z: -0.004780857, w: 0.71098256}
   m_LocalPosition: {x: 1.3837857, y: 9.459999, z: -6.290724}
-  m_LocalScale: {x: 0.2814219, y: 0.281422, z: 0.28142193}
+  m_LocalScale: {x: 0.2814219, y: 0.281422, z: -1.25}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 785332027720706050}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 27.025, y: 28.973, z: -90.823}
+  m_LocalEulerAnglesHint: {x: 89.001, y: -50.775, z: -50.775}
 --- !u!212 &706582125771023876
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -97,4 +153,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f05aa4ede2168e4bbe39a3f8441ce22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 499efecdd6a3a9e4c9e47c6256e1e111, type: 2}
+  item: {fileID: 11400000, guid: 10ac23b48741e434389b52c972326205, type: 2}
+--- !u!65 &1946111337377447641
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8509055422573093548}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.306479, y: 5.2697234, z: 1.0754881}
+  m_Center: {x: -0.03747705, y: -0.04371534, z: 0.082135625}

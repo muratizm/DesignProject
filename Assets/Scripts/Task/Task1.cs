@@ -41,7 +41,7 @@ public class Task1 : BaseTask
         int ringCounter = 0;
         foreach (ItemSO item in items)
         {
-            if(item.ItemType == ItemSO.Type.Ring){
+            if(item && item.ItemType == ItemSO.Type.Ring){
                 ringCounter++;
             }
         }

@@ -31,7 +31,8 @@ public class PlayerAudio : MonoBehaviour
 
     public void PlayFootStepAudio()
     {
-
+        Debug.Log(footstepSounds);
+        Debug.Log(footstepSounds.Count);
         int n = Random.Range(1, footstepSounds.Count);
         while (n == previousFootstepIndex) // Check if the new index is the same as the previous one
         {
@@ -62,6 +63,7 @@ public class PlayerAudio : MonoBehaviour
 
     public void LoadSoundsForGround(string groundTag)
     {
+        Debug.Log("Loading sounds for ground from addressables");
         //addressable code to load footstep sounds
         Addressables.LoadAssetAsync<AudioClip>(groundTag + "_jump").Completed += (audioClip) =>
         {

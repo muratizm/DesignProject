@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 
 public static class Constants
 {
@@ -35,6 +36,13 @@ public static class Constants
         public const string SPEAKER_TAG = "speaker";
         public const string LAYOUT_TAG = "layout";
         public const string CLOSEABLE_BY_ESC_TAG = "CloseableByESC";
+
+        public static class Grounds{
+            public const string DIRT = "Dirt";
+            public const string STONE = "Stone";
+            public const string WATER = "Water";
+            public const string WOOD = "Wood";
+        }
 
     }
 

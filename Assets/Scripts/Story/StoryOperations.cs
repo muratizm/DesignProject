@@ -19,6 +19,7 @@ public class StoryOperations : MonoBehaviour
     }
     [SerializeField] private GameObject ss1_obstacle;
     [SerializeField] private GameObject ss1_branch;
+    [SerializeField] private GameObject ss1_goldenLeaf;
 
     void Awake()
     {
@@ -62,6 +63,15 @@ public class StoryOperations : MonoBehaviour
             Rigidbody rb = ss1_branch.AddComponent<Rigidbody>();
             rb.mass = 100;
         }
+    }
+
+    public void GoldenLeafFall(){
+        if(ss1_goldenLeaf != null){
+            Debug.Log("Golden Leaf is falling!");
+
+            Rigidbody rb = ss1_goldenLeaf.AddComponent<Rigidbody>();
+        }
+        
     }
 
     public async void HomeSceneOpenBook(Sprite[] pages)

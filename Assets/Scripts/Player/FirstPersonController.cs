@@ -48,7 +48,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
-        private string currentGround = "ZORT";
+        private string currentGround = null;
 
 
         private Camera m_Camera;
@@ -189,6 +189,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void ProgressStepCycle(float speed)
         {
+            DetectGround();
+
             if (m_CharacterController.velocity.sqrMagnitude > 0 && (m_Input.x != 0 || m_Input.y != 0))
             {
                 m_StepCycle += (m_CharacterController.velocity.magnitude + (speed*(m_IsWalking ? 1f : m_RunstepLenghten)))*
@@ -203,7 +205,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_NextStep = m_StepCycle + m_StepInterval;
 
-            DetectGround();
             playerAudio.PlayFootStepAudio();
         }
 
@@ -213,16 +214,25 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit))
             {
-                if (hit.collider.tag == currentGround) return; // still the same ground
-                if (hit.collider.tag == "Untagged"){
-                    Debug.Log("No ground detected. For your information.");
+                string hitTag = hit.collider.tag;
+                if (hitTag == currentGround) return; // still the same ground
+                if (currentGround == null){
+                    Debug.LogWarning("No ground detected. Assigning dirt as default ground.");
+                    currentGround = Constants.Tags.Grounds.DIRT;
+                    playerAudio.LoadSoundsForGround(currentGround);
                     return;
                 } 
+                if (hitTag == "Untagged"){
+                    Debug.LogWarning("Untagged ground detected. Previous ground is still valid.");
+                    return;
+                }
+
                 //else: new ground detected
                 //update current ground
                 currentGround = hit.collider.tag;
                 playerAudio.LoadSoundsForGround(currentGround);
             }
+            Debug.LogWarning("No ground detected. For your information.");
             //else: no ground detected
         }
 

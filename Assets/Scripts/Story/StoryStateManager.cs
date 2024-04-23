@@ -28,6 +28,7 @@ public class StoryStateManager : MonoBehaviour
                 { "StoryState0", new StoryState0() },
                 { "StoryState1", new StoryState1() },
                 { "StoryState2", new StoryState2() },
+                { "StoryState3", new StoryState3() }
                 // Add all your states here
             };
 

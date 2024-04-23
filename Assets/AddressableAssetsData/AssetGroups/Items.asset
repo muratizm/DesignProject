@@ -32,7 +32,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - item_map
-  - m_GUID: 2a32dcf5545359a45839ef78fccbfb59
+  - m_GUID: c99e1e570783f1f49a639b9440fe96b9
     m_Address: Assets/Prefabs/VisualAssets/3d/Interactables/Items/GoldenLeaf.prefab
     m_ReadOnly: 0
     m_SerializedLabels:

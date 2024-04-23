@@ -25,5 +25,6 @@ Bu maceraya nerden başlayabilirim ey yüce Remy!
 
 === coward ===
 Ben burayı sevmedim beni evime götürün
+~ curstate = "scared_of_adventure"
 -> END
 

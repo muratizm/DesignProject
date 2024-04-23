@@ -73,16 +73,7 @@ public class SceneCoordinator : MonoBehaviour
     }
 
     public void PressedEscape(){
-        /*
-        if(settingsPanel.activeSelf)    { CloseSettings();} 
-        else if(pauseScenePanel.activeSelf)    { ClosePauseMenu();}
-        else if(taskPanel.activeSelf)    { CloseTaskButton();}
-        else if(bookPanel.activeSelf)    { CloseBookPanel();}
-        else if (GameManager.Instance.IsGamePaused)    { ClosePauseMenu();}
-        else{
-            OpenPauseMenu();
-        }
-        */
+        // kötü kod ama zaman yok
         GameObject[] closeables = GetCloseables();
         if(closeables.Length > 0){
             CloseNextCloseable(closeables);
@@ -107,6 +98,19 @@ public class SceneCoordinator : MonoBehaviour
                 break;
             }
         }
+
+        if (closeables.Length == 1)
+        {
+            ContinueGame();
+        }
+    }
+
+    private void ContinueGame(){
+        Time.timeScale = 1;
+        FirstPersonController.Instance.CanRotateView = true;
+        GameManager.Instance.IsGamePaused = false;
+        LockCursor();
+        
     }
 
     public void OnPressedTAB() // tab button means tasks button

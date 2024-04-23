@@ -34,6 +34,7 @@ public static class Constants
     public static class Tags {
         public const string SPEAKER_TAG = "speaker";
         public const string LAYOUT_TAG = "layout";
+        public const string CLOSEABLE_BY_ESC_TAG = "CloseableByESC";
 
     }
 

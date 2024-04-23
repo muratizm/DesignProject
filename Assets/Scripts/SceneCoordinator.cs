@@ -73,12 +73,40 @@ public class SceneCoordinator : MonoBehaviour
     }
 
     public void PressedEscape(){
+        /*
         if(settingsPanel.activeSelf)    { CloseSettings();} 
         else if(pauseScenePanel.activeSelf)    { ClosePauseMenu();}
         else if(taskPanel.activeSelf)    { CloseTaskButton();}
         else if(bookPanel.activeSelf)    { CloseBookPanel();}
         else if (GameManager.Instance.IsGamePaused)    { ClosePauseMenu();}
-        else    { OpenPauseMenu();}
+        else{
+            OpenPauseMenu();
+        }
+        */
+        GameObject[] closeables = GetCloseables();
+        if(closeables.Length > 0){
+            CloseNextCloseable(closeables);
+        }
+        else{
+            OpenPauseMenu();
+        }
+        
+    }
+
+    private GameObject[] GetCloseables(){
+        return GameObject.FindGameObjectsWithTag("CloseableByESC");
+    }
+
+    private void CloseNextCloseable(GameObject[] closeables){
+        for (int i = closeables.Length - 1; i >= 0; i--)
+        {
+            Transform child = closeables[i].transform;
+            if (child.gameObject.activeSelf)
+            {
+                child.gameObject.SetActive(false);
+                break;
+            }
+        }
     }
 
     public void OnPressedTAB() // tab button means tasks button

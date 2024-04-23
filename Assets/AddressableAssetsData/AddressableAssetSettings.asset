@@ -100,6 +100,7 @@ MonoBehaviour:
     - Wood_walk
     - item_omnivision
     - item_ringaringa
+    - item_map
     - minigame_clickrush
     - minigame_clickthespots
   m_SchemaTemplates: []

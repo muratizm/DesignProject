@@ -17,17 +17,21 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 06a1b9856efa728458082c59c1c59ad4
   m_SerializeEntries:
-  - m_GUID: 7a04b2caf7043ed49a3f59be8216baaa
-    m_Address: Assets/Prefabs/MapShowerObject.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - zort
-    - item_omnivision
   - m_GUID: 637b9889740eb5745a3781db69ae5423
-    m_Address: Assets/Prefabs/Ringaringa.prefab
+    m_Address: Assets/Prefabs/VisualAssets/3d/Interactables/Items/Ringaringa.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - item_ringaringa
+  - m_GUID: 7a04b2caf7043ed49a3f59be8216baaa
+    m_Address: Assets/Prefabs/VisualAssets/3d/Interactables/Items/OmnivisionObject.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - item_omnivision
+  - m_GUID: bb2b44a97b822c94c87618efd1764e48
+    m_Address: Assets/Prefabs/VisualAssets/3d/Interactables/Items/Map.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - item_map
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0622e1d499dea8b43830347f67784483, type: 2}
   m_SchemaSet:

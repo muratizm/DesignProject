@@ -31,6 +31,7 @@ public class DialogueManager : MonoBehaviour
 
 
     [Header("Choices")]
+    private bool showChoices;
     [SerializeField] private GameObject[] choiceObjects;
     List<Choice> currentChoices;
     private TextMeshProUGUI[] choicesText;
@@ -100,7 +101,8 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON){
+    public void EnterDialogueMode(TextAsset inkJSON, bool showChoices = true){
+        this.showChoices = showChoices;
         currentStory = new Story(inkJSON.text);
         IsDialoguePlaying = true;
         dialoguePanel.SetActive(true);
@@ -149,9 +151,14 @@ public class DialogueManager : MonoBehaviour
         File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "========= situation : " + content + "\n");
         choiceMade = false;
 
+        UpdateTimerSlider(0);
+
         
         yield return new WaitForEndOfFrame();
-        DisplayChoices();
+        if(showChoices)
+        {
+            DisplayChoices();
+        }
     }
 
 
@@ -212,6 +219,8 @@ public class DialogueManager : MonoBehaviour
             HideAllChoices();
             
             currentStory.ChooseChoiceIndex(index);
+            Debug.Log("Choice made: " + currentChoices[index].text);
+            timer.PauseTimer();
             choiceMade = true;
             ResetSelectedChoice();
             File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "=========choice made: " + choicesText[index].text + "\n");

@@ -13,8 +13,10 @@ public class AI : MonoBehaviour
 
 
     // AI's story
-    [SerializeField] private TextAsset _aiStoryJson;
-    private Story _aiStory;
+    [SerializeField] private TextAsset _ourQuestionJson;
+    [SerializeField] private TextAsset[] _aiChoicesJson;
+    private Story _ourQuestionStory;
+    private Story[] _aiChoicesStories;
     
 
     // UI
@@ -50,7 +52,7 @@ public class AI : MonoBehaviour
         selectedByAI = UnityEngine.Random.Range(0, story.currentChoices.Count);
 
         // show AI's choice
-        ShowAIsChoice(selectedByAI, timer);
+        AIPanel(selectedByAI, timer);
 
         
         // return AI's choice
@@ -58,31 +60,38 @@ public class AI : MonoBehaviour
         return selectedByAI;
     }
 
-    private async void ShowAIsChoice(int selectedByAI, Timer timer)
+    private async void AIPanel(int selectedByAI, Timer timer)
     {
         ActivateAIPanel();
 
-        _ourText = _aiStory.Continue();
-        _aiText = _aiStory.currentChoices[selectedByAI].text;
-
-        _aiTMP.text = _aiText;
-
-
+        ThoughtManager.Instance.EnterThoughtBubble(_ourQuestionJson);
+        
         await Task.Delay(Constants.Durations.AI_DIALOGUE_WAIT_MS);
 
+        ThoughtManager.Instance.EnterThoughtBubble(_aiChoicesJson[selectedByAI]);
+
+        await Task.Delay(Constants.Durations.AI_DIALOGUE_WAIT_MS);
 
         DeactivateAIPanel();
         OnAITurnEnd?.Invoke();
     }
+    
 
     private void InitializeStory(){
-        _aiStory = new Story(_aiStoryJson.text);
+        _ourQuestionStory = new Story(_ourQuestionJson.text);
+        _aiChoicesStories = new Story[_aiChoicesJson.Length];
+        for (int i = 0; i < _aiChoicesJson.Length; i++)
+        {
+            _aiChoicesStories[i] = new Story(_aiChoicesJson[i].text);
+        }
     }
+
 
     private void ActivateAIPanel()
     {
         aiPanel.SetActive(true);
     }
+
 
     private void DeactivateAIPanel()
     {

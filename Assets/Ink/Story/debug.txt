@@ -3832,3 +3832,251 @@
 ========= given choice : (Attaaaacck!!)
 ========= given choice : (Curious and Brave)
 ========= given choice : (Coward)
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+=========choice made: (Attaaaacck!!)
+========= situation : Sen ne diyon uşağım kelleni alirum ha!
+
+========= situation : Dear Alduin, how do you think we should answer this question?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+========= situation : Dear Alduin, how do you think we should answer this question?
+
+=========choice made: (Coward)
+========= situation : If you ask me, I would choose the third option.
+
+========= situation : Dear Alduin, how do you think we should answer this question?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the first option.
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the third option.
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the third option.
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the first option.
+
+=========choice made: (Attaaaacck!!)
+========= situation : Sen ne diyon uşağım kelleni alirum ha!
+
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the first option.
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+=========choice made: (Curious and Brave)
+========= situation : Bu maceraya nerden başlayabilirim ey yüce Remy!
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+=========choice made: (Curious and Brave)
+========= situation : Bu maceraya nerden başlayabilirim ey yüce Remy!
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+=========choice made: (Coward)
+========= situation : Ben burayı sevmedim beni evime götürün
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the second option.
+
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the second option.
+
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the second option.
+
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the third option.
+
+=========choice made: (Coward)
+========= situation : Ben burayı sevmedim beni evime götürün
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the first option.
+
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the third option.
+
+=========choice made: (Coward)
+========= situation : Ben burayı sevmedim beni evime götürün
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the second option.
+
+=========choice made: (Attaaaacck!!)
+========= situation : Sen ne diyon uşağım kelleni alirum ha!
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the third option.
+
+=========choice made: (Attaaaacck!!)
+========= situation : Sen ne diyon uşağım kelleni alirum ha!
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+
+========= given choice : (Attaaaacck!!)
+========= given choice : (Curious and Brave)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the second option.
+
+=========choice made: (Coward)
+========= situation : Ben burayı sevmedim beni evime götürün
+

@@ -43,6 +43,8 @@ public class MiniGame : MonoBehaviour
     {
         Debug.Log("Exiting MiniGame");
         isMiniGameRunning = false;
+        timer.PauseTimer();
+        timer.SetTimer(99f);
         MinigameManager.Instance.EndMinigame(isWon);
         GameManager.Instance.IsGamePaused = false;
         SceneCoordinator.Instance.LockCursor();

@@ -250,6 +250,7 @@ public class InventoryManager : MonoBehaviour
         UpdateAllInventory(this, EventArgs.Empty);
 
     }
+
     IEnumerator LoadPrefabOfItem(string itemTag)
     {
         var handle = Addressables.LoadAssetAsync<GameObject>(itemTag);
@@ -266,6 +267,17 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void ResetInventory() // responsible for resetting the inventory data
+    {
+        Debug.Log("Inventory Reset");
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            inventory[i] = null;
+            UpdateInventorySlot(i);
+        }
+        Crystal = 0;
+        UpdateAllInventory(this, EventArgs.Empty);
+    }
 
     public ItemSO[] GetInventory()
     {

@@ -35,26 +35,24 @@ public class GameManager : MonoBehaviour
     void Start(){
         // initialize variables
         sceneCoordinator = SceneCoordinator.Instance;
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag(Constants.Tags.PLAYER_TAG);
         SceneCoordinator.Instance.LockCursor();
 
         if(SceneManager.GetActiveScene().name != Constants.Scenes.SCENE_HOME){
 
             // load game
-            LoadGame();
+            LoadPrefs();
         }
 
     }
 
     void Update(){
+        
         // test new feature
         if(Input.GetKeyDown(KeyCode.N)){
             Debug.Log("New Feature pressed");
-            MinigameManager.Instance.StartMinigame(MinigameManager.MinigameType.ClickRush);
+            StoryOperations.Instance.RestartGame();
         }
-
-
-
 
 
         // check if escape is pressed no matter what
@@ -87,7 +85,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void SaveGame(){ // called when the player presses the save button in the pause panel
+    public void SavePrefs(){ // called when the player presses the save button in the pause panel
         Debug.Log("Game Saved");
 
         // player related data
@@ -107,7 +105,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public void LoadGame(){
+    public void LoadPrefs(){
         Debug.Log("Game Loaded");
         // load position, health, items, money, current story, all past decisions, etc.
         player.transform.position = new Vector3(
@@ -118,6 +116,16 @@ public class GameManager : MonoBehaviour
         InventoryManager.Instance.LoadInventory();
     }
 
+    public void ResetPrefs(){
+        Debug.Log("Game Reset");
+        // reset position, health, items, money, current story, all past decisions, etc.
+        player.transform.position = new Vector3(
+            Constants.Positions.PLAYER_START_DEFAULT_X,
+            Constants.Positions.PLAYER_START_DEFAULT_Y,
+            Constants.Positions.PLAYER_START_DEFAULT_Z);
+        
+        InventoryManager.Instance.ResetInventory();
+    }
 
 
     void OnDestroy(){

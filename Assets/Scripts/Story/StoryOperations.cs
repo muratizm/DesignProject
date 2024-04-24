@@ -41,6 +41,11 @@ public class StoryOperations : MonoBehaviour
     }
 
 
+    public void RestartGame()
+    {
+        SceneCoordinator.Instance.OpenScene(Constants.Scenes.SCENE_PLAY);
+        GameManager.Instance.ResetPrefs();
+    }
 
     public void DeleteObjects(string name)
     {

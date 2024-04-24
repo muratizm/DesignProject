@@ -1,11 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class StoryTrigger : MonoBehaviour
+public class TakeItemTrigger : MonoBehaviour
 {
-    [Header("Ink JSON")]
-    [SerializeField] public TextAsset inkJSON;
+    [SerializeField] private MinigameManager.MinigameType minigameType;
+    [SerializeField] private ItemSO itemToGain;
+
     private bool hasTriggered = false;
     public bool HasTriggered { get => hasTriggered; set => hasTriggered = value; }
+
 
     public virtual void OnTriggerEnter(Collider other)
     {
@@ -14,11 +18,9 @@ public abstract class StoryTrigger : MonoBehaviour
             // if you dont want to check hasTriggered, you can remove it from the if statement
             // but be careful with the ~curstate in the ink story
             // you must reset it because old value from older choices will be stored
-            TriggerResult();
+            Player.Instance.TakeItem(itemToGain, minigameType);
             hasTriggered = true;
         }
     }
-
-    public abstract void TriggerResult();
 
 }

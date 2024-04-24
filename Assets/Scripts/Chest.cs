@@ -19,7 +19,10 @@ public class Chest : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag(Constants.Tags.PLAYER_TAG))
+        {
+            _isPlayerInRange = true;
+        }
         {
             _isPlayerInRange = true;
         }
@@ -27,7 +30,7 @@ public class Chest : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag(Constants.Tags.PLAYER_TAG))
         {
             _isPlayerInRange = false;
         }

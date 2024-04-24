@@ -70,7 +70,6 @@ public class Timer
     }
 
 
-
     public void PauseTimer()
     {
         _isPaused = true;

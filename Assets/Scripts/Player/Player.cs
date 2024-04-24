@@ -63,6 +63,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void TakeItem(ItemSO item, MinigameManager.MinigameType minigameType)
+    {
+        _minigameManager.StartMinigame(minigameType);
+        _minigameManager.OnMinigameFinished += () => HandleMinigameFinished(item);
+    }
+
     void HandleMinigameFinished(ItemSO item)
     {
         _minigameManager.ClearSubscribers();

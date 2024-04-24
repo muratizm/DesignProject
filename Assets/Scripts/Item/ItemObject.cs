@@ -12,7 +12,7 @@ public class ItemObject : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(Constants.Tags.PLAYER_TAG))
         {
             //InventoryManager.Instance.AddItem(item);
             Player.Instance.TakeItem(item);

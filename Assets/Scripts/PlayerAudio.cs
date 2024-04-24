@@ -31,8 +31,6 @@ public class PlayerAudio : MonoBehaviour
 
     public void PlayFootStepAudio()
     {
-        Debug.Log(footstepSounds);
-        Debug.Log(footstepSounds.Count);
         int n = Random.Range(1, footstepSounds.Count);
         while (n == previousFootstepIndex) // Check if the new index is the same as the previous one
         {

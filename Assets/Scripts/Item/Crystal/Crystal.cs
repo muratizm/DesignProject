@@ -7,7 +7,7 @@ public class Crystal : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(Constants.Tags.PLAYER_TAG))
         {
             InventoryManager.Instance.AddCrystal();
             Destroy(gameObject);

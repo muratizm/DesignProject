@@ -33,8 +33,7 @@ public class Timer
 
 
 
-        _isPaused = false;
-        Debug.Log(_duration + " " + _elapsedTime + " " + _isPaused);
+        _isPaused = false;  
         await TimerAsync(_cts.Token);
     }
 

@@ -71,20 +71,25 @@ public class ActionManager : MonoBehaviour
     {
         if(gameManager.IsGamePaused){return;} //if game is paused, dont do anything
 
-        if (!currentActionScript){return;} //if no action is playing, dont do anything
+        if (!currentActionScript){Debug.Log("noact"); return;} //if no action is playing, dont do anything
 
         currentActionScript.UpdateAction();
     }
 
     
     public void EnterActionMode(TextAsset inkJSON, BaseAction actionScript){
+        Debug.Log("entering action mode");
+
         currentActionStory = new Story(inkJSON.text);
+        Debug.Log("story: " + currentActionStory);
+        Debug.Log("actionScript: " + actionScript);
         actionIsPlaying = true;
         actionPanel.SetActive(true);
 
         storyVariables.StartListening(currentActionStory);        
         ContinueStory();
         currentActionScript = actionScript;
+        Debug.Log("ac: " + currentActionScript);
         currentActionScript.EnterAction();
     }
 
@@ -173,9 +178,11 @@ public class ActionManager : MonoBehaviour
 
         if (!choiceMade && currentActionChoices.Count > 0)
         {
-            Debug.Log("No choice made, making random choice");
+            Debug.LogWarning("No choice made, making no choice, you missed the opportunity to interact.");
             //ai implementation will go here
-            MakeChoice(UnityEngine.Random.Range(0, currentActionChoices.Count));
+            //MakeChoice(UnityEngine.Random.Range(0, currentActionChoices.Count));
+            ChangeAction(noAction);
+            ExitDialogueMode();
         }
 
         timerSlider.value = 0; // Reset the slider

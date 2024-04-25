@@ -69,7 +69,16 @@ public class MinigameManager : MonoBehaviour
     public void EndMinigame(bool isWon)
     {
         this.isWon = isWon;
+
+        // bunu şimdi ekliyorum çok üzerine düşünmedim
+        // her minigame bittiğinde story manager'a haber verelim
+        // ki mesela fareden itemi alınca şu olsun bu olsun gibi şeylerde kullanibilelim
+        // istersek kullanmayız zaten
+        // storystate manager'ın içinde ise inventory'i kontrol etcez her çağrıldığında
+        // zaten bu updatestate ya dialogue action mng'dan ya burdan çaprılyır performasnı düşünme yani
+        Debug.Log("Minigame is finished");
         OnMinigameFinished?.Invoke();
+        StoryStateManager.Instance.UpdateCurrentState();
     }
 
     private void StartBugsGame(string label)

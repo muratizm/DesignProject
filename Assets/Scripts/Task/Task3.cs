@@ -21,7 +21,6 @@ public class Task3 : BaseTask
         {
             AchieveTask();
         }
-        Debug.Log("Updating Task1");
     }
 
     public override void AchieveTask()

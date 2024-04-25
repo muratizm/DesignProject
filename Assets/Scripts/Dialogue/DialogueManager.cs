@@ -31,7 +31,6 @@ public class DialogueManager : MonoBehaviour
 
 
     [Header("Choices")]
-    private bool showChoices;
     [SerializeField] private GameObject[] choiceObjects;
     List<Choice> currentChoices;
     private TextMeshProUGUI[] choicesText;
@@ -101,8 +100,7 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON, bool showChoices = true){
-        this.showChoices = showChoices;
+    public void EnterDialogueMode(TextAsset inkJSON){
         currentStory = new Story(inkJSON.text);
         IsDialoguePlaying = true;
         dialoguePanel.SetActive(true);
@@ -155,10 +153,9 @@ public class DialogueManager : MonoBehaviour
 
         
         yield return new WaitForEndOfFrame();
-        if(showChoices)
-        {
-            DisplayChoices();
-        }
+
+        DisplayChoices();
+        
     }
 
 

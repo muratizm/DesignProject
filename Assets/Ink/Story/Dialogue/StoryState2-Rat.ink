@@ -3,9 +3,7 @@ INCLUDE ../globals.ink
 -> main
 
 === main ===
-Welcome to our civilization!
-So, you are our new adventurer assigned to solve the secret of our lost civilization.
-It takes great courage to go on this adventure. I hope that by completing this adventure you will be able to save our civilization and be reunited with your parents.
+RAT dialogue
     + [(Attaaaacck!!)]
         -> stupidlybrave
     + [(Curious and Brave) ]

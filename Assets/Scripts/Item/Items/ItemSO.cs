@@ -8,6 +8,7 @@ public abstract class ItemSO : ScriptableObject
     {
         Book,
         Paper,
+        Task,
         Key,
         Ring,
         Crystal,

@@ -21,6 +21,9 @@ public class StoryOperations : MonoBehaviour
     [SerializeField] private GameObject ss1_branch;
     [SerializeField] private GameObject ss1_goldenLeaf;
 
+    
+    [SerializeField] private GameObject ss2_rat;
+
     void Awake()
     {
         if (Instance == null)
@@ -76,7 +79,34 @@ public class StoryOperations : MonoBehaviour
 
             Rigidbody rb = ss1_goldenLeaf.AddComponent<Rigidbody>();
         }
-        
+    }
+
+    public void DisableRatAction(){
+        if(ss2_rat != null){
+            Debug.Log("Rat is not interacting!");
+            ss2_rat.GetComponentInChildren<ActionTrigger>().CanTrigger = false;
+        }
+    }
+
+    public void DisableRatDialogue(){
+        if(ss2_rat != null){
+            Debug.Log("Rat is not talking!");
+            ss2_rat.GetComponentInChildren<DialogueTrigger>().CanTrigger = false;
+        }
+    }
+    
+    public void EnterRatAction(){
+        if(ss2_rat != null){
+            Debug.Log("Rat is interacting!");
+            ActionManager.Instance.EnterActionMode(ss2_rat.GetComponentInChildren<ActionTrigger>().inkJSON, ss2_rat.GetComponentInChildren<BaseAction>());
+        }
+    }
+
+    public void EnterRatDialogue(){
+        if(ss2_rat != null){
+            Debug.Log("Rat is talking!");
+            DialogueManager.Instance.EnterDialogueMode(ss2_rat.GetComponentInChildren<DialogueTrigger>().inkJSON);
+        }
     }
 
     public async void HomeSceneOpenBook(Sprite[] pages)
@@ -103,6 +133,13 @@ public class StoryOperations : MonoBehaviour
         task1.taskName = "Task1 Task1 ";
         task1.TimeToAchieve = 70f;
         tasksManager.AddTask(task1);
+    }
+
+    public void AddTask3(){
+        Task3 task3 = gameObject.AddComponent<Task3>();
+        task3.taskName = "Task3 Task3 ";
+        task3.TimeToAchieve = 370f;
+        tasksManager.AddTask(task3);
     }
     
 

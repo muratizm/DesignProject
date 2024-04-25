@@ -15,6 +15,8 @@ public class TasksManager : MonoBehaviour
     [SerializeField] public BaseTask[] tasks = new BaseTask[10];
     [SerializeField] private GameObject taskPanel; 
     [SerializeField] private GameObject[] taskSlots;
+
+    private BaseTask[] potentialTasks = new BaseTask[10];
     
 
 
@@ -35,6 +37,7 @@ public class TasksManager : MonoBehaviour
     {
         gameManager = GameManager.Instance;
         UpdateTaskSlots();
+        FindAllPotentialTasks();
     }   
 
 
@@ -51,6 +54,7 @@ public class TasksManager : MonoBehaviour
 
     public void AddTask(BaseTask task) 
     {
+        Debug.Log("Adding Task: " + task.TaskName);
         task.EnterTask();
         for (int i = 0; i < tasks.Length; i++)
         {
@@ -98,6 +102,23 @@ public class TasksManager : MonoBehaviour
             taskSlots[index].SetActive(true);
             taskSlots[index].GetComponentInChildren<TextMeshProUGUI>().text = tasks[index].TaskName + " -- Less then " + (tasks[index].LeftMinutes+1) + "minutes left.";
         }
+    }
+
+    private void FindAllPotentialTasks()
+    {
+        potentialTasks = GetComponentsInChildren<BaseTask>();
+    }
+
+    public BaseTask GetTaskFromPotentialTasks(string tag)
+    {
+        foreach (BaseTask task in potentialTasks)
+        {
+            if (task.TaskTag == tag)
+            {
+                return task;
+            }
+        }
+        return null;
     }
 
     private void UpdateTaskSlots()

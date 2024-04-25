@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [Serializable]
@@ -8,6 +9,8 @@ public abstract class BaseTask : MonoBehaviour
     public string TaskName {get { return taskName; } private set { taskName = value; }}
     
 
+    [SerializeField] private string _taskTag;
+    public string TaskTag {get { return _taskTag; } private set { _taskTag = value; }}
     private float timeToAchieve;
     public float TimeToAchieve {get { return timeToAchieve; } set { timeToAchieve = value; }}
     private float timeLeft;

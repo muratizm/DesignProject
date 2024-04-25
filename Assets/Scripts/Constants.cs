@@ -37,7 +37,12 @@ public static class Constants
 
         public const string SPEAKER_TAG = "speaker";
         public const string LAYOUT_TAG = "layout";
+
         public const string CLOSEABLE_BY_ESC_TAG = "CloseableByESC";
+
+        public static class Items{
+            public const string TASK = "Task";
+        }
 
         public static class Grounds{
             public const string DIRT = "Dirt";

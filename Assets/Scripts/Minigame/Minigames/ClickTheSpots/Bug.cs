@@ -22,7 +22,6 @@ public class Bug : Spot {
 
     private IEnumerator Patrol()
     {
-        Debug.Log("Spot patrolling");
 
         float speed = Vector2.Distance(leftBottom, rightTop) / 3f; // Speed is calculated so that leftBottom to rightTop is 3 seconds
         float patrolTime = UnityEngine.Random.Range(.5f, 1f);

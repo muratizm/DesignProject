@@ -281,7 +281,20 @@ public class InventoryManager : MonoBehaviour
 
     public ItemSO[] GetInventory()
     {
-        return inventory;
+        return (ItemSO[])inventory.Clone();
+    }
+
+    public ItemSO FindItem(ItemSO.Type type)
+    {
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (inventory[i] != null && inventory[i].ItemType == type)
+            {
+                Debug.Log("Found " + inventory[i].ItemName);
+                return inventory[i];
+            }
+        }
+        return null;
     }
 
 

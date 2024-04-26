@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
         // test new feature
         if(Input.GetKeyDown(KeyCode.N)){
             Debug.Log("New Feature pressed");
-            StoryOperations.Instance.RestartGame();
+            MinigameManager.Instance.StartMinigame(MinigameManager.MinigameType.ClickRush);
         }
 
 

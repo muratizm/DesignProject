@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 5415856432547932393}
   - component: {fileID: 2029162998837061531}
   m_Layer: 0
-  m_Name: Ringaringa
+  m_Name: Ring 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f05aa4ede2168e4bbe39a3f8441ce22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: f65a50c7f3d2db4408dde55069686626, type: 2}
+  item: {fileID: 11400000, guid: 2a175d61d9c923c4f84801a5f36e48b6, type: 2}

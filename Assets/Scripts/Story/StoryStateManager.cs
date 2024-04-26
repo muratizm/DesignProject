@@ -55,7 +55,7 @@ public class StoryStateManager : MonoBehaviour
             }
             else
             {
-                ChangeState("StoryState2"); //  burda playerprefs falan bi şekilde
+                ChangeState("StoryState3"); //  burda playerprefs falan bi şekilde
                 // şuan içinde bulundugum stroy state i alıp ona göre değiştirme yapılacak
             }
     }

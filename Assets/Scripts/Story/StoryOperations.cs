@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEditor.SearchService;
 using UnityEngine;
@@ -23,6 +24,8 @@ public class StoryOperations : MonoBehaviour
 
     
     [SerializeField] private GameObject ss2_rat;
+
+    [SerializeField] private List<ItemSO> rings;
 
     void Awake()
     {
@@ -92,6 +95,14 @@ public class StoryOperations : MonoBehaviour
         if(ss2_rat != null){
             Debug.Log("Rat is not talking!");
             ss2_rat.GetComponentInChildren<DialogueTrigger>().CanTrigger = false;
+        }
+    }
+
+    public void GiveRandomRing(){
+        if(rings.Count > 0){
+            int randomIndex = Random.Range(0, rings.Count);
+            Player.Instance.TakeItem(rings[randomIndex]);
+            rings.RemoveAt(randomIndex);
         }
     }
     

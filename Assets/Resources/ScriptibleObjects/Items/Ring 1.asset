@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d0542de0e51e64eb8962e32726bd7e, type: 3}
-  m_Name: Ring
+  m_Name: Ring 1
   m_EditorClassIdentifier: 
-  itemName: Ringaringa
-  itemType: 3
-  itemTag: item_ringaringa
+  itemName: Ring 1
+  itemType: 4
+  itemTag: item_ring
   isBuggy: 0
   isMemories: 0
   isConsumable: 1
-  itemIcon: {fileID: 21300062, guid: 36bbf91eb47491242b75b7e2df16947f, type: 3}
+  itemIcon: {fileID: 21300054, guid: 36bbf91eb47491242b75b7e2df16947f, type: 3}

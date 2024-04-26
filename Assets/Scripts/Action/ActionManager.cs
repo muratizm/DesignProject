@@ -71,7 +71,7 @@ public class ActionManager : MonoBehaviour
     {
         if(gameManager.IsGamePaused){return;} //if game is paused, dont do anything
 
-        if (!currentActionScript){Debug.Log("noact"); return;} //if no action is playing, dont do anything
+        if (!currentActionScript){return;} //if no action is playing, dont do anything
 
         currentActionScript.UpdateAction();
     }

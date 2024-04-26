@@ -24,6 +24,7 @@ public class MinigameManager : MonoBehaviour
     {
         Bugs,
         ClickRush,
+        Painter,
         RememberSpots
     }
 
@@ -51,6 +52,10 @@ public class MinigameManager : MonoBehaviour
             case MinigameType.Bugs:
                 Debug.Log("Starting Bugs minigame");
                 StartBugsGame(Constants.Labels.SPOTS_MINIGAME);
+                break;
+            case MinigameType.Painter:
+                Debug.Log("Starting Painter minigame");
+                StartAnyGame(Constants.Labels.PAINTER_MINIGAME);
                 break;
             case MinigameType.ClickRush:
                 Debug.Log("Starting ClickRush minigame");

@@ -522,4 +522,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundItem: {fileID: 768833173172167846}
   itemSprite: {fileID: 21300010, guid: 66f0952bca521c640813e789d988aa1a, type: 3}
-  spotSprite: {fileID: 21300000, guid: 85d98883bdf838d46b6694f6e44f6cca, type: 3}

@@ -138,9 +138,11 @@ public class Book : MonoBehaviour {
     }
     void Update()
     {
+        Debug.Log("Update");
         if (pageDragging && interactable)
         {
             UpdateBook();
+            Debug.Log("Page Dragging");
         }
     }
     public void UpdateBook()

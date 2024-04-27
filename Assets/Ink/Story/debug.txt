@@ -6067,3 +6067,51 @@
 
 ========= situation : hadi kolay gelsin
 
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+

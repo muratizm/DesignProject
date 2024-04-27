@@ -56,6 +56,7 @@ public class ItemOperations : MonoBehaviour
     
     public async void HomeSceneOpenBook(Sprite[] pages)
     {
+        Debug.Log("HomeSceneOpenBook");
         SceneCoordinator.Instance.FadeOut();
         await Task.Delay(Constants.Durations.FADEOUT_DURATION_MS);
 

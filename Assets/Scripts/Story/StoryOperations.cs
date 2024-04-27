@@ -25,6 +25,8 @@ public class StoryOperations : MonoBehaviour
     
     [SerializeField] private GameObject ss2_rat;
 
+    [SerializeField] private ItemSO ss3_map;
+
     [SerializeField] private List<ItemSO> rings;
 
     void Awake()
@@ -104,6 +106,10 @@ public class StoryOperations : MonoBehaviour
             Player.Instance.TakeItem(rings[randomIndex]);
             rings.RemoveAt(randomIndex);
         }
+    }
+
+    public void GiveMap(){
+        Player.Instance.TakeItem(ss3_map);
     }
     
     public void EnterRatAction(){

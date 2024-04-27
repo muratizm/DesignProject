@@ -7213,6 +7213,7 @@ MonoBehaviour:
   ss1_branch: {fileID: 1226043815}
   ss1_goldenLeaf: {fileID: 1422220708}
   ss2_rat: {fileID: 8938940078577243425}
+  ss3_map: {fileID: 11400000, guid: 8bd1020245f6a0e4d943c5afd9c81589, type: 2}
   rings:
   - {fileID: 11400000, guid: 2a175d61d9c923c4f84801a5f36e48b6, type: 2}
   - {fileID: 11400000, guid: 5b8bfa71394036c4a9e8dbcd628b59a0, type: 2}

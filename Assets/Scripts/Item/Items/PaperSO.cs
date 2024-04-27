@@ -8,6 +8,7 @@ public class PaperSO : ItemSO
     [SerializeField] private GameObject _paperItemUI;
     public override void Use()
     {
+
         GameObject map = Instantiate(_paperItemUI);
         map.transform.SetParent(GameObject.Find("Canvas").transform, false);
         map.SetActive(true);

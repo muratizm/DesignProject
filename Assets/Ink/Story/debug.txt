@@ -5236,3 +5236,279 @@
 ========= given choice0 : Yoluna git (-)
 ========= given choice1 : Fareyi öldür (x)
 ========= given choice2 : Soru Sor (e)
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+========= situation : Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+========= situation : Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+=========choice made: Soru Sor (e)
+========= situation : You choosed "ask"!
+
+========= situation : Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+
+========= situation : eğer altın verirsen yardım ederim
+
+========= given choice : (ver!!)
+========= given choice : (maalesef altınım yok)
+========= given choice : (kız)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the third option.
+
+=========choice made: (kız)
+========= situation : sana ne para vericem lan köylü
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+=========choice made: Soru Sor (e)
+========= situation : You choosed "ask"!
+
+========= situation : Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+
+========= situation : eğer altın verirsen yardım ederim
+
+========= given choice : (ver!!)
+========= given choice : (maalesef altınım yok)
+========= given choice : (kız)
+=========choice made: (ver!!)
+========= situation : Al buyur sana altın yaprak getirdim
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+=========choice made: Soru Sor (e)
+========= situation : You choosed "ask"!
+
+========= situation : Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+
+========= situation : eğer altın verirsen yardım ederim
+
+========= given choice : (give gold!!)
+========= given choice : (give crystal!!)
+========= given choice : (kız)
+=========choice made: (give gold!!)
+========= situation : Al buyur sana altın yaprak getirdim
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+=========choice made: Soru Sor (e)
+========= situation : You choosed "ask"!
+
+========= situation : Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+
+========= situation : eğer altın verirsen yardım ederim
+
+========= given choice : (give gold!!)
+========= given choice : (give crystal!!)
+========= given choice : (kız)
+=========choice made: (give crystal!!)
+========= situation : al buyur sana crystal getirdim
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+=========choice made: Soru Sor (e)
+========= situation : You choosed "ask"!
+
+========= situation : Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+
+========= situation : eğer altın verirsen yardım ederim
+
+========= given choice : (give gold!!)
+========= given choice : (give crystal!!)
+========= given choice : (kız)
+=========choice made: (give crystal!!)
+========= situation : al buyur sana crystal getirdim
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+=========choice made: Soru Sor (e)
+========= situation : You choosed "ask"!
+
+========= situation : Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+
+========= situation : eğer altın verirsen yardım ederim
+
+========= given choice : (give gold!!)
+========= given choice : (give crystal!!)
+========= given choice : (kız)
+=========choice made: (give crystal!!)
+========= situation : al buyur sana crystal getirdim
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+=========choice made: Soru Sor (e)
+========= situation : You choosed "ask"!
+
+========= situation : Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+
+========= situation : eğer altın verirsen yardım ederim
+
+========= given choice : (give gold!!)
+========= given choice : (give crystal!!)
+========= given choice : (kız)
+=========choice made: (give gold!!)
+========= situation : Al buyur sana altın yaprak getirdim
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+=========choice made: Soru Sor (e)
+========= situation : You choosed "ask"!
+
+========= situation : Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+
+========= situation : eğer altın verirsen yardım ederim
+
+========= given choice : (give gold!!)
+========= given choice : (give crystal!!)
+========= given choice : (kız)
+=========choice made: (give crystal!!)
+========= situation : al buyur sana crystal getirdim
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+=========choice made: Soru Sor (e)
+========= situation : You choosed "ask"!
+
+========= situation : Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+
+========= situation : eğer altın verirsen yardım ederim
+
+========= given choice : (give gold!!)
+========= given choice : (give crystal!!)
+========= given choice : (kız)
+=========choice made: (give crystal!!)
+========= situation : al buyur sana crystal getirdim
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the third option.
+
+=========choice made: (for what)
+========= situation : what will you give me
+
+========= situation : a surprise gift!!
+
+========= given choice : (no boomerrr)
+========= given choice : (oh thank youu)
+========= given choice : (you are the greatest person ontheworld)
+=========choice made: (you are the greatest person ontheworld)
+========= situation : ohhh. what a great painter are you
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+=========choice made: Soru Sor (e)
+========= situation : You choosed "ask"!
+
+========= situation : Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+
+========= situation : eğer altın verirsen yardım ederim
+
+========= given choice : (give gold!!)
+========= given choice : (give crystal!!)
+========= given choice : (kız)
+=========choice made: (give gold!!)
+========= situation : Al buyur sana altın yaprak getirdim
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+=========choice made: Soru Sor (e)
+========= situation : You choosed "ask"!
+
+========= situation : Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+
+========= situation : eğer altın verirsen yardım ederim
+
+========= given choice : (give gold!!)
+========= given choice : (give crystal!!)
+========= given choice : (kız)
+=========choice made: (give gold!!)
+========= situation : Al buyur sana altın yaprak getirdim
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+

@@ -1,28 +1,28 @@
 INCLUDE ../globals.ink
 
+Hey fare dost! Bana bir yol göster, biraz yardımcı ol
 -> main
 
 === main ===
-RAT dialogue
-    + [(Attaaaacck!!)]
-        -> stupidlybrave
-    + [(Curious and Brave) ]
-        -> adventurerbrave
-    + [(Coward) ]
-        -> coward
+eğer altın verirsen yardım ederim
+    + [(give gold!!)]
+        -> gold
+    + [(give crystal!!) ]
+        -> crystal
+    + [(kız) ]
+        -> angry
 
-=== stupidlybrave ===
-Sen ne diyon uşağım kelleni alirum ha! 
-~ curstate = "attack_to_tree"
+=== gold ===
+Al buyur sana altın yaprak getirdim
+~ curstate = "gave_gold"
 -> END
 
-=== adventurerbrave ===
-Bu maceraya nerden başlayabilirim ey yüce Remy!
-~ curstate = "respect_to_tree"
+=== crystal ===
+al buyur sana crystal getirdim
+~ curstate = "gave_crystal"
 -> END
 
-=== coward ===
-Ben burayı sevmedim beni evime götürün
-~ curstate = "scared_of_adventure"
+=== angry ===
+sana ne para vericem lan köylü
 -> END
 

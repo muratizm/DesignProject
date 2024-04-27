@@ -42,6 +42,34 @@ public class StoryState2 : StoryBaseState
             _isRatActionTriggered = true;
         }
 
+
+        if(_isRatActionTriggered && _isTaskTriggered)
+        {
+            bool gaveMoney = false;
+            string value = ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value;
+            if(value == "gave_gold")
+            {
+                gaveMoney = InventoryManager.Instance.RemoveSpecificTypeFromInventory(ItemSO.Type.Gold);
+            }
+            else if(value == "gave_crystal")
+            {
+                InventoryManager inventoryManager = InventoryManager.Instance;
+                gaveMoney = inventoryManager.RemoveCrystal(inventoryManager.Crystal);
+            }
+
+                if(gaveMoney)
+                {
+                    Debug.Log("Gave money to rat.");
+                    StoryOperations.Instance.GiveMap();
+                }
+                else
+                {
+                    Debug.Log("Did not give money to rat.");
+                }
+        }
+
+
+
     }
 
 

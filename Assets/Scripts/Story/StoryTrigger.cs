@@ -9,7 +9,7 @@ public abstract class StoryTrigger : MonoBehaviour
 
     public virtual void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(Constants.Tags.PLAYER_TAG) && true)
+        if (other.CompareTag(Constants.Tags.PLAYER_TAG) && canTrigger)
         {
             // if you dont want to check hasTriggered, you can remove it from the if statement
             // but be careful with the ~curstate in the ink story

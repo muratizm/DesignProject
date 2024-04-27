@@ -12,6 +12,7 @@ public abstract class ItemSO : ScriptableObject
         Key,
         Ring,
         Crystal,
+        Gold,
         Tool // for example map showing tool etc.
 
     }

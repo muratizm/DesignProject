@@ -13,8 +13,8 @@ public class InventoryManager : MonoBehaviour
     private GameObject prefabToLoad;
 
     
-    private static int crystal;
-    public static int Crystal { get { return crystal; } private set { crystal = value; } }
+    private int crystal;
+    public int Crystal { get { return crystal; } private set { crystal = value; } }
 
 
 
@@ -121,6 +121,18 @@ public class InventoryManager : MonoBehaviour
 
     }
 
+    public bool RemoveCrystal(int amount) 
+    {
+        if (Crystal >= amount)
+        {
+            Crystal -= amount;
+            UpdateCrystalSlot();
+            InventoryChanged?.Invoke(this, EventArgs.Empty);
+            return true;
+        }
+        return false;
+    }
+    
 
 
     void HandleInventoryAction(int slotIndex) // called when the player presses a number key to select an inventory slot
@@ -170,7 +182,7 @@ public class InventoryManager : MonoBehaviour
         OnCloseButton();
     }
 
-    private void RemoveItemFromInventory(int index) 
+    public void RemoveItemFromInventory(int index) 
     {
         inventory[index] = null;
         for(int i = index; i < inventory.Length - 1; i++)
@@ -180,6 +192,20 @@ public class InventoryManager : MonoBehaviour
             UpdateInventorySlot(i);
         }
         UpdateInventorySlot(inventory.Length - 1);
+    }
+
+
+    public bool RemoveSpecificTypeFromInventory(ItemSO.Type type) // responsible for removing a specific type of item from the inventory
+    {
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (inventory[i] != null && inventory[i].ItemType == type)
+            {
+                RemoveItemFromInventory(i);
+                return true;
+            }
+        }
+        return false;
     }
 
 

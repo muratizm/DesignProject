@@ -95,6 +95,9 @@ public class SceneCoordinator : MonoBehaviour
             if (child.gameObject.activeSelf)
             {
                 child.gameObject.SetActive(false);
+            if(child.gameObject.name.StartsWith("ItemUI")){
+                Destroy(child.gameObject);
+            }
                 break;
             }
         }
@@ -137,9 +140,12 @@ public class SceneCoordinator : MonoBehaviour
 
     private async void OpenCelebratePanel()
     {
-        celebratePanel.SetActive(true);
-        await Task.Delay(500);
-        CloseCelebratePanel();
+        if(MinigameManager.Instance.IsWon){
+            celebratePanel.SetActive(true);
+            await Task.Delay(500);
+            CloseCelebratePanel();
+        }
+
     }
 
     private void CloseCelebratePanel()

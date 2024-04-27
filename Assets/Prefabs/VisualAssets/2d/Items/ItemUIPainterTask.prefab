@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5511373647578173642}
   - component: {fileID: 3090116399250464754}
   m_Layer: 5
-  m_Name: PainterTaskItem
+  m_Name: ItemUIPainterTask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

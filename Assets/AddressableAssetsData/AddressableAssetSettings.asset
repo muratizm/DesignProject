@@ -102,6 +102,7 @@ MonoBehaviour:
     - item_map
     - item_goldenleaf
     - minigame_clickrush
+    - minigame_passwordquiz
     - minigame_clickthespots
     - minigame_painter
     - item_ring1

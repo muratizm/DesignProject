@@ -16,7 +16,7 @@ public class ClickRush : MiniGame
     private float _targetScore = 100;
     private float _currentScore = 0;
     private float _clickAmount = 20;
-    private float _timeToFinish = 3;
+    private float _timeToFinish = Constants.Durations.TIME_TO_FINISH_CLICKRUSH;
 
 
 

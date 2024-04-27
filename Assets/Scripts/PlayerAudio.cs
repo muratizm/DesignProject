@@ -48,7 +48,6 @@ public class PlayerAudio : MonoBehaviour
 
     public void PlayJumpSound()
     {
-        Debug.Log("Jump sound");
         m_AudioSource.clip = jumpSound;
         m_AudioSource.Play();
     }

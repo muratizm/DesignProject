@@ -21,7 +21,10 @@ public class StoryStateManager : MonoBehaviour
         StoryState0,
         StoryState1,
         StoryState2,
-        StoryState3
+        StoryState3,
+        StoryState4,
+        StoryState5,
+        StoryState6
     }
     
 

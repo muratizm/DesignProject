@@ -27,7 +27,7 @@ public class ClickTheSpots : MiniGame
             Debug.LogError("Invalid type");
         }
 
-        timeToFinish = 10;
+        timeToFinish = Constants.Durations.TIME_TO_FINISH_CLICKTHESPOTS;
         base.StartGame();
     }
 

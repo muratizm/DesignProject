@@ -24,8 +24,8 @@ public class MinigameManager : MonoBehaviour
     {
         Bugs,
         ClickRush,
-        Painter,
-        RememberSpots
+        RememberSpots,
+        PasswordQuiz
     }
 
     private void Awake()
@@ -53,10 +53,6 @@ public class MinigameManager : MonoBehaviour
                 Debug.Log("Starting Bugs minigame");
                 StartBugsGame(Constants.Labels.SPOTS_MINIGAME);
                 break;
-            case MinigameType.Painter:
-                Debug.Log("Starting Painter minigame");
-                StartAnyGame(Constants.Labels.PAINTER_MINIGAME);
-                break;
             case MinigameType.ClickRush:
                 Debug.Log("Starting ClickRush minigame");
                 StartAnyGame(Constants.Labels.CLICKRUSH_MINIGAME);
@@ -64,6 +60,10 @@ public class MinigameManager : MonoBehaviour
             case MinigameType.RememberSpots:
                 Debug.Log("Starting Remember Spots minigame");
                 StartRememberSpotsGame(Constants.Labels.SPOTS_MINIGAME);
+                break;
+            case MinigameType.PasswordQuiz:
+                Debug.Log("Starting Password Quiz minigame");
+                StartAnyGame(Constants.Labels.PASSWORDQUIZ_MINIGAME);
                 break;
             default:
                 Debug.Log("Invalid minigame type");
@@ -81,7 +81,7 @@ public class MinigameManager : MonoBehaviour
         // istersek kullanmayız zaten
         // storystate manager'ın içinde ise inventory'i kontrol etcez her çağrıldığında
         // zaten bu updatestate ya dialogue action mng'dan ya burdan çaprılyır performasnı düşünme yani
-        Debug.Log("Minigame is finished");
+        Debug.Log("Minigame is finished :" + isWon );
         OnMinigameFinished?.Invoke();
         StoryStateManager.Instance.UpdateCurrentState();
     }

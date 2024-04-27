@@ -29,6 +29,9 @@ public static class Constants
         public const int AI_DIALOGUE_WAIT_MS = 5000;
         public const int FADEIN_DURATION_MS = 2000;
         public const int FADEOUT_DURATION_MS = 1500;
+        public const float TIME_TO_FINISH_PASSWORDQUIZ = 5f;
+        public const float TIME_TO_FINISH_CLICKRUSH = 3f;
+        public const float TIME_TO_FINISH_CLICKTHESPOTS = 10f;
     }
 
 
@@ -75,6 +78,7 @@ public static class Constants
 
     public static class Labels {
 
+        public const string PASSWORDQUIZ_MINIGAME = "minigame_passwordquiz";
         public const string SPOTS_MINIGAME = "minigame_clickthespots";
         public const string CLICKRUSH_MINIGAME = "minigame_clickrush";
         public const string PAINTER_MINIGAME = "minigame_painter";

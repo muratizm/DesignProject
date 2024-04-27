@@ -6,6 +6,8 @@ public abstract class ItemSO : ScriptableObject
 {
     public enum Type
     {
+        
+        Axe,
         Book,
         Paper,
         Task,

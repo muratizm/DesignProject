@@ -33,7 +33,8 @@ public class StoryState2_RatAction : BaseAction
             Debug.Log("E pressed");
             actionManager.MakeChoice(2);
             // open dialogue 
-            StoryOperations.Instance.EnterRatDialogue();
+            DialogueManager.Instance.EnterDialogueMode(transform.parent.GetComponentInChildren<DialogueTrigger>().inkJSON);
+
         }
     }
 

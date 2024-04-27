@@ -8,6 +8,9 @@ public class StoryState3 : StoryBaseState
     private StoryOperations _storyOperations;
     private bool hasPlayedMinigame = false;
 
+
+
+
     public override void EnterState()
     {
         Debug.Log("Entering StoryState3");
@@ -40,6 +43,8 @@ public class StoryState3 : StoryBaseState
             // minigame is already played
             // there may be conclusion of minigame
 
+
+
         }
 
 
@@ -55,4 +60,5 @@ public class StoryState3 : StoryBaseState
             hasPlayedMinigame = false;
         }
     }
+
 }

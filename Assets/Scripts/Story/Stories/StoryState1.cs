@@ -10,6 +10,16 @@ public class StoryState1 : StoryBaseState
     private AudioManager _audioManager;
 
 
+    public const string NAME = "StoryState1";
+    public const string SS1_OBSTACLE = "SS1_Obstacle";
+    public const string SS1_BRANCH = "SS1_Branch";
+
+    [SerializeField] private GameObject ss1_obstacle;
+    [SerializeField] private GameObject ss1_branch;
+    [SerializeField] private GameObject ss1_goldenLeaf;
+
+
+
     public override void EnterState()
     {
         Debug.Log("Entering StoryState1");
@@ -35,26 +45,47 @@ public class StoryState1 : StoryBaseState
         string value = ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value;
         Debug.Log("Updating StoryState1");
         if( value == "respect_to_tree"){
-            _storyOperations.GetRidOfTheObstacle();
+            GetRidOfTheObstacle();
             _storyOperations.AddTask1();
 
-            _storyStateManager.ChangeState("StoryState2");
         }
         else if( value == "attack_to_tree"){
-            _storyOperations.BranchFall();
+            BranchFall();
             _storyOperations.AddTask1();
 
-            _storyStateManager.ChangeState("StoryState3");
         }
         else if ( value == "scared_of_adventure"){
-            _storyOperations.GetRidOfTheObstacle();
-            _storyOperations.GoldenLeafFall();
+            GetRidOfTheObstacle();
+            GoldenLeafFall();
             _storyOperations.AddTask1();
 
-            _storyStateManager.ChangeState("StoryState2");
         }
 
     }
 
+
+    public void GetRidOfTheObstacle(){
+        if(ss1_obstacle != null){
+            Debug.Log("Obstacle is falling!");
+            ss1_obstacle.GetComponent<Animation>().Play("anim");
+        }
+    }
+
+    public void BranchFall(){
+        if(ss1_branch != null){
+            Debug.Log("Branch is falling!");
+
+            Rigidbody rb = ss1_branch.AddComponent<Rigidbody>();
+            rb.mass = 100;
+        }
+    }
+
+    public void GoldenLeafFall(){
+        if(ss1_goldenLeaf != null){
+            Debug.Log("Golden Leaf is falling!");
+
+            Rigidbody rb = ss1_goldenLeaf.AddComponent<Rigidbody>();
+        }
+    }
 
 }

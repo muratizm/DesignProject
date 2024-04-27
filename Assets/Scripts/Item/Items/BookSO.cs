@@ -10,7 +10,7 @@ public class BookSO : ItemSO
     {
         // Implement the logic to show us everywhere
         if (ItemTag == "GrandfathersBook"){
-            StoryOperations.Instance.HomeSceneOpenBook(pages);
+            ItemOperations.Instance.HomeSceneOpenBook(pages);
         }
         else{
             ItemOperations.Instance.UseBookItem(pages);        

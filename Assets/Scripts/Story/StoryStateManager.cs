@@ -8,8 +8,24 @@ public class StoryStateManager : MonoBehaviour
     public static StoryStateManager Instance { get; private set; }
     private StoryVariables storyVariables;
     private StoryBaseState currentStoryState;
-    private Dictionary<string, StoryBaseState> states;
 
+    [System.Serializable]
+    public struct StatePair
+    {
+        public StoryState State;
+        public StoryBaseState StateScript;
+    }
+
+    public enum StoryState
+    {
+        StoryState0,
+        StoryState1,
+        StoryState2,
+        StoryState3
+    }
+    
+
+    [SerializeField] private List<StatePair> statePairs;
 
 
 
@@ -23,16 +39,6 @@ public class StoryStateManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            states = new Dictionary<string, StoryBaseState>
-            {
-                { "StoryState0", new StoryState0() },
-                { "StoryState1", new StoryState1() },
-                { "StoryState2", new StoryState2() },
-                { "StoryState3", new StoryState3() }
-                // Add all your states here
-            };
-
-
             storyVariables = new StoryVariables(globalsTextFile);
 
         }
@@ -51,11 +57,11 @@ public class StoryStateManager : MonoBehaviour
 
             if (SceneManager.GetActiveScene().name == "HomeScene")
             {
-                ChangeState("StoryState0");
+                ChangeState(StoryState.StoryState0);
             }
             else
             {
-                ChangeState("StoryState3"); //  burda playerprefs falan bi şekilde
+                ChangeState(StoryState.StoryState1); //  burda playerprefs falan bi şekilde
                 // şuan içinde bulundugum stroy state i alıp ona göre değiştirme yapılacak
             }
     }
@@ -68,16 +74,20 @@ public class StoryStateManager : MonoBehaviour
     }
 
 
-    public void ChangeState(string newState)
+    public void ChangeState(StoryState newState)
     {
-        if (!states.ContainsKey(newState))
+        StatePair pair = statePairs.Find(p => p.State == newState);
+        if (!pair.Equals(default(KeyValuePair)))
         {
+            currentStoryState?.ExitState();
+            currentStoryState = pair.StateScript;
+            currentStoryState.EnterState();
+        }
+        else{
             Debug.LogError("State " + newState + " does not exist.");
             return;
         }
-        currentStoryState?.ExitState();
-        currentStoryState = states[newState];
-        currentStoryState.EnterState();
+
     }
 
 

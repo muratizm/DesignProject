@@ -6,20 +6,27 @@ using UnityEngine;
 public class StoryState2 : StoryBaseState
 {
     private StoryStateManager _storyStateManager;
-    [SerializeField ] private GameObject _rat;
     private ItemSO[] _inventoryBeforeRat;
     private TaskSO taskItem;
 
     private bool _isRatActionTriggered = false;
     private bool _isTaskTriggered = false;
+
+    [SerializeField] private ItemSO ss2_map;
+    [SerializeField] private GameObject ss2_rat;
+
+    void Start(){
+        
+    }
     
     public override void EnterState()
     {   
         Debug.Log("Entering StoryState2");
         _storyStateManager = StoryStateManager.Instance;
         _inventoryBeforeRat = InventoryManager.Instance.GetInventory();
-        StoryOperations.Instance.DisableRatAction();
-        StoryOperations.Instance.DisableRatDialogue();
+        Debug.Log("name: " + gameObject.name);
+        DisableRatAction();
+        DisableRatDialogue();
     
     }
 
@@ -60,7 +67,7 @@ public class StoryState2 : StoryBaseState
                 if(gaveMoney)
                 {
                     Debug.Log("Gave money to rat.");
-                    StoryOperations.Instance.GiveMap();
+                    GiveMap();
                 }
                 else
                 {
@@ -107,8 +114,44 @@ public class StoryState2 : StoryBaseState
         {
             Debug.Log("The task item was not there before the rat interaction.");
             // yeni item geldi yani actiontrigger'ı aktif etcez
-            StoryOperations.Instance.EnterRatAction();            
+            EnterRatAction();            
         }
 
     }
+
+    public void DisableRatAction(){
+        if(ss2_rat != null){
+            Debug.Log("Rat is not interacting!");
+            ss2_rat.GetComponentInChildren<ActionTrigger>().CanTrigger = false;
+        }
+        else{
+            Debug.Log("Rat is null!");
+        }
+    }
+
+    public void DisableRatDialogue(){
+        if(ss2_rat != null){
+            Debug.Log("Rat is not talking!");
+            ss2_rat.GetComponentInChildren<DialogueTrigger>().CanTrigger = false;
+        }else{
+            Debug.Log("Rat is null!");
+        }
+    }
+
+
+
+
+    public void EnterRatAction(){
+        if(ss2_rat != null){
+            Debug.Log("Rat is interacting!");
+            ActionManager.Instance.EnterActionMode(ss2_rat.GetComponentInChildren<ActionTrigger>().inkJSON, ss2_rat.GetComponentInChildren<BaseAction>());
+        }
+    }
+
+
+    
+    public void GiveMap(){
+        Player.Instance.TakeItem(ss2_map);
+    }
+    
 }

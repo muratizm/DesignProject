@@ -12,21 +12,6 @@ public class StoryOperations : MonoBehaviour
     private StoryStateManager storyStateManager;
     private TasksManager tasksManager;
 
-    public static class StoryState1
-    {
-        public const string NAME = "StoryState1";
-        public const string SS1_OBSTACLE = "SS1_Obstacle";
-        public const string SS1_BRANCH = "SS1_Branch";
-    }
-    [SerializeField] private GameObject ss1_obstacle;
-    [SerializeField] private GameObject ss1_branch;
-    [SerializeField] private GameObject ss1_goldenLeaf;
-
-    
-    [SerializeField] private GameObject ss2_rat;
-
-    [SerializeField] private ItemSO ss3_map;
-
     [SerializeField] private List<ItemSO> rings;
 
     void Awake()
@@ -60,45 +45,6 @@ public class StoryOperations : MonoBehaviour
         //delete every object that needed in this state
         Destroy(GameObject.Find(name));
     }
-    
-    
-    public void GetRidOfTheObstacle(){
-        if(ss1_obstacle != null){
-            Debug.Log("Obstacle is falling!");
-            ss1_obstacle.GetComponent<Animation>().Play("anim");
-        }
-    }
-
-    public void BranchFall(){
-        if(ss1_branch != null){
-            Debug.Log("Branch is falling!");
-
-            Rigidbody rb = ss1_branch.AddComponent<Rigidbody>();
-            rb.mass = 100;
-        }
-    }
-
-    public void GoldenLeafFall(){
-        if(ss1_goldenLeaf != null){
-            Debug.Log("Golden Leaf is falling!");
-
-            Rigidbody rb = ss1_goldenLeaf.AddComponent<Rigidbody>();
-        }
-    }
-
-    public void DisableRatAction(){
-        if(ss2_rat != null){
-            Debug.Log("Rat is not interacting!");
-            ss2_rat.GetComponentInChildren<ActionTrigger>().CanTrigger = false;
-        }
-    }
-
-    public void DisableRatDialogue(){
-        if(ss2_rat != null){
-            Debug.Log("Rat is not talking!");
-            ss2_rat.GetComponentInChildren<DialogueTrigger>().CanTrigger = false;
-        }
-    }
 
     public void GiveRandomRing(){
         if(rings.Count > 0){
@@ -106,35 +52,6 @@ public class StoryOperations : MonoBehaviour
             Player.Instance.TakeItem(rings[randomIndex]);
             rings.RemoveAt(randomIndex);
         }
-    }
-
-    public void GiveMap(){
-        Player.Instance.TakeItem(ss3_map);
-    }
-    
-    public void EnterRatAction(){
-        if(ss2_rat != null){
-            Debug.Log("Rat is interacting!");
-            ActionManager.Instance.EnterActionMode(ss2_rat.GetComponentInChildren<ActionTrigger>().inkJSON, ss2_rat.GetComponentInChildren<BaseAction>());
-        }
-    }
-
-    public void EnterRatDialogue(){
-        if(ss2_rat != null){
-            Debug.Log("Rat is talking!");
-            DialogueManager.Instance.EnterDialogueMode(ss2_rat.GetComponentInChildren<DialogueTrigger>().inkJSON);
-        }
-    }
-
-    public async void HomeSceneOpenBook(Sprite[] pages)
-    {
-        SceneCoordinator.Instance.FadeOut();
-        await Task.Delay(Constants.Durations.FADEOUT_DURATION_MS);
-
-        ItemOperations.Instance.UseBookItem(pages);
-        
-        SceneCoordinator.Instance.FadeIn();
-        await Task.Delay(Constants.Durations.FADEIN_DURATION_MS);
     }
 
     public async void PassOut()

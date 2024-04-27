@@ -5676,3 +5676,19 @@
 =========choice made: (you are the greatest person ontheworld)
 ========= situation : ohhh. what a great painter are you
 
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (no boomer)
+========= situation : no boomerrr
+
+========= situation : youare a bad person. you missed the chance.
+
+========= given choice : (thinkful)
+========= given choice : (sorry)
+========= given choice : (missed a chance??)
+=========choice made: (sorry)
+========= situation : thank you very much men of course i can help you
+

@@ -43,14 +43,18 @@ a surprise gift!!
     + [(no boomerrr)]
         -> bad
     + [(oh thank youu) ]
-        -> ohiamsorry
+        -> ohthankyou
     + [(you are the greatest person ontheworld) ]
         -> greatpainter
 
 
 === ohiamsorry ===
-thank you very much men of course i can help you 
+i am sorry man! i didnt mean it 
 ~ curstate = "minigame"
+-> END
+
+=== ohthankyou ===
+ooh ty man
 -> END
 
 === greatpainter ===

@@ -5692,3 +5692,378 @@
 =========choice made: (sorry)
 ========= situation : thank you very much men of course i can help you
 
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (no boomer)
+========= situation : no boomerrr
+
+========= situation : youare a bad person. you missed the chance.
+
+========= given choice : (thinkful)
+========= given choice : (sorry)
+========= given choice : (missed a chance??)
+=========choice made: (missed a chance??)
+========= situation : what will you give me
+
+========= situation : a surprise gift!!
+
+========= given choice : (no boomerrr)
+========= given choice : (oh thank youu)
+========= given choice : (you are the greatest person ontheworld)
+=========choice made: (you are the greatest person ontheworld)
+========= situation : ohhh. what a great painter are you
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (for what)
+========= situation : what will you give me
+
+========= situation : a surprise gift!!
+
+========= given choice : (no boomerrr)
+========= given choice : (oh thank youu)
+========= given choice : (you are the greatest person ontheworld)
+=========choice made: (no boomerrr)
+========= situation : no boomerrr
+
+========= situation : youare a bad person. you missed the chance.
+
+========= given choice : (thinkful)
+========= given choice : (sorry)
+========= given choice : (missed a chance??)
+=========choice made: (sorry)
+========= situation : i am sorry man! i didnt mean it
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+

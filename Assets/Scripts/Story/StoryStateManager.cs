@@ -69,7 +69,6 @@ public class StoryStateManager : MonoBehaviour
     public void UpdateCurrentState()
     {
         //its warned by MakeChoice() method
-        Debug.Log("Current State: " + currentStoryState);
         currentStoryState.UpdateState();
     }
 

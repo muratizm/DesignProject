@@ -37,6 +37,7 @@ public class DialogueManager : MonoBehaviour
     private int selectedChoiceIndex = -1;
     [SerializeField] private Slider timerSlider;
     private bool choiceMade = false;
+    private bool showChoices = true;
     
 
     private Story currentStory;
@@ -100,7 +101,8 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON){
+    public void EnterDialogueMode(TextAsset inkJSON, bool showChoices = true){
+        this.showChoices = showChoices;
         currentStory = new Story(inkJSON.text);
         IsDialoguePlaying = true;
         dialoguePanel.SetActive(true);
@@ -114,9 +116,9 @@ public class DialogueManager : MonoBehaviour
 
     private void ExitDialogueMode()
     {
-        storyVariables.StartListening(currentStory);
-
         IsDialoguePlaying = false;
+        storyVariables.StartListening(currentStory);
+        storyStateManager.UpdateCurrentState();
         dialoguePanel.SetActive(false);
         dialogueText.text  = "";
     }
@@ -154,7 +156,9 @@ public class DialogueManager : MonoBehaviour
         
         yield return new WaitForEndOfFrame();
 
-        DisplayChoices();
+        if(showChoices){
+            DisplayChoices();
+        }
         
     }
 

@@ -69,12 +69,7 @@ public class StoryOperations : MonoBehaviour
         tasksManager.AddTask(task1);
     }
 
-    public void AddTask3(){
-        Task3 task3 = gameObject.AddComponent<Task3>();
-        task3.taskName = "Task3 Task3 ";
-        task3.TimeToAchieve = 370f;
-        tasksManager.AddTask(task3);
-    }
+
     
 
     public void UseOmniverseItem(float maxSize)

@@ -16,7 +16,7 @@ public class StoryState2 : StoryBaseState
     [SerializeField] private GameObject ss2_rat;
 
     void Start(){
-        
+
     }
     
     public override void EnterState()
@@ -90,7 +90,7 @@ public class StoryState2 : StoryBaseState
         if (taskItem.TaskTag == "Task3")
         {
             Debug.Log("Task3 added.");
-            StoryOperations.Instance.AddTask3();
+            AddTask3();
         }
         else    
         {
@@ -154,4 +154,10 @@ public class StoryState2 : StoryBaseState
         Player.Instance.TakeItem(ss2_map);
     }
     
+    public void AddTask3(){
+        Task3 task3 = gameObject.AddComponent<Task3>();
+        task3.taskName = "Task3 Task3 ";
+        task3.TimeToAchieve = 370f;
+        TasksManager.Instance.AddTask(task3);
+    }
 }

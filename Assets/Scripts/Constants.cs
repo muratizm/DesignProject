@@ -67,7 +67,9 @@ public static class Constants
                 public const string BUTTON_CLICK = "Sounds/SFX/button_click";
                 public const string CHEST_OPEN = "Sounds/SFX/chest_open";
                 public const string CHEST_CLOSE = "Sounds/SFX/chest_close";
+                public const string TREE_FALLING = "Sounds/SFX/tree_falling";
                 public const string PAGE_FLIP = "Sounds/SFX/page_flip";
+                public const string COUGH = "Sounds/SFX/cough";
             }
             public static class MUSIC {
                 public const string HOME = "Sounds/Music/homescene";

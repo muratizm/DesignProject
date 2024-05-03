@@ -9,6 +9,7 @@ public class Chest : MonoBehaviour
     private bool _isPlayerInRange = false;
     private bool _isChestOpened = false;
     private Animator _chestAnimator;
+    
 
     private void Start()
     {

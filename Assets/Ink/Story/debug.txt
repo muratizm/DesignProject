@@ -6250,3 +6250,328 @@
 
 ========= situation : sana teşekkür olarak bu kutsal yüzüğü veriyorum yolcu!
 
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : bu agac zehirli ve yıllardır bu diyarı kirletiyor
+
+========= situation : sonunda kurtulduk
+
+========= situation : sana teşekkür olarak bu kutsal yüzüğü veriyorum yolcu!
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : bu agac zehirli ve yıllardır bu diyarı kirletiyor
+
+========= situation : sonunda kurtulduk
+
+========= situation : sana teşekkür olarak bu kutsal yüzüğü veriyorum yolcu!
+
+========= situation : meraba yolcu,
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba yolcu,
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : bu agac zehirli ve yıllardır bu diyarı kirletiyor
+
+========= situation : sonunda kurtulduk
+
+========= situation : sana teşekkür olarak bu kutsal yüzüğü veriyorum yolcu!
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (umursama)
+========= situation : ben bilmem kardesim naparsan yap
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (umursama)
+========= situation : ben bilmem kardesim naparsan yap
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (umursama)
+========= situation : ben bilmem kardesim naparsan yap
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (umursama)
+========= situation : ben bilmem kardesim naparsan yap
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : bu agac zehirli ve yıllardır bu diyarı kirletiyor
+
+========= situation : sonunda kurtulduk
+
+========= situation : sana teşekkür olarak bu kutsal yüzüğü veriyorum yolcu!
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : bu agac zehirli ve yıllardır bu diyarı kirletiyor
+
+========= situation : sonunda kurtulduk
+
+========= situation : sana teşekkür olarak bu kutsal yüzüğü veriyorum yolcu!
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : bu agac zehirli ve yıllardır bu diyarı kirletiyor
+
+========= situation : sonunda kurtulduk
+
+========= situation : sana teşekkür olarak bu kutsal yüzüğü veriyorum yolcu!
+

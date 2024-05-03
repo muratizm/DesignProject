@@ -6,6 +6,7 @@ using Ink.Runtime;
 using TMPro;
 using UnityEngine;
 
+
 public class AI : MonoBehaviour
 {
     private static AI instance;

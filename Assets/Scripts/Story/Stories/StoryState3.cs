@@ -13,6 +13,7 @@ public class StoryState3 : StoryBaseState
     private bool hasGivenTask = false;
 
     [SerializeField] private TextAsset explainNextTask;
+    [SerializeField] private ItemSO ss3_packetToDeliver;
 
 
 
@@ -36,7 +37,7 @@ public class StoryState3 : StoryBaseState
         if (!hasPlayedMinigame)
         {
             string value = ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value;
-            if( value == "minigame"){
+            if(value == "minigame"){
                 hasPlayedMinigame = true;
                 MinigameManager.Instance.StartMinigame(MinigameManager.MinigameType.ClickRush);
                 MinigameManager.Instance.OnMinigameFinished += () => PainterMinigameEnded();
@@ -45,14 +46,14 @@ public class StoryState3 : StoryBaseState
                 Debug.Log("Curstate value is not minigame");
             }
         }
-        else if (hasPlayedMinigame && MinigameManager.Instance.IsWon && !hasExplainedNextTask){
+        else if (hasPlayedMinigame && !hasExplainedNextTask && MinigameManager.Instance.IsWon){ 
             // minigame is already played
             // there may be conclusion of minigame
 
             Invoke("ExplainNextTask", 2f);
 
         }
-        else if(!DialogueManager.Instance.IsDialoguePlaying && hasExplainedNextTask && !hasGivenTask){
+        else if(hasExplainedNextTask && !hasGivenTask && !DialogueManager.Instance.IsDialoguePlaying){
             // minigame is played and next task is explained
             // do nothing
             Invoke("AddTask4", 3f);
@@ -68,10 +69,6 @@ public class StoryState3 : StoryBaseState
             hasPlayedMinigame = true;
             StoryOperations.Instance.GiveRandomRing();
         }
-        else{
-            hasPlayedMinigame = false;
-            this.UpdateState();
-        }
     }
 
     private void ExplainNextTask(){
@@ -79,6 +76,9 @@ public class StoryState3 : StoryBaseState
         if(!hasExplainedNextTask){
             hasExplainedNextTask = true;
             DialogueManager.Instance.EnterDialogueMode(explainNextTask, showChoices);
+            // give packet to player
+            // player will have to deliver it to the 'kaşif'
+            Player.Instance.TakeItem(ss3_packetToDeliver);
         }
     }
 

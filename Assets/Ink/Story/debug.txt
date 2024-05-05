@@ -6575,3 +6575,691 @@
 
 ========= situation : sana teşekkür olarak bu kutsal yüzüğü veriyorum yolcu!
 
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : meraba yolcu,
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (ağaci koru)
+========= situation : bu agaci sana kestirmem ihtiyar. biz dogayi koruruz
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : bu agac zehirli ve yıllardır bu diyarı kirletiyor
+
+========= situation : sonunda kurtulduk
+
+========= situation : sana teşekkür olarak bu kutsal yüzüğü veriyorum yolcu!
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : bu agac zehirli ve yıllardır bu diyarı kirletiyor
+
+========= situation : sonunda kurtulduk
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : bu agac zehirli ve yıllardır bu diyarı kirletiyor
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : bu agac zehirli ve yıllardır bu diyarı kirletiyor
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the first option.
+
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+=========choice made: (ağaci koru)
+========= situation : bu agaci sana kestirmem ihtiyar. biz dogayi koruruz
+
+========= thought bubble : If you ask me, I would choose the third option.
+
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the first option.
+
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= situation : meraba yolcu,
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : aah, işte beklediğim paket
+
+========= situation : çok teşekkürler dost
+
+========= situation : sana biraz yol göstermek isterim delikanlı bi adama benzyosun
+
+========= situation : yeni totemin keşfedilmesi için farklı farklı yollar var
+
+========= situation : sana hangisinden bahsetmemi istersin
+
+========= given choice : (a yolu)
+========= given choice : (b yolu)
+========= given choice : (c yolu)
+=========choice made: (a yolu)
+========= situation : a yolu böyle böyledir
+
+========= situation : bunu istediğine emin misin
+
+========= given choice : (evet eminim)
+========= given choice : (hayır)
+========= given choice : (diger)
+=========choice made: (hayır)
+========= situation : sana hangisinden bahsetmemi istersin
+
+========= given choice : (a yolu)
+========= given choice : (b yolu)
+========= given choice : (c yolu)
+=========choice made: (c yolu)
+========= situation : c yolu böyle böyledir
+
+========= situation : bunu istediğine emin misin
+
+========= given choice : (evet eminim)
+========= given choice : (hayır)
+========= given choice : (diger)
+=========choice made: (hayır)
+========= situation : sana hangisinden bahsetmemi istersin
+
+========= given choice : (a yolu)
+========= given choice : (b yolu)
+========= given choice : (c yolu)
+=========choice made: (a yolu)
+========= situation : a yolu böyle böyledir
+
+========= situation : bunu istediğine emin misin
+
+========= given choice : (evet eminim)
+========= given choice : (hayır)
+========= given choice : (diger)
+=========choice made: (evet eminim)
+========= situation : tamamdir maceracı, görevin a bu budur.
+
+========= situation : sana bol şans.
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : aah, işte beklediğim paket
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : aah, işte beklediğim paket
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : aah, işte beklediğim paket
+
+========= situation : çok teşekkürler dost
+
+========= situation : sana biraz yol göstermek isterim delikanlı bi adama benzyosun
+
+========= situation : yeni totemin keşfedilmesi için farklı farklı yollar var
+
+========= situation : sana hangisinden bahsetmemi istersin
+
+========= given choice : (a yolu)
+========= given choice : (b yolu)
+========= given choice : (c yolu)
+=========choice made: (b yolu)
+========= situation : b yolu böyle böyledir
+
+========= situation : bunu istediğine emin misin
+
+========= given choice : (evet eminim)
+========= given choice : (hayır)
+========= given choice : (diger)
+=========choice made: (evet eminim)
+========= situation : tamamdir maceracı, görevin a bu budur.
+
+========= situation : sana bol şans.
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : aah, işte beklediğim paket
+
+========= situation : çok teşekkürler dost
+
+========= situation : sana biraz yol göstermek isterim delikanlı bi adama benzyosun
+
+========= situation : yeni totemin keşfedilmesi için farklı farklı yollar var
+
+========= situation : sana hangisinden bahsetmemi istersin
+
+========= given choice : (a yolu)
+========= given choice : (b yolu)
+========= given choice : (c yolu)
+=========choice made: (b yolu)
+========= situation : b yolu böyle böyledir
+
+========= situation : bunu istediğine emin misin
+
+========= given choice : (evet eminim)
+========= given choice : (hayır)
+========= given choice : (diger)
+=========choice made: (evet eminim)
+========= situation : tamamdir maceracı, görevin a bu budur.
+
+========= situation : meraba genç yakışıklı!
+
+========= situation : ben bu diyarın falcısı her şeyi bilen Fatma!
+
+========= situation : sorun varsa alabilirim
+
+========= given choice : (no)
+========= given choice : (aile)
+========= given choice : (medeniyet)
+=========choice made: (no)
+========= situation : no
+
+========= situation : meraba genç yakışıklı!
+
+========= situation : ben bu diyarın falcısı her şeyi bilen Fatma!
+
+========= situation : sorun varsa alabilirim
+
+========= given choice : (no)
+========= given choice : (aile)
+========= given choice : (medeniyet)
+=========choice made: (aile)
+========= situation : aileme noldu
+
+========= situation : anne babanı mı örenmek istersin yoksa macerayi baslatan dedeni mi
+
+========= given choice : (annebaba)
+========= given choice : (dede)
+========= given choice : (farketmez)
+=========choice made: (annebaba)
+========= situation : annebabama noldu
+
+========= situation : annebabana bu bu oldu
+
+========= situation : sorun varsa alabilirim
+
+========= given choice : (no)
+========= given choice : (aile)
+========= given choice : (medeniyet)
+=========choice made: (medeniyet)
+========= situation : medeniyete noldu
+
+========= situation : medeniyete böyle böyle oldu
+
+========= situation : sorun varsa alabilirim
+
+========= given choice : (no)
+========= given choice : (aile)
+========= given choice : (medeniyet)
+=========choice made: (aile)
+========= situation : aileme noldu
+
+========= situation : anne babanı mı örenmek istersin yoksa macerayi baslatan dedeni mi
+
+========= given choice : (annebaba)
+========= given choice : (dede)
+========= given choice : (farketmez)
+=========choice made: (dede)
+========= situation : dedeme noldu
+
+========= situation : dedene bu oldu
+
+========= situation : sorun varsa alabilirim
+
+========= given choice : (no)
+========= given choice : (aile)
+========= given choice : (medeniyet)
+=========choice made: (aile)
+========= situation : aileme noldu
+
+========= situation : anne babanı mı örenmek istersin yoksa macerayi baslatan dedeni mi
+
+========= given choice : (annebaba)
+========= given choice : (dede)
+========= given choice : (farketmez)
+=========choice made: (farketmez)
+========= situation : dedeme noldu
+
+========= situation : dedene bu oldu
+
+========= situation : sorun varsa alabilirim
+
+========= given choice : (no)
+========= given choice : (aile)
+========= given choice : (medeniyet)
+========= situation : Welcome to our civilization!
+
+========= situation : meraba!,
+

@@ -10,7 +10,10 @@ public class StoryState5 : StoryBaseState
     private AudioManager _audioManager;
 
 
-    [SerializeField] private GameObject ss4_zort;
+    private bool hasPlayedMinigame = false;
+    private bool hasAfterDialogue = false;
+    [SerializeField] private TextAsset ss5_afterDialogue;
+
 
 
 
@@ -36,18 +39,45 @@ public class StoryState5 : StoryBaseState
  
     public override void UpdateState()
     {
-        string value = ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value;
         Debug.Log("Updating StoryState5");
-        if( value == "blabla"){
-            Invoke("DoSomething", 2f);
+        if (!hasPlayedMinigame)
+        {
+            Debug.Log("Playing minigame");
+            string value = ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value;
+            if( value == "minigame"){
+                hasPlayedMinigame = true;
+                MinigameManager.Instance.StartMinigame(MinigameManager.MinigameType.PasswordQuiz);
+                MinigameManager.Instance.OnMinigameFinished += () => ExplorerMinigameEnded();
+            }
+            else{
+                Debug.Log("Curstate value is not minigame");
+            }
+        }
+        else if (hasPlayedMinigame && !hasAfterDialogue && MinigameManager.Instance.IsWon){
+            // minigame is already played
+            // there may be conclusion of minigame
 
+            Invoke("DialogueAfterPackage", 1f);
         }
 
     }
 
+    private void ExplorerMinigameEnded(){
+        if(MinigameManager.Instance.IsWon){
+            Debug.Log("Explorer minigame is won");
+            hasPlayedMinigame = true;
+            GivePackageToExplorer();
+        }
+    }
 
-    private void DoSomething()
+    private void DialogueAfterPackage()
     {
-        //do something
+        DialogueManager.Instance.EnterDialogueMode(ss5_afterDialogue);
+        hasAfterDialogue = true;
+    }
+
+    private void GivePackageToExplorer()
+    {
+        InventoryManager.Instance.RemoveSpecificTypeFromInventory(ItemSO.Type.Package);
     }
 }

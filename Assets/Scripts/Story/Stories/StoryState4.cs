@@ -40,16 +40,18 @@ public class StoryState4 : StoryBaseState
         //storyOperations.DeleteObjects("DemoEnvironment");
     }
 
- 
+
     public override void UpdateState()
     {
         //TODO: stop the cutting animation, pass to idle here
-
+        StartLumberjackIdle();
 
         string value = ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value;
-
+        Debug.Log("Curstate value: " + value);
         if(!hasCutTree && value == "give_axe"){
             //TODO: start the cutting animation again
+            StartLumberjackHitting();
+            
             canGiveAxe = InventoryManager.Instance.RemoveSpecificTypeFromInventory(ItemSO.Type.Axe);
             hasCutTree = true;
             ConclusionsOfCuttingTree();
@@ -69,7 +71,7 @@ public class StoryState4 : StoryBaseState
 
     private async void ConclusionsOfCuttingTree(){
         //wait for 2 seconds
-        await Task.Delay(1000);
+        await Task.Delay(5000);
 
         //then, play tree falling animation and sound
         //TODO: stop the cutting animation, pass to idle here
@@ -93,6 +95,10 @@ public class StoryState4 : StoryBaseState
 
     private void StartLumberjackIdle(){
         lumberjackAnimator.SetTrigger("isDoneHitting");
+    }
+
+    private void StartLumberjackHitting(){
+        lumberjackAnimator.SetTrigger("isHitting");
     }
 
     private void StartRewardDialogue(){

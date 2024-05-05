@@ -54,6 +54,7 @@ public class StoryOperations : MonoBehaviour
         }
     }
 
+
     public async void PassOut()
     {
         SceneCoordinator.Instance.FadeOut();

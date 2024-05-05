@@ -79,6 +79,8 @@ public class StoryStateManager : MonoBehaviour
     public void ChangeState(StoryState newState)
     {
         StatePair pair = statePairs.Find(p => p.State == newState);
+        Debug.Log("Changing state to " + newState);
+        Debug.Log("Pair: " + pair);
         if (!pair.Equals(default(KeyValuePair)))
         {
             currentStoryState?.ExitState();

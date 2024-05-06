@@ -75,7 +75,8 @@ public class StoryState1 : StoryBaseState
         if(ss1_branch != null){
             Debug.Log("Branch is falling!");
 
-            Rigidbody rb = ss1_branch.AddComponent<Rigidbody>();
+            ss1_branch.AddComponent<Rigidbody>();
+            Rigidbody rb = ss1_branch.GetComponent<Rigidbody>();
             rb.mass = 100;
         }
     }

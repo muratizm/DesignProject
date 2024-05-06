@@ -7263,3 +7263,246 @@
 
 ========= situation : meraba!,
 
+========= situation : Welcome to our civilization!
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : Welcome to our civilization!
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= thought bubble : Welcome to our civilization!
+
+========= thought bubble : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : Welcome to our civilization!
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= thought bubble : Welcome to our civilization!
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : Welcome to our civilization!
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : Oh my god, where am I?
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+=========choice made: (Ready for adventure)
+========= situation : Dear Tree, Where can I start this adventure?
+
+========= thought bubble : Oh my god, where am I?
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+=========choice made: (My parents?)
+========= situation : What do you mean by reuniting my parent? Where are they!
+
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+=========choice made: (My parents?)
+========= situation : What do you mean by reuniting my parent? Where are they!
+
+========= thought bubble : Oh my god, where am I?
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+=========choice made: (My parents?)
+========= situation : What do you mean by reuniting my parent? Where are they!
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : bu agac zehirli ve yıllardır bu diyarı kirletiyor
+
+========= situation : sonunda kurtulduk
+
+========= situation : sana teşekkür olarak bu kutsal yüzüğü veriyorum yolcu!
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+=========choice made: (Ready for adventure)
+========= situation : Dear Tree, Where can I start this adventure?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+=========choice made: (Ready for adventure)
+========= situation : Dear Tree, Where can I start this adventure?
+
+========= situation : Fareden görevini aldın.
+
+========= given choice0 : Yoluna git (-)
+========= given choice1 : Fareyi öldür (x)
+========= given choice2 : Soru Sor (e)
+=========choice made: Soru Sor (e)
+========= situation : You choosed "ask"!
+
+========= situation : Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+
+========= situation : eğer altın verirsen yardım ederim
+
+========= given choice : (give gold!!)
+========= given choice : (give crystal!!)
+========= given choice : (kız)
+=========choice made: (give crystal!!)
+========= situation : al buyur sana crystal getirdim
+
+========= thought bubble : Oh my god, where am I?
+
+========= thought bubble : What is this place! Where should I go?
+
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+=========choice made: (Ready for adventure)
+========= situation : Dear Tree, Where can I start this adventure?
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (baltanı ver)
+========= situation : al buyur kardesim benim baltami kullan
+
+========= situation : aah sana nekadar tşk etsem az
+
+========= situation : bu agac zehirli ve yıllardır bu diyarı kirletiyor
+
+========= situation : sonunda kurtulduk
+
+========= situation : sana teşekkür olarak bu kutsal yüzüğü veriyorum yolcu!
+
+========= situation : meraba!,
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+========= thought bubble : Oh my god, where am I?
+

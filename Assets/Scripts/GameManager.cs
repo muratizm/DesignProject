@@ -127,6 +127,11 @@ public class GameManager : MonoBehaviour
         InventoryManager.Instance.ResetInventory();
     }
 
+    public void RestartGame()
+    {
+        SceneCoordinator.Instance.OpenScene(Constants.Scenes.SCENE_PLAY);
+        GameManager.Instance.ResetPrefs();
+    }
 
     void OnDestroy(){
     }

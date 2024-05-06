@@ -62,11 +62,6 @@ public class StoryStateManager : MonoBehaviour
             {
                 ChangeState(StoryState.StoryState0);
             }
-            else
-            {
-                ChangeState(StoryState.StoryState1); //  burda playerprefs falan bi şekilde
-                // şuan içinde bulundugum stroy state i alıp ona göre değiştirme yapılacak
-            }
     }
 
     public void UpdateCurrentState()

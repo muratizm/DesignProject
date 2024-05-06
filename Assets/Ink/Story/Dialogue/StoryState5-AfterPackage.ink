@@ -52,19 +52,22 @@ bunu istediğine emin misin
 
 === aChosen ===
 tamamdir maceracı, görevin a bu budur.
+bilinmeyen yol
 sana bol şans.
-~ curstate = "path_with_magicians"
+~ curstate = "a"
 -> END
 
 === bChosen ===
 tamamdir maceracı, görevin b şu şudur.
+parkur ve ölüm tehlikeli yol
 sana bol şans.
-~ curstate = "path_with_bats"
+~ curstate = "b"
 -> END
 
 === cChosen===
 tamamdir maceracı, görevin c du dudur.
+güvenli ama korkunç uzun yol
 sana bol şans.
-~ curstate = "path_slow_safe"
+~ curstate = "c"
 -> END
 

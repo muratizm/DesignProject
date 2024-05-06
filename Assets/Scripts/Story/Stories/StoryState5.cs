@@ -12,7 +12,11 @@ public class StoryState5 : StoryBaseState
 
     private bool hasPlayedMinigame = false;
     private bool hasAfterDialogue = false;
+    private bool hasChoosedPath = false;
     [SerializeField] private TextAsset ss5_afterDialogue;
+    [SerializeField] private Animator pathA;
+    [SerializeField] private Animator pathB;
+    [SerializeField] private Animator pathC;
 
 
 
@@ -58,6 +62,24 @@ public class StoryState5 : StoryBaseState
             // there may be conclusion of minigame
 
             Invoke("DialogueAfterPackage", 1f);
+        }
+        else if(hasPlayedMinigame && hasAfterDialogue && !hasChoosedPath && !DialogueManager.Instance.IsDialoguePlaying){
+            // after dialogue is ended
+            // player should choose a path
+            hasChoosedPath = true;
+            string value = ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value;
+            if( value == "a"){
+                pathA.SetTrigger("OpenPath");
+            }
+            else if(value == "b"){
+                pathB.SetTrigger("OpenPath");
+            }
+            else if(value == "c"){
+                pathC.SetTrigger("OpenPath");
+            }
+            else{
+                Debug.LogError("Curstate value is not a, b or c");
+            }
         }
 
     }

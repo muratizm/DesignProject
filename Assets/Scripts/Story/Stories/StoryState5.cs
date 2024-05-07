@@ -14,6 +14,7 @@ public class StoryState5 : StoryBaseState
     private bool hasAfterDialogue = false;
     private bool hasChoosedPath = false;
     [SerializeField] private TextAsset ss5_afterDialogue;
+    [SerializeField] private ItemSO ss5_wizardNote;
     [SerializeField] private Animator pathA;
     [SerializeField] private Animator pathB;
     [SerializeField] private Animator pathC;
@@ -70,6 +71,8 @@ public class StoryState5 : StoryBaseState
             string value = ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value;
             if( value == "a"){
                 pathA.SetTrigger("OpenPath");
+                // give not itemi
+                Player.Instance.TakeItem(ss5_wizardNote);
             }
             else if(value == "b"){
                 pathB.SetTrigger("OpenPath");

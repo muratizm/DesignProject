@@ -24,7 +24,10 @@ public class StoryStateManager : MonoBehaviour
         StoryState3,
         StoryState4,
         StoryState5,
-        StoryState6
+        StoryState6,
+        StoryState7,
+        StoryState8,
+        StoryState9
     }
     
 
@@ -62,6 +65,8 @@ public class StoryStateManager : MonoBehaviour
             {
                 ChangeState(StoryState.StoryState0);
             }
+
+
     }
 
     public void UpdateCurrentState()

@@ -10,7 +10,8 @@ public class StoryState6 : StoryBaseState
     private AudioManager _audioManager;
 
 
-    [SerializeField] private GameObject ss4_zort;
+    [SerializeField] private ItemSO omnivision;
+    private bool hasGivenItem = false;
 
 
 
@@ -21,7 +22,13 @@ public class StoryState6 : StoryBaseState
         _storyOperations = StoryOperations.Instance;
         _audioManager = AudioManager.Instance;
 
-        _audioManager.PlayMusic(Constants.Paths.Sounds.MUSIC.STORY1, 0.1f);
+
+                    StoryOperations.Instance.GiveRandomRing();
+            StoryOperations.Instance.GiveRandomRing();
+
+            StoryOperations.Instance.GiveRandomRing();
+
+            StoryOperations.Instance.GiveRandomRing();
     }
 
     public override void ExitState()
@@ -36,18 +43,25 @@ public class StoryState6 : StoryBaseState
  
     public override void UpdateState()
     {
-        string value = ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value;
-        Debug.Log("Updating StoryState6");
-        if( value == "blabla"){
-            Invoke("DoSomething", 2f);
-
+        if(!hasGivenItem && !DialogueManager.Instance.IsDialoguePlaying){
+            string value = ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value;
+            Debug.Log("Updating StoryState6");
+            if( value == "give_item"){
+                Debug.Log("Give item");
+                int ringCount = InventoryManager.Instance.GetRingCount();
+                if(ringCount >= 4){
+                    Debug.Log("Give omnivision");
+                    Player.Instance.TakeItem(omnivision);
+                }
+                else{
+                    Debug.Log("Give random ring");
+                    StoryOperations.Instance.GiveRandomRing();
+                }
+                hasGivenItem = true;
+            }
         }
 
+
     }
 
-
-    private void DoSomething()
-    {
-        //do something
-    }
 }

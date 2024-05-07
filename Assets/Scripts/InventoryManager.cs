@@ -15,6 +15,7 @@ public class InventoryManager : MonoBehaviour
     
     private int crystal;
     public int Crystal { get { return crystal; } private set { crystal = value; } }
+    
 
 
 
@@ -121,6 +122,7 @@ public class InventoryManager : MonoBehaviour
 
     }
 
+
     public bool RemoveCrystal(int amount) 
     {
         if (Crystal >= amount)
@@ -133,6 +135,19 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
     
+    public int GetRingCount()
+    {
+        int count = 0;
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (inventory[i] != null && inventory[i].GetType() == typeof(RingSO))
+            {
+                count++;
+            }
+        }
+        Debug.Log("Ring Count: " + count);
+        return count;
+    }
 
 
     void HandleInventoryAction(int slotIndex) // called when the player presses a number key to select an inventory slot

@@ -7852,3 +7852,381 @@
 =========choice made: (no)
 ========= situation : no
 
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+=========choice made: (Ready for adventure)
+========= situation : Dear Tree, Where can I start this adventure?
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : meraba yolcu,
+
+========= situation : benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
+
+========= situation : şu ağacı kesemedim bi türlü
+
+========= given choice : (baltanı ver)
+========= given choice : (ağaci koru)
+========= given choice : (umursama)
+=========choice made: (umursama)
+========= situation : ben bilmem kardesim naparsan yap
+
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+=========choice made: (Ready for adventure)
+========= situation : Dear Tree, Where can I start this adventure?
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : aah, işte beklediğim paket
+
+========= situation : aah, işte beklediğim paket
+
+========= situation : çok teşekkürler dost
+
+========= situation : sana biraz yol göstermek isterim delikanlı bi adama benzyosun
+
+========= situation : yeni totemin keşfedilmesi için farklı farklı yollar var
+
+========= situation : sana hangisinden bahsetmemi istersin
+
+========= given choice : (a yolu)
+========= given choice : (b yolu)
+========= given choice : (c yolu)
+=========choice made: (a yolu)
+========= situation : a yolu böyle böyledir
+
+========= situation : bunu istediğine emin misin
+
+========= given choice : (evet eminim)
+========= given choice : (hayır)
+========= given choice : (diger)
+=========choice made: (evet eminim)
+========= situation : tamamdir maceracı, görevin a bu budur.
+
+========= situation : bilinmeyen yol
+
+========= situation : sana bol şans.
+
+========= thought bubble : Oh my god, where am I?
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+=========choice made: (Ready for adventure)
+========= situation : Dear Tree, Where can I start this adventure?
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= situation : meraba!,
+
+========= situation : aa, bana paketimi mi getirdin
+
+========= situation : ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım
+
+========= situation : meraba genç yolcu!
+
+========= situation : ben, ben bu diyarın en eski büyücüsüyüm.
+
+========= situation : cart curt
+
+========= situation : (hal hatır sorar)
+
+========= given choice : (iyi)
+========= given choice : (kötü)
+========= given choice : (korkak)
+=========choice made: (iyi)
+========= situation : iyiyim hamdolsun
+
+========= situation : ne kadar korkusuz bir maceracıymışsın sen böyle
+
+========= situation : yüzyıllardır bu diyara senin kadar cesur ve maceracı birisi gelmedi cart curt
+
+========= given choice : (teşekkür)
+========= given choice : (sen nasılsın)
+========= given choice : (yardım iste)
+=========choice made: (teşekkür)
+========= situation : teşekkür ederim wizard kardeş.
+
+========= situation : sana yardımcı olmayı çok isterim genç.
+
+========= situation : sana bu itemi veriyorum
+
+========= situation : buradan kurtulmaya çok yakınsın ve bu item seni daha da yaklaştıracak
+
+========= situation : sana güveniyorum, yolun açık olsun
+
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+=========choice made: (Ready for adventure)
+========= situation : Dear Tree, Where can I start this adventure?
+
+========= situation : can you help me alduin?
+
+========= given choice : (yes)
+========= given choice : (no boomer)
+========= given choice : (for what)
+=========choice made: (yes)
+========= situation : of courseee
+
+========= situation : thank you boy ty.
+
+========= situation : bak şimdi sana görevi anlatıyoum hazırsındur umarım
+
+========= situation : bööyle böyle şöyle şöyle
+
+========= situation : hadi kolay gelsin
+
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+=========choice made: (Ready for adventure)
+========= situation : Dear Tree, Where can I start this adventure?
+
+========= situation : meraba genç yolcu!
+
+========= situation : ben, ben bu diyarın en eski büyücüsüyüm.
+
+========= situation : cart curt
+
+========= situation : (hal hatır sorar)
+
+========= given choice : (iyi)
+========= given choice : (kötü)
+========= given choice : (korkak)
+=========choice made: (iyi)
+========= situation : iyiyim hamdolsun
+
+========= situation : ne kadar korkusuz bir maceracıymışsın sen böyle
+
+========= situation : yüzyıllardır bu diyara senin kadar cesur ve maceracı birisi gelmedi cart curt
+
+========= given choice : (teşekkür)
+========= given choice : (sen nasılsın)
+========= given choice : (yardım iste)
+=========choice made: (teşekkür)
+========= situation : teşekkür ederim wizard kardeş.
+
+========= situation : sana yardımcı olmayı çok isterim genç.
+
+========= situation : sana bu itemi veriyorum
+
+========= situation : buradan kurtulmaya çok yakınsın ve bu item seni daha da yaklaştıracak
+
+========= situation : sana güveniyorum, yolun açık olsun
+
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+=========choice made: (Ready for adventure)
+========= situation : Dear Tree, Where can I start this adventure?
+
+========= situation : meraba genç yolcu!
+
+========= situation : ben, ben bu diyarın en eski büyücüsüyüm.
+
+========= situation : cart curt
+
+========= situation : (hal hatır sorar)
+
+========= given choice : (iyi)
+========= given choice : (kötü)
+========= given choice : (korkak)
+=========choice made: (iyi)
+========= situation : iyiyim hamdolsun
+
+========= situation : ne kadar korkusuz bir maceracıymışsın sen böyle
+
+========= situation : yüzyıllardır bu diyara senin kadar cesur ve maceracı birisi gelmedi cart curt
+
+========= given choice : (teşekkür)
+========= given choice : (sen nasılsın)
+========= given choice : (yardım iste)
+=========choice made: (teşekkür)
+========= situation : teşekkür ederim wizard kardeş.
+
+========= situation : sana yardımcı olmayı çok isterim genç.
+
+========= situation : sana bu itemi veriyorum
+
+========= situation : buradan kurtulmaya çok yakınsın ve bu item seni daha da yaklaştıracak
+
+========= situation : sana güveniyorum, yolun açık olsun
+
+========= situation : meraba genç yolcu!
+
+========= situation : ben, ben bu diyarın en eski büyücüsüyüm.
+
+========= situation : cart curt
+
+========= situation : (hal hatır sorar)
+
+========= given choice : (iyi)
+========= given choice : (kötü)
+========= given choice : (korkak)
+=========choice made: (iyi)
+========= situation : iyiyim hamdolsun
+
+========= situation : ne kadar korkusuz bir maceracıymışsın sen böyle
+
+========= situation : yüzyıllardır bu diyara senin kadar cesur ve maceracı birisi gelmedi cart curt
+
+========= given choice : (teşekkür)
+========= given choice : (sen nasılsın)
+========= given choice : (yardım iste)
+=========choice made: (teşekkür)
+========= situation : teşekkür ederim wizard kardeş.
+
+========= situation : sana yardımcı olmayı çok isterim genç.
+
+========= situation : sana bu itemi veriyorum
+
+========= situation : buradan kurtulmaya çok yakınsın ve bu item seni daha da yaklaştıracak
+
+========= situation : sana güveniyorum, yolun açık olsun
+
+========= thought bubble : Oh my god, where am I?
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : meraba genç yolcu!
+
+========= situation : ben, ben bu diyarın en eski büyücüsüyüm.
+
+========= situation : cart curt
+
+========= situation : (hal hatır sorar)
+
+========= given choice : (iyi)
+========= given choice : (kötü)
+========= given choice : (korkak)
+=========choice made: (iyi)
+========= situation : iyiyim hamdolsun
+
+========= situation : ne kadar korkusuz bir maceracıymışsın sen böyle
+
+========= situation : yüzyıllardır bu diyara senin kadar cesur ve maceracı birisi gelmedi cart curt
+
+========= given choice : (teşekkür)
+========= given choice : (sen nasılsın)
+========= given choice : (yardım iste)
+=========choice made: (teşekkür)
+========= situation : teşekkür ederim wizard kardeş.
+
+========= situation : sana yardımcı olmayı çok isterim genç.
+
+========= situation : sana bu itemi veriyorum
+
+========= situation : buradan kurtulmaya çok yakınsın ve bu item seni daha da yaklaştıracak
+
+========= situation : sana güveniyorum, yolun açık olsun
+

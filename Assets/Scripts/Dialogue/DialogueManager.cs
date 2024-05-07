@@ -71,7 +71,7 @@ public class DialogueManager : MonoBehaviour
 
         timer.OnTimerComplete += () => TimeIsUp();
         timer.OnTimerTick += () => UpdateTimerSlider(timer.ElapsedTime);
-        AI.Instance.OnAITurnEnd += () => RestartTimer();
+        AiInteraction.Instance.OnAITurnEnd += () => RestartTimer();
 
 
 
@@ -211,7 +211,7 @@ public class DialogueManager : MonoBehaviour
         if(index == Constants.ASKAI_CHOICE_INDEX)
         {
             timer.PauseTimer();
-            AI.Instance.AskAI(currentStory, timer);
+            AiInteraction.Instance.AskAI(currentStory, timer);
             return;
         }
 
@@ -315,7 +315,6 @@ public class DialogueManager : MonoBehaviour
 
 
     public void RestartTimer(){
-        Debug.Log("Timer is restarted");
         timer.SetTimer(Constants.Durations.DIALOGUE_WAIT_FOR_INPUT);
         timer.StartTimer();
     }

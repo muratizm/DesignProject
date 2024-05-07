@@ -24,6 +24,7 @@ public static class Constants
 
     public static class Durations {
         public const float WAIT_BETWEEN_LETTERS = .025f; 
+        public const int WAIT_BETWEEN_LETTERS_MS = 45;
         public const float THOUGHT_BUBBLE_DURATION = 2.5f;
         public const float DIALOGUE_WAIT_FOR_INPUT = 5f;
         public const int AI_DIALOGUE_WAIT_MS = 5000;

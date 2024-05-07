@@ -8230,3 +8230,535 @@
 
 ========= situation : sana güveniyorum, yolun açık olsun
 
+========= thought bubble : Oh my god, where am I?
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : If you ask me, I would choose the first option.
+
+========= thought bubble : Oh my god, where am I?
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : Oh my god, where am I?
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : Oh my god, where am I?
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Dear Alduin, how do you think we should answer this question?
+
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+=========choice made: (Ready for adventure)
+========= situation : Dear Tree, Where can I start this adventure?
+
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= situation : Welcome to our civilization!
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : So, you are our new adventurer assigned to solve the secret of our lost civilization.
+
+========= situation : I hope that by completing this adventure you will be able to save our civilization and be reunitd with your parents.
+
+========= given choice : (Ready for adventure)
+========= given choice : (My parents?)
+========= given choice : (Coward)

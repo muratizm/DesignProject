@@ -98,7 +98,7 @@ public class ThoughtManager : MonoBehaviour
             yield return new WaitForSeconds(textDelay);
         }
 
-        File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "========= thought bubble : " + content + "\n");
+        AiInteraction.Instance.AddLogToPersonalityFile("=> thought bubble : " + content + "---");
     }
 
 

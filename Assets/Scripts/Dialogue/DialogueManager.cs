@@ -81,6 +81,9 @@ public class DialogueManager : MonoBehaviour
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++; 
         }
+
+
+
     }
 
     private void Update() {
@@ -148,7 +151,6 @@ public class DialogueManager : MonoBehaviour
 
         lineEnded = true;
 
-        File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "========= situation : " + content + "\n");
         choiceMade = false;
 
         UpdateTimerSlider(0);
@@ -156,7 +158,8 @@ public class DialogueManager : MonoBehaviour
         
         yield return new WaitForEndOfFrame();
 
-        if(showChoices){
+        if(showChoices && currentStory.currentChoices.Count > 0){
+            AiInteraction.Instance.AddLogToPersonalityFile("=> situation : " + content + "---");
             DisplayChoices();
         }
         
@@ -186,7 +189,7 @@ public class DialogueManager : MonoBehaviour
         int index = 0;
         foreach(Choice choice in currentChoices){ // 3 real choices 
             choicesText[index].text = choice.text;
-            File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "========= given choice : " + choice.text + "\n");
+            AiInteraction.Instance.AddLogToPersonalityFile("=> given choice : " + choice.text + "---");
             index++;
         }
 
@@ -224,8 +227,7 @@ public class DialogueManager : MonoBehaviour
             timer.PauseTimer();
             choiceMade = true;
             ResetSelectedChoice();
-            File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "=========choice made: " + choicesText[index].text + "\n");
-
+            AiInteraction.Instance.AddLogToPersonalityFile("=> choice made: " + choicesText[index].text + "---");
         }
 
         storyStateManager.UpdateCurrentState();

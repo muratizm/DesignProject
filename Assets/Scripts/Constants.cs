@@ -59,7 +59,7 @@ public static class Constants
 
     public static class Paths {
 
-        public const string DIALOGUE_HISTORY_TEXT = "Assets/Ink/Story/debug.txt";
+        public const string DIALOGUE_HISTORY_TEXT = "Assets/Ink/Story/log.txt";
         public const string RESOURCES_SCRIPTIBLEOBJECTS_ITEMS_FOLDER = "ScriptibleObjects/Items/";
         public const string HIERARCHY_MINIGAME_PANEL = "Canvas/MinigamePanel";
 

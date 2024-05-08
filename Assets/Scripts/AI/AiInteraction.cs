@@ -12,7 +12,7 @@ public class AiInteraction : MonoBehaviour
     private static AiInteraction instance;
     public static AiInteraction Instance { get { return instance; } }
 
-    [SerializeField][TextArea] public string _textToAi = "Hi im friendly person";
+    [SerializeField][TextArea] public string _textToAi = "Hi im friendly person"; // 792 - this will be deleted
 
 
     // question to ai
@@ -43,7 +43,7 @@ public class AiInteraction : MonoBehaviour
         instance = this;
 
         TMP = TMPPanel.GetComponentInChildren<TextMeshProUGUI>();
-        Debug.Log(TMP + " is the ai answer text mesh pro");
+        _textToAi = GetPersonalityLogs();
     }
 
     public async void AskAI(Story story, Timer timer)
@@ -59,6 +59,9 @@ public class AiInteraction : MonoBehaviour
     {
         //activate ui
         ActivateAIPanel();
+
+        // get necessary data for our personality
+        //_textToAi = GetPersonalityLogs();
 
         // ask ai 
         Task<string> aiCallTask = AI.Instance.OnApiCall(_textToAi); // start waiting for the response from the ai
@@ -136,5 +139,29 @@ public class AiInteraction : MonoBehaviour
     private void DeactivateAIPanel()
     {
         aiPanel.SetActive(false);
+    }
+
+    private string GetPersonalityLogs(){
+        string path = Constants.Paths.DIALOGUE_HISTORY_TEXT;
+        string logsOfChoices = "";
+
+        if (System.IO.File.Exists(path))
+        {
+            logsOfChoices = System.IO.File.ReadAllText(path);
+        }
+        else
+        {
+            Debug.LogError("Cannot find the file at " + path);
+        }
+        return logsOfChoices;
+    }
+
+    public void AddLogToPersonalityFile(string log)
+    {
+        // Remove new line characters from the log string
+        string logWithoutNewLines = log.Replace("\n", "").Replace("\r", "");
+
+        // Append the modified log string to the file
+        System.IO.File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, logWithoutNewLines);
     }
 }

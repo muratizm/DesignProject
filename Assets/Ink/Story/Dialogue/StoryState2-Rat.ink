@@ -1,28 +1,28 @@
 INCLUDE ../globals.ink
 
-Hey fare dost! Bana bir yol göster, biraz yardımcı ol
+Hello, little mouse! Could you guide me on my journey? I'd appreciate your help.
 -> main
 
 === main ===
-eğer altın verirsen yardım ederim
-    + [(give gold!!)]
+Give me some gold, and I'll gladly guide you on your way.
+    + [(Give the gold)]
         -> gold
-    + [(give crystal!!) ]
+    + [(Trade the crystal) ]
         -> crystal
-    + [(kız) ]
+    + [(Get mad at the mouse) ]
         -> angry
 
 === gold ===
-Al buyur sana altın yaprak getirdim
+Here, I've brought you a golden leaf.
 ~ curstate = "gave_gold"
 -> END
 
 === crystal ===
-al buyur sana crystal getirdim
+I don't have gold, but I do have a beautiful crystal. It's yours if you guide me.
 ~ curstate = "gave_crystal"
 -> END
 
 === angry ===
-sana ne para vericem lan köylü
+That's not fair! I'm not giving you anything.
 -> END
 

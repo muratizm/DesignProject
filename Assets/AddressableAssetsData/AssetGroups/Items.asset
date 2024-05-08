@@ -17,11 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 06a1b9856efa728458082c59c1c59ad4
   m_SerializeEntries:
-  - m_GUID: 7a04b2caf7043ed49a3f59be8216baaa
-    m_Address: Assets/Prefabs/VisualAssets/3d/Interactables/Items/OmnivisionObject.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - item_omnivision
   - m_GUID: bb2b44a97b822c94c87618efd1764e48
     m_Address: Assets/Prefabs/VisualAssets/3d/Interactables/Items/Map.prefab
     m_ReadOnly: 0

@@ -15,6 +15,8 @@ public class StoryStateChanger : MonoBehaviour
     {
         if (other.CompareTag(Constants.Tags.PLAYER_TAG) && canTrigger)
         {
+            Debug.Log("Triggered");
+            Debug.Log("Changing state to " + storyState);
             StoryStateManager.Instance.ChangeState(storyState);
             canTrigger = false;
         }

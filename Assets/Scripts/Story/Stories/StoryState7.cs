@@ -5,20 +5,20 @@ using UnityEngine;
 
 public class StoryState7 : StoryBaseState
 {
-    private StoryStateManager _storyStateManager;
-    private StoryOperations _storyOperations;
     private AudioManager _audioManager;
 
 
-    [SerializeField] private GameObject ss4_zort;
+    [SerializeField] private Animator ss7_path1;
+    [SerializeField] private Animator ss7_path2;
+    private bool hasMinigameTriggered = false;
+    private bool hasMinigamePlayed = false;
+    private bool hasPath1Opened = false;
 
 
 
     public override void EnterState()
     {
         Debug.Log("Entering StoryState7");
-        _storyStateManager = StoryStateManager.Instance;
-        _storyOperations = StoryOperations.Instance;
         _audioManager = AudioManager.Instance;
 
         _audioManager.PlayMusic(Constants.Paths.Sounds.MUSIC.STORY1, 0.1f);
@@ -36,18 +36,39 @@ public class StoryState7 : StoryBaseState
  
     public override void UpdateState()
     {
-        string value = ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value;
         Debug.Log("Updating StoryState7");
-        if( value == "blabla"){
-            Invoke("DoSomething", 2f);
-
+        if(hasMinigameTriggered && !hasMinigamePlayed){
+            hasMinigamePlayed = true;
+            MinigameManager.Instance.StartMinigame(MinigameManager.MinigameType.ClickRush);
         }
+        else if(hasMinigameTriggered && hasMinigamePlayed && MinigameManager.Instance.IsWon){
+            Debug.Log("Minigame is won");
+            OpenPath2();
+        }
+
 
     }
 
 
-    private void DoSomething()
+    public void TriggerMinigame()
     {
-        //do something
+        hasMinigameTriggered = true;
+        this.UpdateState();
+    }
+
+    public void TriggerPath1()
+    {
+        if(!hasPath1Opened && InventoryManager.Instance.GetRingCount() >= 4){
+            hasPath1Opened = true;
+            OpenPath1();
+        }
+    }
+
+    private void OpenPath1(){
+        ss7_path1.SetTrigger("OpenPath");
+    }
+    
+    private void OpenPath2(){
+        ss7_path2.SetTrigger("OpenPath");
     }
 }

@@ -8974,3 +8974,97 @@
 ========= given choice : (Ready for adventure)
 ========= given choice : (My parents?)
 ========= given choice : (Coward)
+========= thought bubble : Oh my god, where am I?
+
+========= thought bubble : What is this place! Where should I go?
+
+========= situation : buyur sen kimsin vesaire
+
+========= situation : ben alduin, siz kimsiniz efendim
+
+========= situation : bana yardımcı olabilir misiniz
+
+========= situation : ben labirentin efendisi ABE
+
+========= situation : yüzyıllardır buralara kimse gelmemişti
+
+========= situation : ne istiyorsun bakalım benden
+
+========= situation : sor bana ve ben de cevaplıyim
+
+========= given choice : (çıkış yolu?)
+========= given choice : (öğrenmek istediklerim var)
+========= given choice : (yok)
+=========choice made: (öğrenmek istediklerim var)
+========= situation : neyi öğrenmek istersin
+
+========= given choice : (baştaki ağaç?)
+========= given choice : (aile)
+========= given choice : (medeniyet)
+=========choice made: (baştaki ağaç?)
+========= situation : ağaç şu bu
+
+========= situation : şöyle böyle
+
+========= situation : sor bana ve ben de cevaplıyim
+
+========= given choice : (çıkış yolu?)
+========= given choice : (öğrenmek istediklerim var)
+========= given choice : (yok)
+=========choice made: (öğrenmek istediklerim var)
+========= situation : neyi öğrenmek istersin
+
+========= given choice : (baştaki ağaç?)
+========= given choice : (aile)
+========= given choice : (medeniyet)
+=========choice made: (medeniyet)
+========= situation : medeniyete noldu, medeniyeti kurtmak mümkün mü
+
+========= situation : medeniyete böyle böyle oldu
+
+========= situation : hayır mümkün değil
+
+========= situation : veya evet mümkün falan filan
+
+========= situation : konuşma konuşma
+
+========= situation : sor bana ve ben de cevaplıyim
+
+========= given choice : (çıkış yolu?)
+========= given choice : (öğrenmek istediklerim var)
+========= given choice : (yok)
+=========choice made: (öğrenmek istediklerim var)
+========= situation : neyi öğrenmek istersin
+
+========= given choice : (baştaki ağaç?)
+========= given choice : (aile)
+========= given choice : (medeniyet)
+=========choice made: (aile)
+========= situation : aileme noldu
+
+========= situation : anne babanı mı örenmek istersin yoksa macerayi baslatan dedeni mi
+
+========= given choice : (annebaba)
+========= given choice : (dede)
+========= given choice : (farketmez)
+=========choice made: (dede)
+========= situation : dedeme noldu
+
+========= situation : dedene bu oldu
+
+========= situation : sor bana ve ben de cevaplıyim
+
+========= given choice : (çıkış yolu?)
+========= given choice : (öğrenmek istediklerim var)
+========= given choice : (yok)
+=========choice made: (çıkış yolu?)
+========= situation : bana nolur çıkışı göster
+
+========= situation : yolu takip et
+
+========= situation : ilerden sola dön
+
+========= situation : korkmadan koşarak dümdüz devam et, çıkışa ulaşacaksın
+
+========= situation : bol şans
+

@@ -27,7 +27,7 @@ aileme noldu
 -> aile_answer
 
 === medeniyet_question ===
-medeniyete noldu
+medeniyete noldu kurtarmak mümkün mü falan
 ~ curstate = "medeniyet"
 -> medeniyet_answer
 
@@ -41,7 +41,7 @@ anne babanı mı örenmek istersin yoksa macerayi baslatan dedeni mi
         -> dede_question
 
 === medeniyet_answer ===
-medeniyete böyle böyle oldu
+bu sorunun cevabını sadece labirentin efendisi verebilir
 -> choose
 
 === dede_question ===

@@ -3,71 +3,62 @@ INCLUDE ../globals.ink
 -> main
 
 === main ===
-aah, işte beklediğim paket
-çok teşekkürler dost
-sana biraz yol göstermek isterim delikanlı bi adama benzyosun
-yeni totemin keşfedilmesi için farklı farklı yollar var 
+Ah, there it is, the long-awaited package! Thank you, Alduin. 
+Let me offer you some guidance on your journey. There are many ways to uncover the new totem's secrets.
 -> choose
 
 === choose ===
-sana hangisinden bahsetmemi istersin
-    + [(a yolu) ]
+Which path would you like me to reveal?
+    + [(Unknown path) ]
         -> a    
-    + [(b yolu)]
+    + [(Fast but risky path)]
         -> b
-    + [(c yolu) ]
+    + [(Safe but long path) ]
         -> c
 
 
 === a ===
-a yolu böyle böyledir
-bunu istediğine emin misin
-    + [(evet eminim) ]
+The wizard path is unpredictable, nobody knowes what are there. Are you sure you want this?
+    + [(Yes, I'm sure.) ]
         -> aChosen
-    + [(hayır)]
+    + [(No, I don't want this.)]
         -> choose
-    + [(diger) ]
+    + [(Let's ask the AI.) ]
         -> choose
 
 === b ===
-b yolu böyle böyledir
-bunu istediğine emin misin
-    + [(evet eminim) ]
+bu rota çok tehlikeli işte çok zorlu bir parkur oldugu söyleniyor falan
+    + [(Yes, I'm sure.) ]
         -> bChosen
-    + [(hayır)]
+    + [(No, I don't want this.)]
         -> choose
-    + [(diger) ]
+    + [(Let's ask the AI.) ]
         -> choose
 
 === c ===
-c yolu böyle böyledir
-bunu istediğine emin misin
-    + [(evet eminim) ]
+bu rotanın güvenli oldugu fakat çook uzun oldugu söyleniyor
+o rotaya girip yıllarca gelmeyen dostlarımız oldu
+sırf risk almamak içinbu uzunyolu seçmek istediğine emin misin
+    + [(Yes, I'm sure.) ]
         -> cChosen
-    + [(hayır)]
+    + [(No, I don't want this.)]
         -> choose
-    + [(diger) ]
+    + [(Let's ask the AI.) ]
         -> choose
 
 
 === aChosen ===
-tamamdir maceracı, görevin a bu budur.
-bilinmeyen yol
-sana bol şans.
+Very well, adventurer, your task is to take the unkown path. Good luck to you.
 ~ curstate = "a"
 -> END
 
 === bChosen ===
-tamamdir maceracı, görevin b şu şudur.
-parkur ve ölüm tehlikeli yol
-sana bol şans.
+Alright, adventurer, your mission is to follow the parkour route, dark and very dangerous. Best of luck.
 ~ curstate = "b"
 -> END
 
 === cChosen===
-tamamdir maceracı, görevin c du dudur.
-güvenli ama korkunç uzun yol
-sana bol şans.
+Okay, adventurer, your journey is to take the safe path, a slow but loooong route without conflict. Wishing you all the best.
 ~ curstate = "c"
 -> END
 

@@ -3,28 +3,27 @@ INCLUDE ../globals.ink
 -> main
 
 === main ===
-meraba yolcu,
-benim balta körelmiş de bu baltayı nasıl düzeltiriz be.
-şu ağacı kesemedim bi türlü
-    + [(baltanı ver) ]
+Greetings, adventurer.
+Exhaustion weighs me down, and my axe has lost its edge. This stubborn tree won't fall.
+    + [(Give the man your axe.) ]
         -> help    
-    + [(ağaci koru)]
+    + [(Protect the tree.)]
         -> protect_tree
-    + [(umursama) ]
+    + [(Ignore him.) ]
         -> donotcare
 
 === help ===
-al buyur kardesim benim baltami kullan
+Take my axe—it's sharp enough to fell the tree.
 ~ curstate = "give_axe"
 -> END
 
 === protect_tree ===
-bu agaci sana kestirmem ihtiyar. biz dogayi koruruz
+This tree won't fall. I'll stand guard and make sure you don't harm it.
 ~ curstate = "protect_tree"
 -> END
 
 === donotcare ===
-ben bilmem kardesim naparsan yap
+I don't care what you do; I need to keep going.
 ~ curstate = "donotcare"
 -> END
 

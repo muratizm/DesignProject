@@ -3,33 +3,33 @@ INCLUDE ../globals.ink
 -> main
 
 === main ===
-can you help me alduin?
-    + [(yes)]
+Hey, welcome to the Realm of Colors! Come, help me out, Alduin. 
+    + [(The painter needs help; accept to assist.)]
         -> helpful_adventurer
-    + [(no boomer) ]
+    + [(Refuse to offer help.) ]
         -> bad
-    + [(for what) ]
+    + [(Ask why you should help.) ]
         -> sly
 
 === helpful_adventurer ===
-of courseee
+Absolutely, painter! I'm here to help you out!
 ~ curstate = "minigame"
 -> painter_ty
 
 === bad ===
-no boomerrr
+Looks like you’re on your own this time!
 -> youarebad
 
 === sly ===
-what will you give me
+Painter, what do I stand to gain if I help you?
 -> agift
 
 === painter_ty ===
-thank you boy ty.
+Thank you so much! I'm grateful for your help!
 -> END
 
 === youarebad ===
-youare a bad person. you missed the chance.
+You're not who I thought you were. You missed your chance.
     + [(thinkful)]
         -> ohiamsorry
     + [(sorry) ]
@@ -39,26 +39,27 @@ youare a bad person. you missed the chance.
 
 
 === agift ===
-a surprise gift!!
-    + [(no boomerrr)]
+If you agree to help me, I'll give you a surprise gift.
+    + [(Refuse!)]
         -> bad
-    + [(oh thank youu) ]
+    + [(Give thanks and continue.) ]
         -> ohthankyou
-    + [(you are the greatest person ontheworld) ]
+    + [(Accept the task and praise the painter.) ]
         -> greatpainter
 
 
 === ohiamsorry ===
-i am sorry man! i didnt mean it 
+No thanks, you can keep your gift!
 ~ curstate = "minigame"
 -> END
 
 === ohthankyou ===
-ooh ty man
+Oh, thank you! But I can't waste time on that.
 -> END
 
 === greatpainter ===
-ohhh. what a great painter are you
+You're amazing, and I'm glad I found you for this task!
 ~ curstate = "minigame"
 -> END
+
 

@@ -14,7 +14,7 @@ public class StoryState1 : StoryBaseState
     public const string SS1_OBSTACLE = "SS1_Obstacle";
     public const string SS1_BRANCH = "SS1_Branch";
 
-    [SerializeField] private GameObject ss1_obstacle;
+    [SerializeField] private Animator ss1_obstacle;
     [SerializeField] private GameObject ss1_branch;
     [SerializeField] private GameObject ss1_goldenLeaf;
 
@@ -67,7 +67,7 @@ public class StoryState1 : StoryBaseState
     public void GetRidOfTheObstacle(){
         if(ss1_obstacle != null){
             Debug.Log("Obstacle is falling!");
-            ss1_obstacle.GetComponent<Animation>().Play("anim");
+            ss1_obstacle.SetTrigger("OpenPath");
         }
     }
 

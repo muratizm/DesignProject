@@ -3,93 +3,72 @@ INCLUDE ../globals.ink
 -> main
 
 === main ===
-heeyyyy,
-orda dur bakalım genç adam
-bu ormana öyle her adımını atan giremez
+Hey, hold up there, young man! Not just anyone can wander into this forest. Who are you?"
 -> choose
 
 === choose ===
-kimsin sen tanıt kendini
-    + [(alduin (scared)) ]
+Introduce yourself.
+    + [(I'm Alduin (scared)) ]
         -> alduin    
-    + [(ailemi kurtarmaya çalışıyorum)]
+    + [(I'm here to save my family.)]
         -> family
-    + [(sanane ihtiyar) ]
+    + [(None of your business.) ]
         -> arrogant
 
 
 === alduin ===
-k k kim konuşuyor orda
-ben alduin, lütfen bana zarar vermeyin
-ben buraya nasıl geldiğimi bilmiyorum
-bana yolu gösterir misiniz
-amacım zarar vermek değil sadece ailemi kurtarmak
+W-Who's there? I'm Alduin, please don't hurt me! 
+I don't even know how I got here. Can you show me the way? I'm not here to cause harm, just trying to save my family."
 -> alduin_answer
 
 === family ===
-ben ailemi kurtarmaya geldim buraya
-ya bana yardımcı olursunuz...
-ya da benimle yüzleşmek zorunda kalırsınız
+I'm here to rescue my family. You can either help me or face me. The choice is yours.
 -> family_answer
 
 === arrogant ===
-sanane moruk (falan filan)
+What's it to you, old man? I'm here for my own reasons.
 -> arrogant_answer
 
 === family_answer ===
-aileni kurtarmaya mı geldin
-yüzyıllardır bunu başarabilen kimse olmadı
-buraya giren çıkamaz falan gibi cümleler
-sana yardımcı olacağız cesur adam
-    + [(teşekkür) ]
+You've come to rescue your family? Many have tried for centuries, but none have succeeded. 
+No one who enters ever returns. Still, we'll help you, brave soul.
+    + [(Thank you!)) ]
         -> thanks   
-    + [(sizin bir isteğiniz var mı)]
+    + [(Offer help.)]
         -> how_are_you
-    + [(size ihtiyacım yok) ]
+    + [(I don't need your help.) ]
         -> arrogant2
 
 === alduin_answer ===
-işte seni tanıdığımza memnun olduk falan filan 
+Nice to meet you, Alduin. Your courage to come here is admirable.
 -> family_answer
 
 === arrogant_answer ===
-haddini bil densiz cart curt
-buraya gelip bize saygı duymazsan bu ormandan geçemezsin ve burda ağaç olursun gibi iddialı söylemler falan tehdit
+Watch your tone, disrespectful one! 
+You won't pass through this forest without showing respect, or you might just become one with the trees. Threats won't serve you well here.
 -> sorry
 
 === sorry ===
-özür dilerim falan filan
-ben sadece ailemi kurtmatmaya çalışyıroum
+My apologies, please, please don't hurt me! 
+I don't want to act like this—I'm just trying to save my parents. This place scares me, please forgive me.
 -> family_answer
 
 === arrogant2 ===
-siz kimsiniz bana yardım edeceksiniz
-ben kendi başımın çaresine bakarım
-beni rahatsız etmeyin yeter
+Who are you to help me? I can handle myself. Just leave me be!
 -> arrogant2_answer
 
 === arrogant2_answer===
-ne bok yersen ye falan filan
-eğer ki ormandan geçersen taşkınlık çıkarırsan gününü görürsün falan
-hadi git yoluna
+Do as you wish, but beware: any trouble you cause here will come back to haunt you. Be on your way!
 -> END
 
 === how_are_you ===
-.ok teşekkür ederim
-sizlerin bir yardıma ihtiyacı var mı, size yardım etmek isterim
+Thank you, but your help isn't necessary; I can handle this on my own. Is there something you need from me?
 -> help
 
 === thanks===
-çok teşekkür ederim yardımınızı
-bunu asla unutmayacağım
+Thank you so much for your help. I'll never forget this kindness.
 -> help 
 
 ===help===
-ne demek güzel insan
-sana çıkış yolunu göstermek istiyoruz umarımm bunu başarabilirsin
-bu ormanı takip et ormanın bitiminde sola doğru ssakın girme
-yolun sonuna kadar devam et. yolun sonuna gelmeden zaten seni birisi bekliyor olacak
-o kişi...
-o'nun hakkında çok bilgi veremem
-sana güveniyorum
+You're welcome, kind soul. Let me show you the way out. Follow the forest trail, and when you reach the end, avoid the left path. Continue straight ahead to find your guide. As for who it is... I can't reveal too much. But trust me, they're expecting you. I have faith in you.
 -> END

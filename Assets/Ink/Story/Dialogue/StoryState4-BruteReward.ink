@@ -3,9 +3,9 @@ INCLUDE ../globals.ink
 -> main
 
 === main ===
-aah sana nekadar tşk etsem az 
-bu agac zehirli ve yıllardır bu diyarı kirletiyor
-sonunda kurtulduk
-sana teşekkür olarak bu kutsal yüzüğü veriyorum yolcu!
-~ curstate = "minigame"
+Oh I can't thank you enough.
+This tree is poisonous and has been polluting this land for years.
+We were finally saved!
+I give you this sacred ring as a thank you!
+~curstate="minigame"
 -> END

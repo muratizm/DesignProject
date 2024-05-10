@@ -3,97 +3,98 @@ INCLUDE ../globals.ink
 -> main
 
 === main ===
-buyur sen kimsin vesaire
+Welcome, stranger. Who are you, and what brings you here?
 -> alduin1
 
 === alduin1 ===
-ben alduin, siz kimsiniz efendim
-bana yardımcı olabilir misiniz
+I'm Alduin. May I ask who you are, sir? Can you help me?
 ->lord1
 
 ===lord1===
-ben labirentin efendisi ABE
-yüzyıllardır buralara kimse gelmemişti
-ne istiyorsun bakalım benden
+I am Abe, the master of this labyrinth. 
+It's been centuries since anyone has ventured here. What is it that you seek from me?
 -> ask_to_lord
 
 
 ===ask_to_lord===
-sor bana ve ben de cevaplıyim
-    + [(çıkış yolu?) ]
+Ask me your questions, and I shall provide answers.
+    + [(Ask exit.) ]
         -> exit    
-    + [(öğrenmek istediklerim var)]
+    + [(Ask wish to know.)]
         -> learnAnswer
-    + [(yok) ]
+    + [(No question.) ]
         -> no
 
 ===learnAnswer===
-neyi öğrenmek istersin
-    + [(baştaki ağaç?) ]
+What knowledge do you seek?
+    + [(Tell me about the tree at the start.) ]
         -> tree    
-    + [(aile)]
+    + [(I want to know about my parents.)]
         -> aileQuestion
-    + [(medeniyet) ]
+    + [(Tell me about the lost civilization.) ]
         -> medeniyetQuestion
 
 ===exit===
-bana nolur çıkışı göster
+Please, show me the way out. I've traveled far and faced many dangers to reach this point. My journey depends on finding the path to freedom.
 ->exit_answer
 
 ===exit_answer===
 
-yolu takip et
-ilerden sola dön
-korkmadan koşarak dümdüz devam et, çıkışa ulaşacaksın
-bol şans
+Follow the path ahead. Turn left when you reach the clearing. Run bravely, and you will find your way out. Good luck.
+
 ->END
 
 ===no===
-benim gitmem lazım
+I must take my leave now. My journey calls, and there's no time to waste.
 ->END
 
 === tree ===
-ağaç şu bu 
-şöyle böyle
+Ah, the tree you speak of was once mine. It stood proudly as my own, but it dared to oppose me. 
+It rebelled against my plans for growing a certain plant that I desired, so I cast it out of the civilization. 
+Now it remains a solitary sentinel at the entrance, bearing the mark of its rebellion
 -> ask_to_lord
 
 === aileQuestion ===
-aileme noldu
+What happened to my parents?
 -> aileAnswer
 
 === medeniyetQuestion ===
-medeniyete noldu, medeniyeti kurtmak mümkün mü
+What became of the lost civilization? Can it be saved?
 -> medeniyetAnswer
 
 === aileAnswer ===
-anne babanı mı örenmek istersin yoksa macerayi baslatan dedeni mi
-    + [(annebaba) ]
+Do you seek the truth about your parents, or would you rather uncover the story of the grandfather who set you on this path?
+    + [(Ask about parents.) ]
         -> annebabaQuestion   
-    + [(dede)]
+    + [(Ask about grandfather.)]
         -> dedeQuestion
-    + [(farketmez) ]
+    + [(Doesn't matter.) ]
         -> dedeQuestion
 
 === medeniyetAnswer ===
-medeniyete böyle böyle oldu
-hayır mümkün değil
-veya evet mümkün falan filan
-konuşma konuşma
+Ah, the fate of the civilization weighs heavily on me. I let my people grow a plant that promised them great wealth but caused untold harm to humanity. 
+In their quest for selfish gain, they fled and vanished into the labyrinth, taking their secrets with them.
+Yet there may still be hope. Your grandfather's research uncovered the perilous plant responsible for our downfall. 
+If it can be tracked down and eradicated wherever it grows, perhaps the civilization can be saved. Alduin, you've proven yourself by reaching me here. 
+I trust you now, and I believe you are the one who can complete this mission.
 -> ask_to_lord
 
 === dedeQuestion ===
-dedeme noldu
+What happened to my grandfather?
 -> dedeAnswer
 
 === annebabaQuestion ===
-annebabama noldu
+What happened to my parents?
 -> annebabaAnswer   
 
 === dedeAnswer ===
-dedene bu oldu
+Your grandfather's story is a tale of tragedy and mystery. He vanished without a trace, his fate entangled with the secrets of the labyrinth. 
+His knowledge of the lost civilization haunted him, leading him down a dangerous path from which he never returned.
 -> ask_to_lord
 
 === annebabaAnswer ===
-annebabana bu bu oldu
+Your parents vanished after a tragic car accident, and their bodies were never found. 
+Your grandfather believed their disappearance was linked to the mysteries of the labyrinth, but he couldn't convince others of his suspicions.
 -> ask_to_lord 
+
 

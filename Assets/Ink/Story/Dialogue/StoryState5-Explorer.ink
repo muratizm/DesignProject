@@ -3,9 +3,8 @@ INCLUDE ../globals.ink
 -> main
 
 === main ===
-meraba!,
-aa, bana paketimi mi getirdin
-ama bu paket tehlikeli olabilir. sana güvenmem için şifreyi söylemen lazım 
-~ curstate = "minigame"
+Hello!,
+Oh, did you bring me my package?
+But this package may be dangerous. You have to tell me the password for me to trust you.
+~curstate="minigame"
 -> END
-

@@ -3,96 +3,86 @@ INCLUDE ../globals.ink
 -> main
 
 === main ===
-meraba genç yolcu!
-ben, ben bu diyarın en eski büyücüsüyüm.
-cart curt
+Greetings, young advennturer. I am the oldest wizard in this land. 
+I've seen countless adventures come and go, and I sense you are on a journey of great importance.
+Many moons have passed since I first set foot in this realm, and I've witnessed its many transformations.
 -> choose
 
 === choose ===
-(hal hatır sorar)
-    + [(iyi) ]
+(But enough about me—how are you faring?)
+    + [(Well!) ]
         -> good    
-    + [(kötü)]
+    + [(Tough!)]
         -> bad
-    + [(korkak) ]
+    + [(Frightening!) ]
         -> coward
 
 
 === good ===
-iyiyim hamdolsun
+I'm doing well, thank you for asking! The journey has been good to me so far.
 -> wizard_answer1
 
 === bad ===
-perperişan oldum sorma
+It's been tough, wizard. I've faced so many trials already, and I'm struggling with the weight of them all.
 ~ curstate = "aile"
 -> wizard_answer2
 
 === coward ===
-yeter artık çıkarın beni burdan
+I must admit, there have been moments of great fear along the way. Please, get me out of here!
 ~ curstate = "medeniyet"
 -> wizard_answer2
 
 === wizard_answer1 ===
-ne kadar korkusuz bir maceracıymışsın sen böyle
-yüzyıllardır bu diyara senin kadar cesur ve maceracı birisi gelmedi cart curt
-    + [(teşekkür) ]
+My, what a fearless adventurer you are! It's been centuries since this realm has seen someone as bold and daring as you. Your courage is truly remarkable!
+    + [(Much appreciated!) ]
         -> ty   
-    + [(sen nasılsın)]
+    + [(Ask the wizard how he feels.)]
         -> you
-    + [(yardım iste) ]
+    + [(Request aid.) ]
         -> help
 
 === wizard_answer2 ===
-bunu duyduğuma üzüldüm
-senin için yapabileceğim bir şey var midur
-    + [(teşekkür) ]
+That saddens me to hear. Is there anything I can do to help you?
+    + [(Show gratitude.) ]
         -> grateful   
-    + [(yardım iste)]
+    + [(Ask for aid.)]
         -> help
-    + [(yalvar) ]
+    + [(Plead for assistance.) ]
         -> beg
 
 
 
 === ty ===
-teşekkür ederim wizard kardeş.
+Your generosity is greatly appreciated! Thank you for your kindness and support on my journey!
 -> wizard_help
 
 === you ===
-saol dost. sen nasılsın iyi misin. buralar tekin değil gibi görünüyor
+Thanks, friend. How are you faring in this strange place? The air here feels thick with mystery and danger.
 -> how_is_wizard
 
 === help ===
-bana yardımcı olabilir misin. yolumu bulmaya çalışıyorum
+Can you offer me guidance? I'm trying to navigate my way.
 -> wizard_help
 
 
 
 === grateful ===
-allah senden razı olsun ustam çok iyi olur valla çok mutlu olruum.
+May your kindness be rewarded, my friend! It would be most helpful, and I would be truly grateful!
 -> wizard_help
 
 === how_is_wizard ===
-ben mi? 
-benim nasıl olduğumu hayatım boyunca kimse sormadı
-sen yüce bir insansın
-içinde hem şefkatli bir kalp
-hem de korkusuz bir yürek var
-işte bu yüzden...
+Me? It's a rarity for anyone to ask about my well-being. 
+Your character is a marvel—compassionate and courageous. For that, I will offer you my guidance.
 -> wizard_help
 
 === beg ===
-yalvarırım bana yardım et bıktım artık bıktım
-sana muhtacım
+Please, I beg you! I've reached my limit—I can't go on without your help!
 -> wizard_help
 
 
 
 === wizard_help ===
-sana yardımcı olmayı çok isterim genç.
-sana bu itemi veriyorum
-buradan kurtulmaya çok yakınsın ve bu item seni daha da yaklaştıracak
-sana güveniyorum, yolun açık olsun
+I'd be happy to help you, young one. I'm giving you this item—you're very close to finding your way out of the labyrinth, and this will bring you even closer. I trust you; may your path be clear!
 ~ curstate = "give_item"
 -> END
 

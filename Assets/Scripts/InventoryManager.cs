@@ -226,7 +226,13 @@ public class InventoryManager : MonoBehaviour
 
     IEnumerator CreateItemDrop()
     {
+        prefabToLoad = null;
         yield return LoadPrefabOfItem(inventory[selectedSlot].ItemTag);  // Wait for loading
+        if (prefabToLoad == null)
+        {
+            Debug.LogError("Failed to instantiate prefab");
+            yield break;
+        }
         GameObject itemDrop = Instantiate(prefabToLoad, Player.Instance.transform.position + Player.Instance.transform.forward * 2.0f, Quaternion.identity);
         itemDrop.GetComponent<ItemObject>().Item = inventory[selectedSlot];
     }

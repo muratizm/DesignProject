@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Book
   m_EditorClassIdentifier: Assembly-CSharp::BookSO
   itemName: Book
-  itemType: 0
+  itemType: 2
   itemTag: item_book
   isBuggy: 0
   isMemories: 0

@@ -98,7 +98,6 @@ MonoBehaviour:
     - Stone_walk
     - Water_walk
     - Wood_walk
-    - item_omnivision
     - item_map
     - item_goldenleaf
     - minigame_clickrush
@@ -109,6 +108,11 @@ MonoBehaviour:
     - item_ring2
     - item_ring3
     - item_ring4
+    - item_package
+    - item_axe
+    - item_omnivision_buggy
+    - item_omnivision_memories
+    - item_task
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 0cda4c79f4608944e8e19fb36330038b, type: 2}

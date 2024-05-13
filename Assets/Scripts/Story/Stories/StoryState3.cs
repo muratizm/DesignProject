@@ -46,13 +46,7 @@ public class StoryState3 : StoryBaseState
                 Debug.Log("Curstate value is not minigame");
             }
         }
-        else if (hasPlayedMinigame && !hasExplainedNextTask && MinigameManager.Instance.IsWon){ 
-            // minigame is already played
-            // there may be conclusion of minigame
 
-            Invoke("ExplainNextTask", 2f);
-
-        }
         else if(hasExplainedNextTask && !hasGivenTask && !DialogueManager.Instance.IsDialoguePlaying){
             // minigame is played and next task is explained
             // do nothing
@@ -68,10 +62,12 @@ public class StoryState3 : StoryBaseState
         if(MinigameManager.Instance.IsWon){
             hasPlayedMinigame = true;
             StoryOperations.Instance.GiveRandomRing();
+            Invoke("ExplainNextTask", 2f);
         }
     }
 
     private void ExplainNextTask(){
+        if(!MinigameManager.Instance.IsWon){return;}
         bool showChoices = false;
         if(!hasExplainedNextTask){
             hasExplainedNextTask = true;

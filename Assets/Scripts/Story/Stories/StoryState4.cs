@@ -53,6 +53,10 @@ public class StoryState4 : StoryBaseState
             StartLumberjackHitting();
             
             canGiveAxe = InventoryManager.Instance.RemoveSpecificTypeFromInventory(ItemSO.Type.Axe);
+            if(!canGiveAxe){
+                Debug.Log("Player does not have axe");
+                return;
+            }
             hasCutTree = true;
             ConclusionsOfCuttingTree();
             return;

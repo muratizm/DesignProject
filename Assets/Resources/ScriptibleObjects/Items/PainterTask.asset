@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: PainterTask
   itemType: 4
-  itemTag: Task
+  itemTag: item_task
   isBuggy: 0
   isMemories: 0
   isConsumable: 0

@@ -47,6 +47,31 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - item_ring4
+  - m_GUID: 2db2e146285c4f0439c0fb6eeb1d0214
+    m_Address: Assets/Prefabs/VisualAssets/3d/Interactables/Items/Package.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - item_package
+  - m_GUID: c4bb82e9173c58c46bf0d1cb87f53477
+    m_Address: Assets/Prefabs/VisualAssets/3d/Interactables/Items/axe.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - item_axe
+  - m_GUID: 7ffa459d027773140a379393a6ba3b9e
+    m_Address: Assets/Prefabs/VisualAssets/3d/Interactables/Items/Omnivision Buggy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - item_omnivision_buggy
+  - m_GUID: 710b64b8e5aaba64792072b392264e86
+    m_Address: Assets/Prefabs/VisualAssets/3d/Interactables/Items/Omnivision Memories.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - item_omnivision_memories
+  - m_GUID: 158c89d7e04d8b74fae97edd39e1f8f2
+    m_Address: Assets/Prefabs/VisualAssets/3d/Interactables/Items/PainterTask.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - item_task
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0622e1d499dea8b43830347f67784483, type: 2}
   m_SchemaSet:

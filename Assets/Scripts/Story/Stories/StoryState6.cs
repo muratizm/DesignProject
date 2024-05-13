@@ -23,12 +23,6 @@ public class StoryState6 : StoryBaseState
         _audioManager = AudioManager.Instance;
 
 
-                    StoryOperations.Instance.GiveRandomRing();
-            StoryOperations.Instance.GiveRandomRing();
-
-            StoryOperations.Instance.GiveRandomRing();
-
-            StoryOperations.Instance.GiveRandomRing();
     }
 
     public override void ExitState()

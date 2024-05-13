@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Omnivision Buggy
   m_EditorClassIdentifier: 
   itemName: Omnivision
-  itemType: 5
-  itemTag: item_omnivision
+  itemType: 9
+  itemTag: item_omnivision_buggy
   isBuggy: 1
   isMemories: 0
   isConsumable: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Axe
   m_EditorClassIdentifier: 
   itemName: Axe
-  itemType: 0
+  itemType: 1
   itemTag: item_axe
   isBuggy: 0
   isMemories: 0

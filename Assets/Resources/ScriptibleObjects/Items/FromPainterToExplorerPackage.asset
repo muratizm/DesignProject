@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: FromPainterToExplorerPackage
   itemType: 0
-  itemTag: FromPainterToExplorerPackage
+  itemTag: item_package
   isBuggy: 0
   isMemories: 0
   isConsumable: 0

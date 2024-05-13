@@ -45,7 +45,7 @@ public class StoryState5 : StoryBaseState
     public override void UpdateState()
     {
         Debug.Log("Updating StoryState5");
-        if (!hasPlayedMinigame)
+        if (!DialogueManager.Instance.IsDialoguePlaying && !hasPlayedMinigame)
         {
             Debug.Log("Playing minigame");
             string value = ((Ink.Runtime.StringValue) _storyStateManager.GetStoryState("curstate")).value;
@@ -58,7 +58,7 @@ public class StoryState5 : StoryBaseState
                 Debug.Log("Curstate value is not minigame");
             }
         }
-        else if (hasPlayedMinigame && !hasAfterDialogue && MinigameManager.Instance.IsWon){
+        else if (hasPlayedMinigame && !hasAfterDialogue && MinigameManager.Instance.IsWon && !DialogueManager.Instance.IsDialoguePlaying){
             // minigame is already played
             // there may be conclusion of minigame
 
@@ -97,6 +97,7 @@ public class StoryState5 : StoryBaseState
 
     private void DialogueAfterPackage()
     {
+        if(!MinigameManager.Instance.IsWon){return;}
         DialogueManager.Instance.EnterDialogueMode(ss5_afterDialogue);
         hasAfterDialogue = true;
     }

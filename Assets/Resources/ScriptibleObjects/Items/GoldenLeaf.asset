@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GoldenLeaf
   m_EditorClassIdentifier: 
   itemName: GoldenLeaf
-  itemType: 5
+  itemType: 8
   itemTag: item_goldenleaf
   isBuggy: 0
   isMemories: 0

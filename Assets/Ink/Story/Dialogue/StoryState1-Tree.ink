@@ -3,9 +3,9 @@ INCLUDE ../globals.ink
 -> main
 
 === main ===
-So, you are our new adventurer tasked with solving the secret of our lost civilization. 
-Embarking on this adventure requires great courage. Welcome to our civilization, Alduin! 
-I hope that by completing this adventure, you not only save our civilization but also reunite with your parents. 
+So, you are our new adventurer tasked with solving the secret of our lost civilization. #voice:voice1
+Embarking on this adventure requires great courage. Welcome to our civilization, Alduin! #voice:voice2
+I hope that by completing this adventure, you not only save our civilization but also reunite with your parents. #voice:voice3
     + [Ready for the adventure! ]
         -> adventure    
     + [Where are my parents? (Attack!)]

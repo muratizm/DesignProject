@@ -242,7 +242,9 @@ public class DialogueManager : MonoBehaviour
 
     private void HandleTags(List<string> currentTags)
     {
+        Debug.Log("Current tags: " + currentTags);
         foreach(string tag in currentTags){
+            Debug.Log("Tag: " + tag);
             string[] splitTag = tag.Split(':');
             if(splitTag.Length != 2){
                 Debug.LogError("tag couldnt parsed : " + tag);
@@ -250,6 +252,20 @@ public class DialogueManager : MonoBehaviour
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
 
+            if(tagKey == Constants.Tags.VOICE_TAG){
+                Debug.Log("Voice tag found: " + tagValue);
+                
+                string path = "Assets/Assets/Voices/" + tagValue + ".wav";
+                AssetLoader.Instance.LoadAssetAsync<AudioClip>(path, (result) =>
+                {
+                    if(result != null){
+                        AudioManager.Instance.PlayVoice(result);
+                    }
+                    else{
+                        Debug.LogError("Voice couldnt be loaded: " + tagValue);
+                    }
+                });
+            }
             if(tagKey == Constants.Tags.SPEAKER_TAG){
                 speakerNameText.text = tagValue;
                 tagValue = (Resources.Load<Sprite>("Icons/Speakers/" + tagValue) != null) ? tagValue : "default";

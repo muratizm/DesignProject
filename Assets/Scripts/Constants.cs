@@ -21,7 +21,6 @@ public static class Constants
 
 
 
-
     public static class Durations {
         public const float WAIT_BETWEEN_LETTERS = .025f; 
         public const int WAIT_BETWEEN_LETTERS_MS = 45;
@@ -38,7 +37,7 @@ public static class Constants
 
     public static class Tags {
         public const string PLAYER_TAG = "Player";
-
+        public const string VOICE_TAG = "voice";
         public const string SPEAKER_TAG = "speaker";
         public const string LAYOUT_TAG = "layout";
 

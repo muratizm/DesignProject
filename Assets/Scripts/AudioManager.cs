@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     private static AudioManager instance;
     public static AudioManager Instance { get { return instance; } }
 
-    private AudioSource musicSource, sfxSource, uiSource;
+    private AudioSource musicSource, sfxSource, uiSource, voiceSource;
 
     private void Awake()
     {
@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour
         musicSource = gameObject.AddComponent<AudioSource>();
         sfxSource = gameObject.AddComponent<AudioSource>();
         uiSource = gameObject.AddComponent<AudioSource>();
+        voiceSource = gameObject.AddComponent<AudioSource>();
     }
 
 
@@ -50,6 +51,13 @@ public class AudioManager : MonoBehaviour
             musicSource.volume += Time.deltaTime * 2; // adjust the 2 to change the fade speed
             await Task.Delay(10);
         }
+    }
+
+    public void PlayVoice(AudioClip clip, float volume = 0.5f)
+    {
+        if (clip == null) { Debug.LogWarning("null clip"); return; }
+        voiceSource.volume = volume;
+        voiceSource.PlayOneShot(clip);
     }
 
     public void PlaySFX(string path, float volume = 0.5f)

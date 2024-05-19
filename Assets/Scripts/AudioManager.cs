@@ -56,6 +56,7 @@ public class AudioManager : MonoBehaviour
     public void PlayVoice(AudioClip clip, float volume = 0.5f)
     {
         if (clip == null) { Debug.LogWarning("null clip"); return; }
+        voiceSource.Stop();
         voiceSource.volume = volume;
         voiceSource.PlayOneShot(clip);
     }

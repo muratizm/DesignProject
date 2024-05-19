@@ -17,21 +17,70 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: b9fb1bc8407eec945a21cd184f107ca9
   m_SerializeEntries:
-  - m_GUID: e90f7a4f9a602ba41bce596f0509595f
-    m_Address: Assets/Assets/Voices/voice1.wav
+  - m_GUID: 505904a249ade4d4c9540d974e56f1b8
+    m_Address: Assets/Assets/Voices/voice1.mp3
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - voice1
-  - m_GUID: 9d755659860f8724c982a1feacef3450
-    m_Address: Assets/Assets/Voices/voice2.wav
+    m_SerializedLabels: []
+  - m_GUID: 60edba881d829c04ba2e1cf8c20867f5
+    m_Address: Assets/Assets/Voices/voice2.mp3
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - voice2
-  - m_GUID: 529db2fe30d7ffd41b733bd14b253965
-    m_Address: Assets/Assets/Voices/voice3.wav
+    m_SerializedLabels: []
+  - m_GUID: 7b71973c250f9c74fb0d516debbe672f
+    m_Address: Assets/Assets/Voices/voice3.mp3
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - voice3
+    m_SerializedLabels: []
+  - m_GUID: 0badf1b780d537e42ba907bc88ff482a
+    m_Address: Assets/Assets/Voices/voice4.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 91d4caee96bea6c4aab557307b9ee816
+    m_Address: Assets/Assets/Voices/voice5.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 591e9bace0c029949857e3dd08c9de91
+    m_Address: Assets/Assets/Voices/voice6.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8948e1cc01c53574893bfdb3df378aa3
+    m_Address: Assets/Assets/Voices/voice7.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 15721afa01317c144882da15e5eac888
+    m_Address: Assets/Assets/Voices/voice8.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e2819fc33fa475e419b845ae8a9c2444
+    m_Address: Assets/Assets/Voices/voice9.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e0de532edf69003419a29093a2580d23
+    m_Address: Assets/Assets/Voices/voice10.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 562f24c843c2ffd41a53b9bcf4a5b3fb
+    m_Address: Assets/Assets/Voices/voice11.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 554919f5d4e82bb46b196090c2719a99
+    m_Address: Assets/Assets/Voices/voice12.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3b52c57906650514e80fe349891a5608
+    m_Address: Assets/Assets/Voices/voice13.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c8fe8755c36e0b944ada1b5482bb5fad
+    m_Address: Assets/Assets/Voices/voice14.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b49223087b8e4814d84a2318035c7d9d
+    m_Address: Assets/Assets/Voices/voice15.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 47997cb50a742f64a922705c11ca650d
+    m_Address: Assets/Assets/Voices/voice16.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0622e1d499dea8b43830347f67784483, type: 2}
   m_SchemaSet:

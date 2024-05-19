@@ -14,35 +14,35 @@ I hope that by completing this adventure, you not only save our civilization but
         -> coward
 
 === parents ===
-What did you mean by reuniting me with my parents? Where are they?
-Answer to me or I am going to kill you!
+What did you mean by reuniting me with my parents? Where are they? #voice:voice4
+Answer to me or I am going to kill you!#voice:voice5
 -> parentsAnswer
 
 === adventure ===
-Ready for the adventure! How do I begin this journey?
+Ready for the adventure! How do I begin this journey? #voice:voice6
 -> adventureAnswer
 
 === coward ===
-I want to leave this place right away. Let me go back now!
+I want to leave this place right away. Let me go back now! #voice:voice7
 -> cowardAnswer
 
 ===parentsAnswer===
-Kill me? hahaha. Here, attack this!
+Kill me? hahaha. Here, attack this! #voice:voice8
 ~ curstate = "attack_to_tree"
 -> END
 
 ===adventureAnswer===
-Here, young man, I am clearing the way for you. 
-If you need anything, you can come to me. 
-But be careful, when you try to come back, the labyrinth may give unexpected reactions.
+Here, young man, I am clearing the way for you. #voice:voice9
+If you need anything, you can come to me. #voice:voice10
+But be careful, when you try to come back, the labyrinth may give unexpected reactions. #voice:voice11
 ~ curstate = "respect_to_tree"
 -> END
 
 ===cowardAnswer===
-Don't be afraid, young man, don't be afraid.
-If you are afraid, you cannot fulfill your potential.
-You are currently holding within you the energy brought by all your ancestors. I believe you will pass this difficult journey.
-I give you a gold leaf to help you.
-I hope it works for you. Good luck!
+Don't be afraid, young man, don't be afraid. #voice:voice12
+If you are afraid, you cannot fulfill your potential. #voice:voice13
+You are currently holding within you the energy brought by all your ancestors. I believe you will pass this difficult journey. #voice:voice14
+I give you a gold leaf to help you. #voice:voice15
+I hope it works for you. Good luck! #voice:voice16
 ~ curstate = "scared_of_adventure"
 -> END

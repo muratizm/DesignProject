@@ -139,7 +139,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator DisplayDialogueInSeconds(TMP_Text tmp_text, string content){
         tmp_text.text = "";
-        
+        Debug.Log("Content: " + content);
         HandleTags(currentStory.currentTags);
         
         lineEnded = false;
@@ -255,7 +255,7 @@ public class DialogueManager : MonoBehaviour
             if(tagKey == Constants.Tags.VOICE_TAG){
                 Debug.Log("Voice tag found: " + tagValue);
                 
-                string path = "Assets/Assets/Voices/" + tagValue + ".wav";
+                string path = "Assets/Assets/Voices/" + tagValue + ".mp3";
                 AssetLoader.Instance.LoadAssetAsync<AudioClip>(path, (result) =>
                 {
                     if(result != null){

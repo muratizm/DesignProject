@@ -115,7 +115,7 @@ public class ActionManager : MonoBehaviour
     private void Display(TMP_Text tmp_text, string content){
         tmp_text.text = content;
         
-        AiInteraction.Instance.AddLogToPersonalityFile("=> situation : " + content + "---");
+        AiInteraction.Instance.AddLogToPersonalityFile("=> situation : " + content );
         choiceMade = false;
         
 
@@ -145,7 +145,7 @@ public class ActionManager : MonoBehaviour
         foreach (Choice choice in currentActionChoices){
             actionChoicesText[index].text = choice.text;
             actionChoices[index].gameObject.SetActive(true);
-            AiInteraction.Instance.AddLogToPersonalityFile("=> given choice" + index + " : " + actionChoicesText[index].text + "---");
+            AiInteraction.Instance.AddLogToPersonalityFile("=> given choice" + index + " : " + actionChoicesText[index].text );
             index++;
         }
 
@@ -195,7 +195,7 @@ public class ActionManager : MonoBehaviour
         storyStateManager.UpdateCurrentState();
         ChangeAction(noAction);
 
-        AiInteraction.Instance.AddLogToPersonalityFile("=> choice made: " + actionChoicesText[index].text + "---");
+        AiInteraction.Instance.AddLogToPersonalityFile("=> choice made: " + actionChoicesText[index].text );
         choiceMade = true;
 
         ContinueStory();

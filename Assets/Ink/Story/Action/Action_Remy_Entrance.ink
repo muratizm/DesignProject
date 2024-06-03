@@ -4,11 +4,11 @@ INCLUDE ../globals.ink
 
 === choices ===
 Medeniyetimize hoş geldin
-* [Yok ET ! (x) ]  -> chosen ("yokettik")
-* [Yavasca acmayi dene (c)] -> chosen("actik")
-* [Osur! (v)] -> chosen("osurduk")
+* [A ! (x) ]  -> chosen ("yokettik")
+* [B (c)] -> chosen("actik")
+* [C (v)] -> chosen("osurduk")
 
 === chosen(option) ===
  ~ curstate = option
-You choosed "{option}"!  #end3
+You choosed '{option}'!  #end3
 -> END

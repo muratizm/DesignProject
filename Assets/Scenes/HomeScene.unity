@@ -4336,7 +4336,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh84724
+  m_Name: pb_Mesh206712
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10922,7 +10922,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25e9d02d17636247a0bb38ea99c2913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statePairs: []
+  statePairs:
+  - State: 0
+    StateScript: {fileID: 0}
   globalsTextFile: {fileID: 4900000, guid: a86f819d6331848459c9bff2e483171a, type: 3}
 --- !u!1 &3660286822832635216
 GameObject:
@@ -10956,7 +10958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d401d565297135d40b516c71dead5865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: 03f4bab42929b1844939f972a23eaa0b, type: 3}
+  inkJSON: {fileID: 4900000, guid: e174bd73f7e34174e870230ba947f21b, type: 3}
 --- !u!65 &3660286822832635218
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15646,7 +15648,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 13
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33ec8cd6703026e43bd1f4d593fde031, type: 2}
   m_sharedMaterial: {fileID: 1331612784791648441, guid: 33ec8cd6703026e43bd1f4d593fde031,

@@ -44,6 +44,7 @@ public class AiInteraction : MonoBehaviour
 
         TMP = TMPPanel.GetComponentInChildren<TextMeshProUGUI>();
         _textToAi = GetPersonalityLogs();
+        ResetPersonalityFile();
     }
 
     public async void AskAI(Story story, Timer timer)
@@ -64,6 +65,7 @@ public class AiInteraction : MonoBehaviour
         //_textToAi = GetPersonalityLogs();
 
         // ask ai 
+        _textToAi = GetPersonalityLogs();
         Task<string> aiCallTask = AI.Instance.OnApiCall(_textToAi); // start waiting for the response from the ai
         await AskQuestionToAI(); // showing the question to the players (what do you think we should do in this situation Alduin?)
         await PretendAIIsThinking(); // ai is thinking (hmm... let me think about it...)
@@ -163,5 +165,10 @@ public class AiInteraction : MonoBehaviour
 
         // Append the modified log string to the file
         System.IO.File.AppendAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, logWithoutNewLines);
+    }
+
+    public void ResetPersonalityFile()
+    {
+        System.IO.File.WriteAllText(Constants.Paths.DIALOGUE_HISTORY_TEXT, "");
     }
 }

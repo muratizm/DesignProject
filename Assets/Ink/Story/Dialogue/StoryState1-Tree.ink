@@ -8,9 +8,9 @@ Embarking on this adventure requires great courage. Welcome to our civilization,
 I hope that by completing this adventure, you not only save our civilization but also reunite with your parents. #voice:voice3
     + [Ready for the adventure! ]
         -> adventure    
-    + [Where are my parents? (Attack!)]
+    + [Ask about your parents.]
         -> parents
-    + [Request exit. ]
+    + [Escape with fear!]
         -> coward
 
 === parents ===

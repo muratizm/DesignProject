@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using TMPro;
 
 
@@ -20,12 +21,13 @@ public class AI : MonoBehaviour
     }
 
 
+
     private static readonly HttpClient httpClient = new HttpClient();
 
     public async Task<string> OnApiCall(string msg)
     {
         
-        Debug.Log("Message sent to Llama: " + msg);
+        UnityEngine.Debug.Log("Message sent to Llama: " + msg);
         var json = CreateJsonMessage(msg);
         
         var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
@@ -35,20 +37,20 @@ public class AI : MonoBehaviour
         {
             
             var jsonResponse = await response.Content.ReadAsStringAsync();
-            Debug.Log("Yanıt: " + jsonResponse);
+            UnityEngine.Debug.Log("Yanıt: " + jsonResponse);
 
             var responseData = JsonUtility.FromJson<ResponseData>(jsonResponse);
-            Debug.Log("Personality Type: " + responseData.personality_type);
 
-            Debug.Log(responseData.personality_type);
+
 
             // Return the personality type
-            return responseData.personality_type;
+            return "I would select " + responseData.choice +
+             ".\nBecause: " + responseData.explanation; 
         }
         else
         {
-            Debug.LogError("API isteği başarısız oldu: " + response.StatusCode);
-            return "API isteği başarısız oldu.";
+            UnityEngine.Debug.LogError("API isteği başarısız oldu: " + response.StatusCode);
+            return "In this case, I can't decide what to choose. Hmm I guess I'll leave it to you.";
         }
     }
 
@@ -63,14 +65,8 @@ public class AI : MonoBehaviour
     [System.Serializable]
     public class ResponseData
     {
-        public string personality_type;
+        public string choice;
+        public string explanation;
     }
 
-}
-
-// JSON yanıtını temsil edecek bir sınıf
-[System.Serializable]
-public class ResponseData
-{
-    public string personality_type;
 }

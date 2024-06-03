@@ -159,7 +159,7 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         if(showChoices && currentStory.currentChoices.Count > 0){
-            AiInteraction.Instance.AddLogToPersonalityFile("=> situation : " + content + "---");
+            AiInteraction.Instance.AddLogToPersonalityFile("=> situation : " + content );
             DisplayChoices();
         }
         
@@ -189,7 +189,7 @@ public class DialogueManager : MonoBehaviour
         int index = 0;
         foreach(Choice choice in currentChoices){ // 3 real choices 
             choicesText[index].text = choice.text;
-            AiInteraction.Instance.AddLogToPersonalityFile("=> given choice : " + choice.text + "---");
+            AiInteraction.Instance.AddLogToPersonalityFile("=> given choice : " + choice.text );
             index++;
         }
 
@@ -227,7 +227,7 @@ public class DialogueManager : MonoBehaviour
             timer.PauseTimer();
             choiceMade = true;
             ResetSelectedChoice();
-            AiInteraction.Instance.AddLogToPersonalityFile("=> choice made: " + choicesText[index].text + "---");
+            AiInteraction.Instance.AddLogToPersonalityFile("=> choice made: " + choicesText[index].text );
         }
 
         storyStateManager.UpdateCurrentState();

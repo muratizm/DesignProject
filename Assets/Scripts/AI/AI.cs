@@ -49,7 +49,7 @@ public class AI : MonoBehaviour
         }
         else
         {
-            UnityEngine.Debug.LogError("API isteği başarısız oldu: " + response.StatusCode);
+            UnityEngine.Debug.Log("API isteği başarısız oldu: " + response.StatusCode);
             return "In this case, I can't decide what to choose. Hmm I guess I'll leave it to you.";
         }
     }

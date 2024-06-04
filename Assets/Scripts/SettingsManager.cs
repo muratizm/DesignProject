@@ -40,7 +40,8 @@ public class SettingsManager : MonoBehaviour
     }
 
     public void SetVolume(float volume){ // settings panel : puts new volume in the newVolume variable
-        newVolume = (int) volume;
+        //newVolume = (int) volume;
+        newVolume = (int) volumeSlider.value;
         Debug.Log("Volume: " + newVolume);
     }
 

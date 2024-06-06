@@ -41,8 +41,8 @@ def llm_call():
         }
 
         chain = create_tagging_chain(schema, model)
-
-        prompt = f"Your name is Alduin, and you are a video game character. Based on your conversation_history, you must now make a decision from the possible_choices. Always provide a choice and explanation. Ensure your choice aligns with your established character traits. Explain why you made this choice, making sure your explanation is personable and engaging and contains why this choice aligns with your character. Here is your conversation_history: {message}. Here is the possible_choices: {choices}"
+        print(choices)
+        prompt = f"Your name is Alduin, a video game character. Based on choice made choices in the conversation_history, you must now decide one of the possible_choices provided. Consider your past choices without any assumptions about being a hero or a good person. Always explain your choice, ensuring it reflects your character traits demonstrated in the past. Your explanation should be engaging, reflecting your personality. Do not share your previous choices explicitly. Here is your conversation_history: {message}. possible_choices: {choices}"
         response = chain.run(prompt)
         print(response)
         return jsonify({"choice": response['choice'], "explanation": response['explanation']})
